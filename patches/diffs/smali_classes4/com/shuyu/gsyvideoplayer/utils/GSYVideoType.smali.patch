@@ -1,0 +1,23 @@
+--- a/smali_classes4/com/shuyu/gsyvideoplayer/utils/GSYVideoType.smali
++++ b/smali_classes4/com/shuyu/gsyvideoplayer/utils/GSYVideoType.smali
+@@ -24,15 +24,15 @@
+ 
+ .field public static final SUFRACE:I = 0x1
+ 
+-.field public static final TEXTURE:I = 0x0
++.field public static final TEXTURE:I
+ 
+-.field private static TYPE:I = 0x0
++.field private static TYPE:I
+ 
+-.field private static sRenderType:I = 0x0
++.field private static sRenderType:I
+ 
+-.field private static sScreenScaleRatio:F = 0.0f
++.field private static sScreenScaleRatio:F
+ 
+-.field private static sTextureMediaPlay:Z = false
++.field private static sTextureMediaPlay:Z
+ 
+ 
+ # direct methods

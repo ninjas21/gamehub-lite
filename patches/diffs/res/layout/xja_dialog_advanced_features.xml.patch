@@ -1,0 +1,9 @@
+--- a/res/layout/xja_dialog_advanced_features.xml
++++ b/res/layout/xja_dialog_advanced_features.xml
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<com.xj.adb.wifiui.widget.shape.layout.ShapeConstraintLayout android:id="@id/common_focus_cl" android:tag="layout/xja_dialog_advanced_features_0" android:paddingBottom="@dimen/dp_28" android:layout_width="fill_parent" android:layout_height="wrap_content" app:xja_shape_radius="@dimen/dp_8" app:xja_shape_solidColor="#ff191a1c"
++<com.xj.adb.wifiui.widget.shape.layout.ShapeConstraintLayout android:id="@id/common_focus_cl" android:tag="layout/xja_dialog_advanced_features_0" android:paddingBottom="@dimen/dp_28" android:layout_width="fill_parent" android:layout_height="wrap_content" app:xja_shape_radius="@dimen/dp_8" app:xja_shape_solidColor="#ff111827"
+   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+     <ImageView android:id="@id/closeIv" android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_24" android:layout_marginTop="@dimen/dp_12" android:src="@drawable/xja_back_icon" android:layout_marginEnd="@dimen/dp_12" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+     <TextView android:textSize="@dimen/sp_18" android:textColor="#ffffffff" android:id="@id/title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/xja_inject_advanced_features" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/closeIv" />

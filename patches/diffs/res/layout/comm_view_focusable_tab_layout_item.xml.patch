@@ -1,0 +1,12 @@
+--- a/res/layout/comm_view_focusable_tab_layout_item.xml
++++ b/res/layout/comm_view_focusable_tab_layout_item.xml
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<com.xj.common.view.focus.focus.view.FocusableFrameLayout android:id="@id/flCommonTextTab" android:padding="@dimen/mw_3dp" android:layout_width="wrap_content" android:layout_height="wrap_content"
++<com.xj.common.view.focus.focus.view.FocusableFrameLayout android:id="@id/flCommonTextTab" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+-    <com.hjq.shape.layout.ShapeConstraintLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/mw_16dp">
++    <com.hjq.shape.layout.ShapeConstraintLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="0.0dip">
+         <com.hjq.shape.view.ShapeTextView android:textSize="@dimen/mw_14sp" android:textColor="@color/comm_FFC0C4CC" android:gravity="center_vertical" android:id="@id/tvTab" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingVertical="@dimen/mw_4dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:shape_textSelectedColor="@color/comm_white" />
+         <com.hjq.shape.view.ShapeTextView android:textSize="@dimen/mw_9sp" android:textColor="@color/comm_white" android:gravity="center" android:layout_gravity="end|top" android:id="@id/tvSubTag" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mw_5dp" android:includeFontPadding="false" android:paddingHorizontal="@dimen/mw_4dp" app:layout_constraintStart_toEndOf="@id/tvTab" app:layout_constraintTop_toTopOf="parent" app:shape_radius="@dimen/mw_4dp" app:shape_solidColor="#ff33d9a4" />
+     </com.hjq.shape.layout.ShapeConstraintLayout>

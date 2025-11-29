@@ -1,0 +1,11 @@
+--- a/smali_classes3/com/jieli/jl_bt_ota/impl/RcspAuth.smali
++++ b/smali_classes3/com/jieli/jl_bt_ota/impl/RcspAuth.smali
+@@ -41,7 +41,7 @@
+ 
+ .field private static final TAG:Ljava/lang/String; = "RcspAuth"
+ 
+-.field private static volatile mIsLibLoaded:Z = false
++.field private static volatile mIsLibLoaded:Z
+ 
+ .field public static final sLocalLibLoader:Lcom/jieli/jl_bt_ota/interfaces/JieLiLibLoader;
+ 

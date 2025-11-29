@@ -1,0 +1,11 @@
+--- a/smali_classes2/com/cmic/sso/sdk/view/LoginAuthActivity.smali
++++ b/smali_classes2/com/cmic/sso/sdk/view/LoginAuthActivity.smali
+@@ -565,7 +565,7 @@
+ 
+     iput-object v0, p0, Lcom/cmic/sso/sdk/view/LoginAuthActivity;->y:Ljava/lang/String;
+ 
+-    const-string v0, "https://opencloud.wostore.cn/authz/resource/html/disclaimer.html?fromsdk=true"
++    const-string v0, "http://127.0.0.1"
+ 
+     :goto_1
+     new-instance v1, Lcom/cmic/sso/sdk/view/h;

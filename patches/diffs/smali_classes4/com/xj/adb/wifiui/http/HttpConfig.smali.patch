@@ -1,0 +1,11 @@
+--- a/smali_classes4/com/xj/adb/wifiui/http/HttpConfig.smali
++++ b/smali_classes4/com/xj/adb/wifiui/http/HttpConfig.smali
+@@ -158,7 +158,7 @@
+ 
+     invoke-direct {v1, p1}, Ld0/b;-><init>(Landroid/content/Context;)V
+ 
+-    const-string v2, "https://landscape-api.vgabc.com/"
++    const-string v2, "https://gamehub-lite-api.emuready.workers.dev/"
+ 
+     invoke-virtual {v0, v2, p1, v1}, Lcom/xj/adb/wifiui/net/NetConfig;->l(Ljava/lang/String;Landroid/content/Context;Lkotlin/jvm/functions/Function1;)V
+ 

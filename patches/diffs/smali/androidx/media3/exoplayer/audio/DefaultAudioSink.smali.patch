@@ -1,0 +1,11 @@
+--- a/smali/androidx/media3/exoplayer/audio/DefaultAudioSink.smali
++++ b/smali/androidx/media3/exoplayer/audio/DefaultAudioSink.smali
+@@ -62,7 +62,7 @@
+ 
+ .field private static final TAG:Ljava/lang/String; = "DefaultAudioSink"
+ 
+-.field public static failOnSpuriousAudioTimestamp:Z = false
++.field public static failOnSpuriousAudioTimestamp:Z
+ 
+ .field private static pendingReleaseCount:I
+     .annotation build Landroidx/annotation/GuardedBy;

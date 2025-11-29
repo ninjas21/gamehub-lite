@@ -1,0 +1,24 @@
+--- a/smali/androidx/core/graphics/TypefaceCompatApi21Impl.smali
++++ b/smali/androidx/core/graphics/TypefaceCompatApi21Impl.smali
+@@ -12,15 +12,15 @@
+ 
+ 
+ # static fields
+-.field public static b:Ljava/lang/Class; = null
++.field public static b:Ljava/lang/Class;
+ 
+-.field public static c:Ljava/lang/reflect/Constructor; = null
++.field public static c:Ljava/lang/reflect/Constructor;
+ 
+-.field public static d:Ljava/lang/reflect/Method; = null
++.field public static d:Ljava/lang/reflect/Method;
++
++.field public static e:Ljava/lang/reflect/Method;
+ 
+-.field public static e:Ljava/lang/reflect/Method; = null
+-
+-.field public static f:Z = false
++.field public static f:Z
+ 
+ 
+ # direct methods

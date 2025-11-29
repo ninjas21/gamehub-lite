@@ -1,0 +1,20 @@
+--- a/smali_classes4/com/xj/base/language/GHLocaleManager.smali
++++ b/smali_classes4/com/xj/base/language/GHLocaleManager.smali
+@@ -529,15 +529,13 @@
+ .end method
+ 
+ .method public final j()Ljava/util/Locale;
+-    .locals 3
++    .locals 2
+ 
+     new-instance v0, Ljava/util/Locale;
+ 
+     const-string v1, "ru"
+ 
+-    const-string v2, "RU"
+-
+-    invoke-direct {v0, v1, v2}, Ljava/util/Locale;-><init>(Ljava/lang/String;Ljava/lang/String;)V
++    invoke-direct {v0, v1}, Ljava/util/Locale;-><init>(Ljava/lang/String;)V
+ 
+     return-object v0
+ .end method

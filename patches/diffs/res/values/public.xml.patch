@@ -1,0 +1,257 @@
+--- a/res/values/public.xml
++++ b/res/values/public.xml
+@@ -9360,11 +9360,7 @@
+     <public type="drawable" name="circel_left" id="0x7f0801ad" />
+     <public type="drawable" name="circle_menu_bg" id="0x7f0801ae" />
+     <public type="drawable" name="close_game" id="0x7f0801af" />
+-    <public type="drawable" name="cloud_ic_close_white" id="0x7f0801b0" />
+-    <public type="drawable" name="cloud_ic_queue_loading_bg" id="0x7f0801b1" />
+-    <public type="drawable" name="cloud_ic_state_info_bg" id="0x7f0801b2" />
+-    <public type="drawable" name="cloud_list_item_select" id="0x7f0801b3" />
+-    <public type="drawable" name="cloud_progress_bar_style" id="0x7f0801b4" />
++    <public type="drawable" name="emuready_logo" id="0x7f0801b0" />
+     <public type="drawable" name="com_white_bg_btn_b" id="0x7f0801b5" />
+     <public type="drawable" name="com_white_bg_btn_x" id="0x7f0801b6" />
+     <public type="drawable" name="com_white_bg_btn_y" id="0x7f0801b7" />
+@@ -9393,7 +9389,7 @@
+     <public type="drawable" name="comm_floating_close_btn" id="0x7f0801ce" />
+     <public type="drawable" name="comm_floating_drag_icon" id="0x7f0801cf" />
+     <public type="drawable" name="comm_gradient_background" id="0x7f0801d0" />
+-    <public type="drawable" name="comm_guide_close_gry" id="0x7f0801d1" />
++    <public type="drawable" name="connection_tutorial_select" id="0x7f0801d1" />
+     <public type="drawable" name="comm_horizontal_progress_bar_style" id="0x7f0801d2" />
+     <public type="drawable" name="comm_ic_arrow_right" id="0x7f0801d3" />
+     <public type="drawable" name="comm_ic_arrow_right_white" id="0x7f0801d4" />
+@@ -9477,8 +9473,8 @@
+     <public type="drawable" name="common_page_bg" id="0x7f080222" />
+     <public type="drawable" name="common_verify_dialog_close" id="0x7f080223" />
+     <public type="drawable" name="configview_bg" id="0x7f080224" />
+-    <public type="drawable" name="connection_tutorial_select" id="0x7f080225" />
+-    <public type="drawable" name="connection_tutorial_unselect" id="0x7f080226" />
++    <public type="drawable" name="connection_tutorial_unselect" id="0x7f080225" />
++    <public type="drawable" name="ic_launcher_mono" id="0x7f080226" />
+     <public type="drawable" name="content_dialog_background" id="0x7f080227" />
+     <public type="drawable" name="content_dialog_background_n" id="0x7f080228" />
+     <public type="drawable" name="control_analog_stick_base" id="0x7f080229" />
+@@ -9553,9 +9549,7 @@
+     <public type="drawable" name="down_selector" id="0x7f08026e" />
+     <public type="drawable" name="ds_arrow_withe_to_right" id="0x7f08026f" />
+     <public type="drawable" name="ds_change_layout_switch" id="0x7f080270" />
+-    <public type="drawable" name="ds_change_layout_xbox" id="0x7f080271" />
+     <public type="drawable" name="ds_game_pad_defalut_pic" id="0x7f080272" />
+-    <public type="drawable" name="ds_guide_close_gry" id="0x7f080273" />
+     <public type="drawable" name="edit_rect_icon_telescopic" id="0x7f080274" />
+     <public type="drawable" name="edit_text" id="0x7f080275" />
+     <public type="drawable" name="edittext_cursor" id="0x7f080276" />
+@@ -9730,12 +9724,6 @@
+     <public type="drawable" name="ic_console_standby" id="0x7f08031f" />
+     <public type="drawable" name="ic_curve_bg" id="0x7f080320" />
+     <public type="drawable" name="ic_delete_row" id="0x7f080321" />
+-    <public type="drawable" name="ic_devadb2" id="0x7f080322" />
+-    <public type="drawable" name="ic_devadb2en" id="0x7f080323" />
+-    <public type="drawable" name="ic_devnotify" id="0x7f080324" />
+-    <public type="drawable" name="ic_devnotifyen" id="0x7f080325" />
+-    <public type="drawable" name="ic_devpwss" id="0x7f080326" />
+-    <public type="drawable" name="ic_devpwssen" id="0x7f080327" />
+     <public type="drawable" name="ic_dialog_close" id="0x7f080328" />
+     <public type="drawable" name="ic_dialog_close_dark" id="0x7f080329" />
+     <public type="drawable" name="ic_dialog_close_light" id="0x7f08032a" />
+@@ -9784,10 +9772,6 @@
+     <public type="drawable" name="ic_group_expand_13" id="0x7f080355" />
+     <public type="drawable" name="ic_group_expand_14" id="0x7f080356" />
+     <public type="drawable" name="ic_group_expand_15" id="0x7f080357" />
+-    <public type="drawable" name="ic_guide_step_first_pc" id="0x7f080358" />
+-    <public type="drawable" name="ic_guide_step_first_phone" id="0x7f080359" />
+-    <public type="drawable" name="ic_guide_step_second_pc" id="0x7f08035a" />
+-    <public type="drawable" name="ic_guide_step_third_pc" id="0x7f08035b" />
+     <public type="drawable" name="ic_hdr" id="0x7f08035c" />
+     <public type="drawable" name="ic_help" id="0x7f08035d" />
+     <public type="drawable" name="ic_host" id="0x7f08035e" />
+@@ -10204,10 +10188,6 @@
+     <public type="drawable" name="llanuncher_ble_icon_iv" id="0x7f0804f9" />
+     <public type="drawable" name="llanuncher_device_connection" id="0x7f0804fa" />
+     <public type="drawable" name="llanuncher_dialog_news_details_ic_close" id="0x7f0804fb" />
+-    <public type="drawable" name="llanuncher_guide_close_gry" id="0x7f0804fc" />
+-    <public type="drawable" name="llanuncher_guide_game_pad_cover1_bg" id="0x7f0804fd" />
+-    <public type="drawable" name="llanuncher_guide_game_pad_cover2_bg" id="0x7f0804fe" />
+-    <public type="drawable" name="llanuncher_guide_game_pad_promotional2_bg" id="0x7f0804ff" />
+     <public type="drawable" name="llanuncher_ic_check_green" id="0x7f080500" />
+     <public type="drawable" name="llanuncher_ic_close_full_share_screen" id="0x7f080501" />
+     <public type="drawable" name="llanuncher_ic_delete_focus" id="0x7f080502" />
+@@ -10253,12 +10233,8 @@
+     <public type="drawable" name="llanuncher_icon_circle_play_station" id="0x7f08052a" />
+     <public type="drawable" name="llanuncher_icon_circle_ps_remote_play" id="0x7f08052b" />
+     <public type="drawable" name="llanuncher_icon_circle_pslink_game" id="0x7f08052c" />
+-    <public type="drawable" name="llanuncher_icon_circle_xbox" id="0x7f08052d" />
+     <public type="drawable" name="llanuncher_icon_close" id="0x7f08052e" />
+     <public type="drawable" name="llanuncher_icon_close_x" id="0x7f08052f" />
+-    <public type="drawable" name="llanuncher_icon_dark_guide_gamesir" id="0x7f080530" />
+-    <public type="drawable" name="llanuncher_icon_dark_guide_gamesir_handle" id="0x7f080531" />
+-    <public type="drawable" name="llanuncher_icon_dark_guide_gamesir_screen" id="0x7f080532" />
+     <public type="drawable" name="llanuncher_icon_device_radiator_temp" id="0x7f080533" />
+     <public type="drawable" name="llanuncher_icon_device_radiator_temp_back" id="0x7f080534" />
+     <public type="drawable" name="llanuncher_icon_device_radiator_temp_black" id="0x7f080535" />
+@@ -10276,20 +10252,10 @@
+     <public type="drawable" name="llanuncher_icon_empty" id="0x7f080541" />
+     <public type="drawable" name="llanuncher_icon_emulator_play" id="0x7f080542" />
+     <public type="drawable" name="llanuncher_icon_frame_select" id="0x7f080543" />
+-    <public type="drawable" name="llanuncher_icon_gamesir_guide_home" id="0x7f080544" />
+-    <public type="drawable" name="llanuncher_icon_gamesir_guide_logo" id="0x7f080545" />
+     <public type="drawable" name="llanuncher_icon_google_play" id="0x7f080546" />
+     <public type="drawable" name="llanuncher_icon_gray_circle_setting" id="0x7f080547" />
+     <public type="drawable" name="llanuncher_icon_gray_circle_share" id="0x7f080548" />
+     <public type="drawable" name="llanuncher_icon_gray_circle_video" id="0x7f080549" />
+-    <public type="drawable" name="llanuncher_icon_grid_xbox" id="0x7f08054a" />
+-    <public type="drawable" name="llanuncher_icon_guide_buy" id="0x7f08054b" />
+-    <public type="drawable" name="llanuncher_icon_guide_gamepad" id="0x7f08054c" />
+-    <public type="drawable" name="llanuncher_icon_guide_gamesir" id="0x7f08054d" />
+-    <public type="drawable" name="llanuncher_icon_guide_highlight_bg" id="0x7f08054e" />
+-    <public type="drawable" name="llanuncher_icon_guide_request_usb_bg" id="0x7f08054f" />
+-    <public type="drawable" name="llanuncher_icon_guide_storage_bg" id="0x7f080550" />
+-    <public type="drawable" name="llanuncher_icon_guide_test_click_btn_bg" id="0x7f080551" />
+     <public type="drawable" name="llanuncher_icon_hid_play" id="0x7f080552" />
+     <public type="drawable" name="llanuncher_icon_in_game" id="0x7f080553" />
+     <public type="drawable" name="llanuncher_icon_long_emulator_play" id="0x7f080554" />
+@@ -10300,7 +10266,6 @@
+     <public type="drawable" name="llanuncher_icon_long_ps_station" id="0x7f080559" />
+     <public type="drawable" name="llanuncher_icon_long_ps_store" id="0x7f08055a" />
+     <public type="drawable" name="llanuncher_icon_long_pslink_play" id="0x7f08055b" />
+-    <public type="drawable" name="llanuncher_icon_long_xbox" id="0x7f08055c" />
+     <public type="drawable" name="llanuncher_icon_main_device_empty" id="0x7f08055d" />
+     <public type="drawable" name="llanuncher_icon_main_device_empty_black" id="0x7f08055e" />
+     <public type="drawable" name="llanuncher_icon_main_device_empty_white" id="0x7f08055f" />
+@@ -10388,7 +10353,6 @@
+     <public type="drawable" name="llanuncher_icon_withe_message" id="0x7f0805b1" />
+     <public type="drawable" name="llanuncher_icon_withe_release_date" id="0x7f0805b2" />
+     <public type="drawable" name="llanuncher_icon_withe_video_cut" id="0x7f0805b3" />
+-    <public type="drawable" name="llanuncher_icon_xbox" id="0x7f0805b4" />
+     <public type="drawable" name="llanuncher_iconz_mobile_game_play" id="0x7f0805b5" />
+     <public type="drawable" name="llanuncher_location_icon_iv" id="0x7f0805b6" />
+     <public type="drawable" name="llanuncher_norification_permission_bg" id="0x7f0805b7" />
+@@ -10437,7 +10401,6 @@
+     <public type="drawable" name="llauncher_game_detail_setting_select" id="0x7f0805e2" />
+     <public type="drawable" name="llauncher_game_icon_gray" id="0x7f0805e3" />
+     <public type="drawable" name="llauncher_gamepad_button_mapping_switch" id="0x7f0805e4" />
+-    <public type="drawable" name="llauncher_gamepad_button_mapping_xbox" id="0x7f0805e5" />
+     <public type="drawable" name="llauncher_gamepad_test_border" id="0x7f0805e6" />
+     <public type="drawable" name="llauncher_gamepad_test_btn_check_down" id="0x7f0805e7" />
+     <public type="drawable" name="llauncher_gamepad_test_btn_check_left" id="0x7f0805e8" />
+@@ -10499,7 +10462,6 @@
+     <public type="drawable" name="llauncher_green_select_add_brank" id="0x7f080620" />
+     <public type="drawable" name="llauncher_green_select_add_write" id="0x7f080621" />
+     <public type="drawable" name="llauncher_green_select_check" id="0x7f080622" />
+-    <public type="drawable" name="llauncher_guide_request_read_contacts_permission_bg" id="0x7f080623" />
+     <public type="drawable" name="llauncher_ic_add_mobile_game" id="0x7f080624" />
+     <public type="drawable" name="llauncher_ic_apple_login_white" id="0x7f080625" />
+     <public type="drawable" name="llauncher_ic_arrow_down" id="0x7f080626" />
+@@ -10531,7 +10493,6 @@
+     <public type="drawable" name="llauncher_ic_launch_type_ps_remote_play" id="0x7f080640" />
+     <public type="drawable" name="llauncher_ic_launch_type_steam" id="0x7f080641" />
+     <public type="drawable" name="llauncher_ic_launch_type_steam_black" id="0x7f080642" />
+-    <public type="drawable" name="llauncher_ic_launch_type_xbox" id="0x7f080643" />
+     <public type="drawable" name="llauncher_ic_launcher_main_nav_focused" id="0x7f080644" />
+     <public type="drawable" name="llauncher_ic_launcher_main_nav_normal" id="0x7f080645" />
+     <public type="drawable" name="llauncher_ic_login_alpha_bg" id="0x7f080646" />
+@@ -10676,9 +10637,6 @@
+     <public type="drawable" name="mapping_checkbox_selector" id="0x7f0806d1" />
+     <public type="drawable" name="mapping_comm_loading" id="0x7f0806d2" />
+     <public type="drawable" name="mapping_floating_titile_s_bg" id="0x7f0806d3" />
+-    <public type="drawable" name="mapping_guide_click" id="0x7f0806d4" />
+-    <public type="drawable" name="mapping_guide_double_click" id="0x7f0806d5" />
+-    <public type="drawable" name="mapping_guide_hold_and_drag" id="0x7f0806d6" />
+     <public type="drawable" name="mapping_ic_back_gray" id="0x7f0806d7" />
+     <public type="drawable" name="mapping_ic_button_setting_edit_white" id="0x7f0806d8" />
+     <public type="drawable" name="mapping_ic_click_mode_help_white" id="0x7f0806d9" />
+@@ -11609,6 +11567,7 @@
+     <public type="drawable" name="zan1" id="0x7f080a76" />
+     <public type="drawable" name="zb1" id="0x7f080a77" />
+     <public type="drawable" name="zb2" id="0x7f080a78" />
++    <public type="drawable" name="wine_loading_round_light.png" id="0x7f080a79" />
+     <public type="font" name="d_din_pro_600_semibold" id="0x7f090000" />
+     <public type="font" name="roboto_medium_numbers" id="0x7f090001" />
+     <public type="id" name="ALT" id="0x7f0a0000" />
+@@ -15317,6 +15276,12 @@
+     <public type="id" name="yesTv" id="0x7f0a0e77" />
+     <public type="id" name="zh_bgImage" id="0x7f0a0e78" />
+     <public type="id" name="zoom" id="0x7f0a0e79" />
++    <public type="id" name="tv_dashboard_label" id="0x7f0a0e7a" />
++    <public type="id" name="tv_battery_percent" id="0x7f0a0e7b" />
++    <public type="id" name="iv_emuready_logo" id="0x7f0a0e7c" />
++    <public type="id" name="tv_local_game_id" id="0x7f0a0e7d" />
++    <public type="id" name="ll_local_game_id_container" id="0x7f0a0e7e" />
++    <public type="id" name="btn_copy_local_game_id" id="0x7f0a0e7f" />
+     <public type="integer" name="abc_config_activityDefaultDur" id="0x7f0b0000" />
+     <public type="integer" name="abc_config_activityShortDur" id="0x7f0b0001" />
+     <public type="integer" name="app_bar_elevation_anim_duration" id="0x7f0b0002" />
+@@ -15507,7 +15472,7 @@
+     <public type="layout" name="browser_actions_context_menu_page" id="0x7f0d0057" />
+     <public type="layout" name="browser_actions_context_menu_row" id="0x7f0d0058" />
+     <public type="layout" name="btns_keyboard_menu_btns" id="0x7f0d0059" />
+-    <public type="layout" name="bussiness_activity_xbox_web" id="0x7f0d005a" />
++    <public type="layout" name="pay_cloud_game_activity" id="0x7f0d005a" />
+     <public type="layout" name="bussiness_dialog_config_setting_view" id="0x7f0d005b" />
+     <public type="layout" name="bussiness_item_language" id="0x7f0d005c" />
+     <public type="layout" name="bussiness_item_region" id="0x7f0d005d" />
+@@ -15526,21 +15491,6 @@
+     <public type="layout" name="cast_tracks_chooser_dialog_layout" id="0x7f0d006a" />
+     <public type="layout" name="cast_tracks_chooser_dialog_row_layout" id="0x7f0d006b" />
+     <public type="layout" name="category_text_view" id="0x7f0d006c" />
+-    <public type="layout" name="cloud_activitiy_settings_layout" id="0x7f0d006d" />
+-    <public type="layout" name="cloud_activity_game_setting" id="0x7f0d006e" />
+-    <public type="layout" name="cloud_dialog_fragment_cloud_game_question" id="0x7f0d006f" />
+-    <public type="layout" name="cloud_dialog_list_item_text" id="0x7f0d0070" />
+-    <public type="layout" name="cloud_dialog_list_select" id="0x7f0d0071" />
+-    <public type="layout" name="cloud_fragment_cloud_game_queue_description" id="0x7f0d0072" />
+-    <public type="layout" name="cloud_fragment_setting" id="0x7f0d0073" />
+-    <public type="layout" name="cloud_game_activity" id="0x7f0d0074" />
+-    <public type="layout" name="cloud_item_helper_tab" id="0x7f0d0075" />
+-    <public type="layout" name="cloud_item_setting_switch" id="0x7f0d0076" />
+-    <public type="layout" name="cloud_item_simple_calander" id="0x7f0d0077" />
+-    <public type="layout" name="cloud_popup_home_common_focus" id="0x7f0d0078" />
+-    <public type="layout" name="cloud_sidebar_settings_fragment" id="0x7f0d0079" />
+-    <public type="layout" name="cloud_view_game_state_info" id="0x7f0d007a" />
+-    <public type="layout" name="cloud_view_moving_handle_controller" id="0x7f0d007b" />
+     <public type="layout" name="comm_activity_web" id="0x7f0d007c" />
+     <public type="layout" name="comm_adapter_item_pic_selector" id="0x7f0d007d" />
+     <public type="layout" name="comm_adapter_menu_item" id="0x7f0d007e" />
+@@ -16193,7 +16143,6 @@
+     <public type="layout" name="notification_template_part_time" id="0x7f0d0305" />
+     <public type="layout" name="number_picker" id="0x7f0d0306" />
+     <public type="layout" name="pay_adapter_goods_item" id="0x7f0d0307" />
+-    <public type="layout" name="pay_cloud_game_activity" id="0x7f0d0308" />
+     <public type="layout" name="pay_main_button_layout" id="0x7f0d0309" />
+     <public type="layout" name="pay_popup_focus" id="0x7f0d030a" />
+     <public type="layout" name="pay_popup_hint" id="0x7f0d030b" />
+@@ -16424,7 +16373,6 @@
+     <public type="layout" name="winemu_view_game_pad_connect_tips" id="0x7f0d03ec" />
+     <public type="layout" name="winemu_view_menu_button" id="0x7f0d03ed" />
+     <public type="layout" name="winemu_view_setting_collapse_menu" id="0x7f0d03ee" />
+-    <public type="layout" name="xbox_activity_web" id="0x7f0d03ef" />
+     <public type="layout" name="xja_activity_adb_activation" id="0x7f0d03f0" />
+     <public type="layout" name="xja_activity_adb_activation_success" id="0x7f0d03f1" />
+     <public type="layout" name="xja_activity_developer_options" id="0x7f0d03f2" />
+@@ -16462,7 +16410,7 @@
+     <public type="mipmap" name="ic_pc_scut_foreground" id="0x7f100015" />
+     <public type="mipmap" name="ic_reply_add" id="0x7f100016" />
+     <public type="mipmap" name="ic_reply_post" id="0x7f100017" />
+-    <public type="mipmap" name="llanuncher_guide_close_gry" id="0x7f100018" />
++    <public type="mipmap" name="ic_launcher_bg" id="0x7f100018" />
+     <public type="mipmap" name="llauncher_icon_battery_level_1" id="0x7f100019" />
+     <public type="mipmap" name="llauncher_icon_battery_level_2" id="0x7f10001a" />
+     <public type="mipmap" name="llauncher_icon_battery_level_3" id="0x7f10001b" />
+@@ -16479,6 +16427,7 @@
+     <public type="mipmap" name="pay_popup_close_gry" id="0x7f100026" />
+     <public type="mipmap" name="pay_wx" id="0x7f100027" />
+     <public type="mipmap" name="pay_zfb" id="0x7f100028" />
++    <public type="mipmap" name="ic_launcher_fg" id="0x7f100029" />
+     <public type="plurals" name="exo_controls_fastforward_by_amount_description" id="0x7f110000" />
+     <public type="plurals" name="exo_controls_rewind_by_amount_description" id="0x7f110001" />
+     <public type="plurals" name="mtrl_badge_content_description" id="0x7f110002" />
+@@ -20313,7 +20262,6 @@
+     <public type="style" name="CastIntroOverlay" id="0x7f140135" />
+     <public type="style" name="CastMiniController" id="0x7f140136" />
+     <public type="style" name="CheckBox" id="0x7f140137" />
+-    <public type="style" name="CloudProgressStyle" id="0x7f140138" />
+     <public type="style" name="ComboBox" id="0x7f140139" />
+     <public type="style" name="CommDownloadingHorizontalProgress" id="0x7f14013a" />
+     <public type="style" name="ContentDialog" id="0x7f14013b" />

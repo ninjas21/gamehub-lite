@@ -1,0 +1,22 @@
+--- a/smali_classes2/cn/jpush/android/ui/d.smali
++++ b/smali_classes2/cn/jpush/android/ui/d.smali
+@@ -1,13 +1,13 @@
+-.class public abstract synthetic Lcn/jpush/android/ui/d;
++.class public Lcn/jpush/android/ui/d;
+ .super Ljava/lang/Object;
+-.source "SourceFile"
++.source "JPushStub"
+ 
+ 
+ # direct methods
+-.method public static bridge synthetic a(Landroid/app/ActivityManager$RunningTaskInfo;)Landroid/content/ComponentName;
+-    .locals 0
++.method public static a(Landroid/app/ActivityManager$RunningTaskInfo;)Landroid/content/ComponentName;
++    .locals 1
+ 
+-    iget-object p0, p0, Landroid/app/ActivityManager$RunningTaskInfo;->baseActivity:Landroid/content/ComponentName;
++    const/4 v0, 0x0
+ 
+-    return-object p0
++    return-object v0
+ .end method

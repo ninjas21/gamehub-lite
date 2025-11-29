@@ -1,0 +1,19 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/dialog/NewsDetailDialog$init$5.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/dialog/NewsDetailDialog$init$5.smali
+@@ -271,6 +271,8 @@
+     move-result-object v0
+ 
+     iget-object v0, v0, Lcom/xj/landscape/launcher/databinding/LlauncherDialogNewsDetailBinding;->tvSource:Landroid/widget/TextView;
++
++    if-eqz v0, :cond_4
+ 
+     invoke-static {}, Lcom/blankj/utilcode/util/Utils;->a()Landroid/app/Application;
+ 
+@@ -292,6 +294,7 @@
+ 
+     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+ 
++    :cond_4
+     iget-object v0, p0, Lcom/xj/landscape/launcher/ui/dialog/NewsDetailDialog$init$5;->this$0:Lcom/xj/landscape/launcher/ui/dialog/NewsDetailDialog;
+ 
+     invoke-static {v0}, Lcom/xj/landscape/launcher/ui/dialog/NewsDetailDialog;->v0(Lcom/xj/landscape/launcher/ui/dialog/NewsDetailDialog;)Lcom/xj/landscape/launcher/databinding/LlauncherDialogNewsDetailBinding;

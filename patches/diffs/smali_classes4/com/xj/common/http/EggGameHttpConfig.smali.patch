@@ -1,0 +1,26 @@
+--- a/smali_classes4/com/xj/common/http/EggGameHttpConfig.smali
++++ b/smali_classes4/com/xj/common/http/EggGameHttpConfig.smali
+@@ -40,7 +40,7 @@
+ 
+     if-eqz v1, :cond_0
+ 
+-    const-string v0, "https://test-magic-landscape-api.vgabc.com/"
++    const-string v0, "https://gamehub-lite-api.emuready.workers.dev/"
+ 
+     goto :goto_0
+ 
+@@ -51,12 +51,12 @@
+ 
+     if-eqz v0, :cond_1
+ 
+-    const-string v0, "https://landscape-api.vgabc.com/"
++    const-string v0, "https://gamehub-lite-api.emuready.workers.dev/"
+ 
+     goto :goto_0
+ 
+     :cond_1
+-    const-string v0, "https://dev-gamehub-api.vgabc.com/"
++    const-string v0, "https://gamehub-lite-api.emuready.workers.dev/"
+ 
+     :goto_0
+     sput-object v0, Lcom/xj/common/http/EggGameHttpConfig;->b:Ljava/lang/String;

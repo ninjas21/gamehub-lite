@@ -1,0 +1,11 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/setting/tab/HelpSettingFragment$initObserver$2.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/setting/tab/HelpSettingFragment$initObserver$2.smali
+@@ -142,7 +142,7 @@
+ 
+     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->f(Ljava/lang/Object;Ljava/lang/String;)V
+ 
+-    const-string v1, "https://gamehub.xiaoji.com"
++    const-string v1, "http://127.0.0.1"
+ 
+     invoke-static {p1, v0, v1}, Lcom/xj/landscape/launcher/ui/setting/tab/HelpSettingFragment;->m0(Lcom/xj/landscape/launcher/ui/setting/tab/HelpSettingFragment;Landroid/content/Context;Ljava/lang/String;)V
+ 

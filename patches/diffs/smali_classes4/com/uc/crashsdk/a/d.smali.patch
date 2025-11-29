@@ -1,0 +1,20 @@
+--- a/smali_classes4/com/uc/crashsdk/a/d.smali
++++ b/smali_classes4/com/uc/crashsdk/a/d.smali
+@@ -815,7 +815,7 @@
+     monitor-enter v1
+ 
+     :try_start_0
+-    const-string v0, "https://errlog.umeng.com"
++    const-string v0, "http://127.0.0.1"
+ 
+     invoke-static {}, Lcom/uc/crashsdk/g;->R()Z
+ 
+@@ -823,7 +823,7 @@
+ 
+     if-eqz v2, :cond_0
+ 
+-    const-string v0, "https://errlogos.umeng.com"
++    const-string v0, "http://127.0.0.1"
+ 
+     goto :goto_0
+ 

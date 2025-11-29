@@ -1,0 +1,468 @@
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" package="com.xiaoji.egggame" platformBuildVersionCode="35" platformBuildVersionName="15">
++<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" package="gamehub.lite" platformBuildVersionCode="35" platformBuildVersionName="15">
+     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+     <uses-permission android:name="android.permission.INTERNET"/>
+     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+@@ -8,7 +8,6 @@
+     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+     <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED"/>
+-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+     <uses-permission android:name="android.permission.VIBRATE"/>
+     <uses-permission android:name="android.hardware.usb.host"/>
+     <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
+@@ -21,51 +20,21 @@
+     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+-    <uses-permission android:name="com.android.permission.GET_INSTALLED_APPS"/>
+-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+-    <uses-permission android:name="android.permission.NOTIFICATION_SERVICE"/>
+-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
+     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+     <uses-permission android:name="android.permission.BLUETOOTH"/>
+     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation"/>
+-    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE"/>
+     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+     <queries>
+-        <package android:name="com.tencent.mm"/>
+-        <package android:name="com.tencent.mobileqq"/>
+-        <package android:name="com.tencent.tim"/>
+-        <package android:name="com.tencent.minihd.qq"/>
+-        <package android:name="com.tencent.qqlite"/>
+         <intent>
+             <action android:name="android.intent.action.MAIN"/>
+         </intent>
+         <intent>
+             <action android:name="android.intent.action.VIEW"/>
+         </intent>
+-        <package android:name="com.google.android.gms.policy_cast_dynamite"/>
+-        <intent>
+-            <action android:name="*"/>
+-            <data android:scheme="tbopen"/>
+-        </intent>
+-        <package android:name="com.eg.android.AlipayGphone"/>
+-        <package android:name="com.eg.android.AlipayGphoneRC"/>
+-        <package android:name="hk.alipay.wallet"/>
+-        <package android:name="hk.alipay.walletRC"/>
+     </queries>
+-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+-    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"/>
+     <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS"/>
+-    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+-    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+-    <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA"/>
+-    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA"/>
+     <uses-permission android:maxSdkVersion="33" android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+     <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+@@ -75,28 +44,13 @@
+     <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false"/>
+     <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false"/>
+     <uses-feature android:name="android.hardware.type.pc" android:required="false"/>
+-    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+-    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+-    <uses-permission android:name="com.bbk.launcher2.permission.READ_SETTINGS"/>
+-    <uses-permission android:name="com.bbk.launcher2.permission.WRITE_SETTINGS"/>
++    <uses-permission android:name="gamehub.lite_com.bbk.launcher2.permission.READ_SETTINGS"/>
++    <uses-permission android:name="gamehub.lite_com.bbk.launcher2.permission.WRITE_SETTINGS"/>
+     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+-    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+-    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"/>
+-    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID"/>
+-    <uses-permission android:name="android.permission.CAMERA"/>
+-    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+-    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+-    <permission android:name="com.xiaoji.egggame.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+-    <uses-permission android:name="com.xiaoji.egggame.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+-    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+-    <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION"/>
++    <permission android:name="gamehub.lite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
++    <uses-permission android:name="gamehub.lite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+-    <permission android:name="com.xiaoji.egggame.permission.JPUSH_MESSAGE" android:protectionLevel="signature"/>
+-    <uses-permission android:name="com.xiaoji.egggame.permission.JPUSH_MESSAGE"/>
+-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+-    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+-    <application android:allowBackup="true" android:allowNativeHeapPointerTagging="false" android:appCategory="game" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:icon="@mipmap/ic_launcher" android:isGame="true" android:label="@string/app_name" android:largeHeap="true" android:name="com.xj.app.App" android:networkSecurityConfig="@xml/network_security_config" android:requestLegacyExternalStorage="true" android:supportsRtl="true" android:theme="@style/Theme.Component">
++    <application android:allowBackup="true" android:allowNativeHeapPointerTagging="false" android:appCategory="game" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:isGame="true" android:label="@string/app_name" android:largeHeap="true" android:name="com.xj.app.App" android:networkSecurityConfig="@xml/network_security_config" android:requestLegacyExternalStorage="true" android:roundIcon="@mipmap/ic_launcher" android:supportsRtl="true" android:theme="@style/Theme.Component">
+         <meta-data android:name="ScopedStorage" android:value="true"/>
+         <activity android:exported="true" android:name="com.xj.app.SplashActivity" android:screenOrientation="sensorLandscape" android:theme="@style/AppTheme_Splash"/>
+         <activity android:exported="true" android:name="com.xj.app.DeepLinkRouterActivity" android:theme="@style/AppTheme_Splash">
+@@ -112,16 +66,6 @@
+                 <data android:host="gamehub" android:scheme="gamesir"/>
+             </intent-filter>
+         </activity>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+-            <intent-filter>
+-                <action android:name="android.intent.action.VIEW"/>
+-                <category android:name="android.intent.category.DEFAULT"/>
+-                <category android:name="android.intent.category.BROWSABLE"/>
+-                <data android:scheme="tencent102667728"/>
+-            </intent-filter>
+-        </activity>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="behind" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.xiaoji.egggame.wxapi.WXEntryActivity" android:taskAffinity="com.xiaoji.egggame" android:theme="@style/llauncher_TranslucentStyle"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.xj.landscape.launcher.ui.main.LandscapeLauncherMainActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.xj.landscape.launcher.ui.guide.GuideButtonAActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleTask" android:name="com.xj.landscape.launcher.ui.guide.GuideLoginActivity" android:screenOrientation="sensorLandscape" android:theme="@style/llauncher_LoginPageTranslucentStyle"/>
+@@ -134,22 +78,12 @@
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.guide.GuideKeypadOperationActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.guide.GuiRequestReadContactsPermissionActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.guide.GuideFindContactActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.guide.GuideRequestNotificationPermissionActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.guide.GuideRequestStoragePermissionActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.guide.GuideGamePadCover1Activity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.guide.GuideGamePadCover2Activity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.guide.GuideGamePadPromotional1Activity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.guide.GuideGamePadPromotional2Activity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.guide.GuideGamePadPromotional3Activity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.test.firebase.TestFirebaseAuthActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.firebase.auth.internal.GenericIdpActivity" android:screenOrientation="sensorLandscape" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+-            <intent-filter>
+-                <action android:name="android.intent.action.VIEW"/>
+-                <category android:name="android.intent.category.DEFAULT"/>
+-                <category android:name="android.intent.category.BROWSABLE"/>
+-                <data android:host="firebase.auth" android:path="/" android:scheme="genericidp"/>
+-            </intent-filter>
+-        </activity>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.xj.landscape.launcher.ui.record.RecordMainActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.record.CutVideoActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.record.EditorVideoActivity" android:screenOrientation="sensorLandscape"/>
+@@ -164,7 +98,12 @@
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.device.SelectDeviceActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.xj.landscape.launcher.ui.device.ScanDeviceActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.device.ProductDocActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.gamedetail.GameDetailActivity" android:screenOrientation="sensorLandscape" android:theme="@style/llauncher_TranslucentStyle"/>
++        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:name="com.xj.landscape.launcher.ui.gamedetail.GameDetailActivity" android:screenOrientation="sensorLandscape" android:theme="@style/llauncher_TranslucentStyle">
++            <intent-filter>
++                <action android:name="gamehub.lite.LAUNCH_GAME"/>
++                <category android:name="android.intent.category.DEFAULT"/>
++            </intent-filter>
++        </activity>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.gamedetail.NewsDetailActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.gamedetail.GameDetailMoreInfoActivity" android:screenOrientation="sensorLandscape" android:theme="@style/llauncher_TranslucentStyle"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.gamedetail.PreviewPictureActivity" android:screenOrientation="sensorLandscape"/>
+@@ -180,7 +119,7 @@
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.search.V4SearchActivity" android:screenOrientation="sensorLandscape" android:theme="@style/llauncher_TranslucentStyle" android:windowSoftInputMode="adjustPan"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.album.AlbumDetailActivity" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="adjustPan"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.test.AudioViewEditorTestActivity" android:screenOrientation="sensorLandscape"/>
+-        <service android:foregroundServiceType="specialUse" android:name="com.xj.landscape.launcher.devicemanagement.DeviceManagementService"/>
++        <service android:name="com.xj.landscape.launcher.devicemanagement.DeviceManagementService"/>
+         <activity android:enabled="true" android:exported="false" android:launchMode="singleTask" android:name="com.xj.landscape.launcher.devicemanagement.PermissionsActivity" android:noHistory="true" android:screenOrientation="sensorLandscape" android:theme="@style/TransparentActivityTheme">
+             <intent-filter>
+                 <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
+@@ -188,9 +127,6 @@
+             <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" android:resource="@xml/device_filter"/>
+         </activity>
+         <activity android:name="com.xj.landscape.launcher.ui.social.UserInfoActivity" android:screenOrientation="sensorLandscape" android:theme="@style/ActivityTranslucent"/>
+-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.mobile.auth.gatewayauth.LoginAuthActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.mobile.auth.gatewayauth.activity.AuthWebVeiwActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.mobile.auth.gatewayauth.PrivacyDialogActivity" android:screenOrientation="sensorLandscape" android:theme="@style/llauncher_authsdk_activity_dialog"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.guide.GuideNotConnectGamePadActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.luck.picture.lib.basic.PictureSelectorSupporterActivity" android:screenOrientation="sensorLandscape" android:theme="@style/Base.Theme.NoActionBar"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.notification.CommonFragmentActivity" android:screenOrientation="sensorLandscape" android:theme="@style/ActivityTranslucent"/>
+@@ -201,7 +137,7 @@
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.guide.GuideCreateInfoActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.landscape.launcher.ui.preview.PreviewImageActivity" android:screenOrientation="sensorLandscape"/>
+         <service android:name="com.xj.apk.update.service.DownloadService"/>
+-        <provider android:authorities="com.xiaoji.egggame.apkUpdateFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.xj.apk.update.config.AppUpdateFileProvider">
++        <provider android:authorities="gamehub.lite.apkUpdateFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.xj.apk.update.config.AppUpdateFileProvider">
+             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/app_update_file"/>
+         </provider>
+         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.xj.apk.update.view.UpdateDialogActivity" android:theme="@style/AppUpdate.UpdateDialog"/>
+@@ -210,7 +146,7 @@
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.xj.devicesetting.gamepad.GamePadTestActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.xj.devicesetting.gamepad.StretchHandleTestActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.xj.devicesetting.gamepad.GamePadCalibrationActivity" android:screenOrientation="sensorLandscape"/>
+-        <service android:enabled="true" android:exported="true" android:foregroundServiceType="specialUse" android:label="@string/mapping_keyboardeditservice" android:name="com.xj.mapping.MappingService" android:process="">
++        <service android:enabled="true" android:exported="true" android:label="@string/mapping_keyboardeditservice" android:name="com.xj.mapping.MappingService" android:process="">
+             <intent-filter>
+                 <category android:name="android.intent.category.DEFAULT"/>
+             </intent-filter>
+@@ -245,11 +181,10 @@
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.xj.ota.ui.G8TypeCOtaActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.xj.ota.ui.X5sOTAActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale" android:label="@string/app_name" android:name="com.xj.ota.ui.FileActivity" android:screenOrientation="portrait"/>
+-        <activity android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale" android:name="com.xj.cloud.ui.LauncherCloudGameActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.cloud.ui.setting.CloudGameSettingActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.cloud.ui.ExchangeActivity" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="adjustPan"/>
+-        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleInstance" android:name="com.xj.bussiness.devicemanagement.XboxWebActivity" android:resizeableActivity="true" android:screenOrientation="userLandscape" android:supportsPictureInPicture="true"/>
+-        <activity android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density|layoutDirection|fontScale" android:launchMode="singleTask" android:name="com.xj.winemu.WineActivity" android:process=":wine" android:screenOrientation="sensorLandscape" android:theme="@style/Theme.WineUI" android:windowSoftInputMode="adjustNothing|stateHidden"/>
++        <activity android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density|layoutDirection|fontScale" android:enableOnBackInvokedCallback="false" android:launchMode="singleTask" android:name="com.xj.winemu.WineActivity" android:preferMinimalPostProcessing="true" android:process=":wine" android:resizeableActivity="false" android:screenOrientation="sensorLandscape" android:theme="@style/Theme.WineUI" android:windowSoftInputMode="adjustNothing|stateHidden">
++            <meta-data android:name="com.nvidia.immediateInput" android:value="true"/>
++            <meta-data android:name="com.nvidia.rawCursorInput" android:value="true"/>
++        </activity>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.winemu.settings.PcGameSettingsActivity" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="stateHidden|adjustPan"/>
+         <activity android:configChanges="orientation" android:name="com.xj.winemu.ui.gamelibrary.env.ui.EnvLayerDetailActivity" android:screenOrientation="sensorLandscape"/>
+         <service android:exported="false" android:name="com.xj.winemu.download.service.UnzipService"/>
+@@ -260,99 +195,18 @@
+         <activity android:configChanges="orientation" android:name="com.xj.winemu.settings.translations.WinEmuTranslationParametersActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="orientation" android:name="com.xj.winemu.settings.translations.WinEmuTranslationConfigEditActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="orientation" android:name="com.xj.winemu.settings.translations.GameTranslationParametersActivity" android:screenOrientation="sensorLandscape"/>
+-        <meta-data android:name="com.alipay.sdk.appId" android:value="\ 2021005104662679"/>
+-        <activity android:exported="true" android:launchMode="singleTop" android:name="com.xiaoji.egggame.wxapi.WXPayEntryActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+-        <activity android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale" android:name="com.xj.pay.ui.CloudGamePayActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.module.steam.account.login.ui.SteamLoginActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.module.steam.account.change.SteamChangeAccountActivity" android:screenOrientation="sensorLandscape"/>
+-        <service android:exported="true" android:foregroundServiceType="specialUse" android:name="com.xj.module.steam.SteamService"/>
++        <service android:exported="true" android:name="com.xj.module.steam.SteamService"/>
+         <activity android:configChanges="orientation" android:exported="false" android:launchMode="singleTask" android:name="com.xj.game.ui.game_library.GameLibraryActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.adb.wifiui.ui.DeveloperOptionsActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.adb.wifiui.ui.UsbOptionsActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.adb.wifiui.ui.SelectActivationTypeActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.adb.wifiui.ui.AdbActivationActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.adb.wifiui.ui.AdbActivationSuccessActivity" android:screenOrientation="sensorLandscape"/>
+-        <provider android:authorities="com.xiaoji.egggame.psplay.fileprovider1" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/filepaths"/>
+-        </provider>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.xj.psplay.main.MainActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize" android:exported="true" android:launchMode="singleTop" android:name="com.xj.psplay.ui.home.HomePSActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.xj.psplay.ui.register.AddControllerActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.xj.psplay.ui.register.RegisterNicknamePSNActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.xj.psplay.ui.register.PinCodeActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.xj.psplay.ui.register.IPActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.xj.psplay.ui.setting.tab.SettingsLogsActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="com.xj.psplay.stream.StreamActivity" android:screenOrientation="sensorLandscape" android:theme="@style/StreamTheme"/>
+-        <activity android:name="com.xj.psplay.settings.SettingsActivity"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.xj.psplay.regist.RegistActivity" android:theme="@style/MageTheme" android:windowSoftInputMode="adjustResize"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.xj.psplay.regist.RegistExecuteActivity" android:theme="@style/MageTheme"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.xj.psplay.manualconsole.EditManualConsoleActivity" android:theme="@style/MageTheme"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.psplay.ui.setting.PsSettingActivity" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="stateHidden"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.module_pcstream.activity.PcStreamShareActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.module_pcstream.activity.PcStreamMainActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.module_pcstream.activity.PcStreamAddDevIPActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.module_pcstream.activity.PcStreamQRCodeScanActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale" android:name="com.xj.module_pcstream.activity.PcStreamSettingActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.xj.module_pcstream.activity.PcStreamAddGameActivity" android:screenOrientation="sensorLandscape"/>
+-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.module_pcstream.activity.PcStreamAddGameSelectPathActivity" android:screenOrientation="sensorLandscape"/>
+-        <provider android:authorities="poster.com.xiaoji.egggame" android:enabled="true" android:exported="true" android:name="com.streaming.PosterContentProvider"/>
+-        <uses-library android:name="com.sec.android.app.multiwindow" android:required="false"/>
+-        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true"/>
+-        <meta-data android:name="com.android.graphics.intervention.wm.allowDownscale" android:value="false"/>
+-        <meta-data android:name="android.game_mode_config" android:resource="@xml/game_mode_config"/>
+-        <activity android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|layoutDirection|fontScale" android:enableOnBackInvokedCallback="true" android:exported="true" android:name="com.streaming.PcView" android:resizeableActivity="true" android:screenOrientation="sensorLandscape">
+-            <meta-data android:name="WindowManagerPreference:FreeformWindowSize" android:value="system-default"/>
+-            <meta-data android:name="WindowManagerPreference:FreeformWindowOrientation" android:value="sensorLandscape"/>
+-        </activity>
+-        <activity android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|layoutDirection|fontScale" android:enableOnBackInvokedCallback="true" android:exported="true" android:name="com.streaming.ShortcutTrampoline" android:noHistory="true" android:resizeableActivity="true" android:screenOrientation="sensorLandscape">
+-            <meta-data android:name="WindowManagerPreference:FreeformWindowSize" android:value="system-default"/>
+-            <meta-data android:name="WindowManagerPreference:FreeformWindowOrientation" android:value="sensorLandscape"/>
+-        </activity>
+-        <activity android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|layoutDirection|fontScale" android:enableOnBackInvokedCallback="true" android:name="com.streaming.AppView" android:resizeableActivity="true" android:screenOrientation="sensorLandscape">
+-            <meta-data android:name="WindowManagerPreference:FreeformWindowSize" android:value="system-default"/>
+-            <meta-data android:name="WindowManagerPreference:FreeformWindowOrientation" android:value="sensorLandscape"/>
+-        </activity>
+-        <activity android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|layoutDirection|fontScale" android:enableOnBackInvokedCallback="true" android:label="Streaming Settings" android:name="com.streaming.preferences.StreamSettings" android:resizeableActivity="true" android:screenOrientation="sensorLandscape">
+-            <meta-data android:name="WindowManagerPreference:FreeformWindowSize" android:value="system-default"/>
+-            <meta-data android:name="WindowManagerPreference:FreeformWindowOrientation" android:value="sensorLandscape"/>
+-        </activity>
+-        <activity android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|layoutDirection|fontScale" android:enableOnBackInvokedCallback="true" android:label="Add Computer Manually" android:name="com.streaming.preferences.AddComputerManually" android:resizeableActivity="true" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="stateVisible">
+-            <meta-data android:name="WindowManagerPreference:FreeformWindowSize" android:value="system-default"/>
+-            <meta-data android:name="WindowManagerPreference:FreeformWindowOrientation" android:value="sensorLandscape"/>
+-        </activity>
+-        <activity android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|layoutDirection|fontScale" android:enableOnBackInvokedCallback="false" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.streaming.Game" android:noHistory="true" android:preferMinimalPostProcessing="true" android:resizeableActivity="true" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true" android:theme="@style/PcStreamTheme">
+-            <meta-data android:name="WindowManagerPreference:FreeformWindowSize" android:value="system-default"/>
+-            <meta-data android:name="WindowManagerPreference:FreeformWindowOrientation" android:value="sensorLandscape"/>
+-            <meta-data android:name="com.nvidia.immediateInput" android:value="true"/>
+-            <meta-data android:name="com.nvidia.rawCursorInput" android:value="true"/>
+-        </activity>
+-        <service android:label="mDNS PC Auto-Discovery Service" android:name="com.streaming.discovery.DiscoveryService"/>
+-        <service android:label="Computer Management Service" android:name="com.streaming.computers.ComputerManagerService"/>
+-        <service android:label="Usb Driver Service" android:name="com.streaming.binding.input.driver.UsbDriverService"/>
+-        <activity android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|layoutDirection|fontScale" android:enableOnBackInvokedCallback="true" android:name="com.streaming.HelpActivity" android:resizeableActivity="true" android:screenOrientation="sensorLandscape">
+-            <meta-data android:name="WindowManagerPreference:FreeformWindowSize" android:value="system-default"/>
+-            <meta-data android:name="WindowManagerPreference:FreeformWindowOrientation" android:value="sensorLandscape"/>
+-        </activity>
+-        <activity android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale" android:name="com.xj.pcvirtualbtn.WinMainActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale" android:exported="false" android:name="com.xj.pcvirtualbtn.ControlsEditorActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale" android:exported="false" android:name="com.xj.pcvirtualbtn.DisplayActivity" android:screenOrientation="sensorLandscape"/>
+         <activity android:name="com.xj.pcvirtualbtn.ControlsProfileListActivity" android:screenOrientation="sensorLandscape"/>
+-        <provider android:authorities="com.xiaoji.egggame.share.sharefileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.xj.common.share.ShareFileProvider">
++        <provider android:authorities="gamehub.lite.share.sharefileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.xj.common.share.ShareFileProvider">
+             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/share_file_paths"/>
+         </provider>
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.xj.common.utils.GetGpuInfo" android:screenOrientation="sensorLandscape"/>
+         <activity android:configChanges="orientation" android:name="com.xj.common.preview.PreviewMediaActivity" android:screenOrientation="sensorLandscape" android:theme="@style/ActivityTranslucent"/>
+-        <service android:enabled="true" android:exported="false" android:name="com.xj.push.jiguang.JPushService" android:process=":pushcore">
+-            <intent-filter>
+-                <action android:name="cn.jiguang.user.service.action"/>
+-            </intent-filter>
+-        </service>
+-        <receiver android:enabled="true" android:exported="false" android:name="com.xj.push.jiguang.JPushBroadcastReceiver">
+-            <intent-filter>
+-                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE"/>
+-                <category android:name="com.xiaoji.egggame"/>
+-            </intent-filter>
+-        </receiver>
+         <receiver android:enabled="true" android:exported="false" android:name="com.xj.muugi.shortcut.special.AutoCreateBroadcastReceiver">
+             <intent-filter>
+                 <action android:name="com.shortcut.core.auto_create"/>
+@@ -367,40 +221,20 @@
+         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.yalantis.ucrop.UCropMultipleActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+         <meta-data android:name="android.notch_support" android:value="true"/>
+         <activity android:name="com.lxj.xpopup.util.XPermission$PermissionActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+-        <provider android:authorities="com.xiaoji.egggame.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
++        <provider android:authorities="gamehub.lite.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+             <meta-data android:name="com.drake.net.internal.NetInitializer" android:value="androidx.startup"/>
+             <meta-data android:name="com.king.logx.initialize.LogXInitializer" android:value="androidx.startup"/>
+             <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+             <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+         </provider>
+-        <provider android:authorities="com.xiaoji.egggame.therouter.TheRouteContentProvider" android:exported="false" android:name="com.therouter.InnerTheRouterContentProvider"/>
+-        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+-            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsLegacyRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+-            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthLegacyRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+-            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+-            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+-            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+-            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+-            <meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+-            <meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+-        </service>
+-        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.firebase.auth.internal.RecaptchaActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+-            <intent-filter>
+-                <action android:name="android.intent.action.VIEW"/>
+-                <category android:name="android.intent.category.DEFAULT"/>
+-                <category android:name="android.intent.category.BROWSABLE"/>
+-                <data android:host="firebase.auth" android:path="/" android:scheme="recaptcha"/>
+-            </intent-filter>
+-        </activity>
+-        <property android:name="android.adservices.AD_SERVICES_CONFIG" android:resource="@xml/ga_ad_services_config"/>
+-        <provider android:authorities="com.xiaoji.egggame.luckProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.luck.picture.lib.basic.PictureFileProvider">
++        <provider android:authorities="gamehub.lite.therouter.TheRouteContentProvider" android:exported="false" android:name="com.therouter.InnerTheRouterContentProvider"/>
++        <provider android:authorities="gamehub.lite.luckProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.luck.picture.lib.basic.PictureFileProvider">
+             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/ps_file_paths"/>
+         </provider>
+-        <service android:enabled="true" android:foregroundServiceType="location" android:name="com.luck.picture.lib.service.ForegroundService"/>
+         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.luck.picture.lib.basic.PictureSelectorTransparentActivity" android:theme="@style/Picture.Theme.Translucent"/>
+         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.blankj.utilcode.util.UtilsTransActivity4MainProcess" android:theme="@style/ActivityTranslucent" android:windowSoftInputMode="stateAlwaysHidden"/>
+         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:multiprocess="true" android:name="com.blankj.utilcode.util.UtilsTransActivity" android:theme="@style/ActivityTranslucent" android:windowSoftInputMode="stateAlwaysHidden"/>
+-        <provider android:authorities="com.xiaoji.egggame.utilcode.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.blankj.utilcode.util.UtilsFileProvider">
++        <provider android:authorities="gamehub.lite.utilcode.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.blankj.utilcode.util.UtilsFileProvider">
+             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/util_code_provider_paths"/>
+         </provider>
+         <service android:exported="false" android:name="com.blankj.utilcode.util.MessengerUtils$ServerService">
+@@ -408,104 +242,22 @@
+                 <action android:name="com.xiaoji.egggame.messenger"/>
+             </intent-filter>
+         </service>
+-        <receiver android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver"/>
+-        <service android:exported="false" android:name="com.google.android.gms.cast.framework.ReconnectionService"/>
+-        <service android:enabled="false" android:exported="false" android:name="androidx.camera.core.impl.MetadataHolderService">
+-            <meta-data android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER" android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
+-        </service>
+-        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+-        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
+-        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+-        <provider android:authorities="com.xiaoji.egggame.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+         <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+-        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+-        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+-        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+         <uses-library android:name="android.ext.adservices" android:required="false"/>
+-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+         <uses-library android:name="androidx.window.extensions" android:required="false"/>
+         <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+-        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+-            <intent-filter>
+-                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+-            </intent-filter>
+-            <intent-filter>
+-                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+-            </intent-filter>
+-            <intent-filter>
+-                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+-            </intent-filter>
+-            <intent-filter>
+-                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+-            </intent-filter>
+-        </receiver>
+-        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+-            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+-        </service>
+-        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+-        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+-        <provider android:authorities="com.xiaoji.egggame.andoFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="ando.file.core.FileProvider">
++        <provider android:authorities="gamehub.lite.andoFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="ando.file.core.FileProvider">
+             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/ando_paths"/>
+         </provider>
+         <activity android:exported="false" android:name="com.xiaoji.sdk.debug.GcmDebugActivity" android:screenOrientation="landscape"/>
+         <activity android:exported="false" android:name="com.xiaoji.sdk.debug.GcmVibrationMotorActivity" android:screenOrientation="landscape"/>
+         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+-        <activity android:configChanges="locale|keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize|density|layoutDirection|fontScale" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+-        <activity android:configChanges="locale|keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize|density|layoutDirection|fontScale" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+-        <activity android:configChanges="locale|keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize|density|layoutDirection|fontScale" android:exported="true" android:launchMode="singleInstance" android:name="com.alipay.sdk.app.PayResultActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+-        <activity android:configChanges="locale|keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize|density|layoutDirection|fontScale" android:exported="true" android:launchMode="singleTask" android:name="com.alipay.sdk.app.AlipayResultActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+-        <activity android:configChanges="locale|keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize|density|layoutDirection|fontScale" android:exported="false" android:name="com.alipay.sdk.app.H5OpenAuthActivity" android:screenOrientation="behind" android:windowSoftInputMode="stateHidden|adjustResize"/>
+-        <activity android:configChanges="locale|keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize|density|layoutDirection|fontScale" android:exported="false" android:name="com.alipay.sdk.app.APayEntranceActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+-        <activity android:exported="true" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@style/JPushDialogStyle">
++        <activity android:label="@string/adb_pairing" android:name="com.xiaoji.wifi.adb.AdbPairingTutorialActivity"/>
++        <activity android:excludeFromRecents="true" android:exported="true" android:name="bin.mt.file.content.MTDataFilesWakeUpActivity" android:noHistory="true" android:taskAffinity="com.xiaoji.egggame.MTDataFilesWakeUp"/>
++        <provider android:authorities="gamehub.lite.MTDataFilesProvider" android:exported="true" android:grantUriPermissions="true" android:name="bin.mt.file.content.MTDataFilesProvider" android:permission="android.permission.MANAGE_DOCUMENTS">
+             <intent-filter>
+-                <category android:name="android.intent.category.DEFAULT"/>
+-                <action android:name="cn.jpush.android.ui.PopWinActivity"/>
+-                <category android:name="com.xiaoji.egggame"/>
++                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+             </intent-filter>
+-        </activity>
+-        <activity android:configChanges="keyboardHidden|orientation" android:exported="true" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:style/Theme.NoTitleBar">
+-            <intent-filter>
+-                <action android:name="cn.jpush.android.ui.PushActivity"/>
+-                <category android:name="android.intent.category.DEFAULT"/>
+-                <category android:name="com.xiaoji.egggame"/>
+-            </intent-filter>
+-        </activity>
+-        <service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+-            <intent-filter>
+-                <action android:name="cn.jpush.android.intent.REGISTER"/>
+-                <action android:name="cn.jpush.android.intent.REPORT"/>
+-                <action android:name="cn.jpush.android.intent.PushService"/>
+-                <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
+-            </intent-filter>
+-        </service>
+-        <receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+-            <intent-filter android:priority="1000">
+-                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>
+-                <category android:name="com.xiaoji.egggame"/>
+-            </intent-filter>
+-        </receiver>
+-        <receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver"/>
+-        <receiver android:exported="false" android:name="cn.jpush.android.service.SchedulerReceiver"/>
+-        <provider android:authorities="com.xiaoji.egggame.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider" android:process=":pushcore"/>
+-        <activity android:exported="true" android:name="cn.jpush.android.service.JNotifyActivity" android:taskAffinity="" android:theme="@style/JPushTheme">
+-            <intent-filter>
+-                <action android:name="cn.jpush.android.intent.JNotifyActivity"/>
+-                <category android:name="android.intent.category.DEFAULT"/>
+-                <category android:name="com.xiaoji.egggame"/>
+-            </intent-filter>
+-        </activity>
+-        <activity android:exported="true" android:name="cn.android.service.JTransitActivity" android:taskAffinity="" android:theme="@style/JPushTheme">
+-            <intent-filter>
+-                <action android:name="cn.android.service.JTransitActivity"/>
+-                <category android:name="android.intent.category.DEFAULT"/>
+-                <category android:name="com.xiaoji.egggame"/>
+-            </intent-filter>
+-        </activity>
+-        <receiver android:exported="false" android:name="cn.jpush.android.asus.AsusPushMessageReceiver"/>
+-        <meta-data android:name="JPUSH_CHANNEL" android:value="default"/>
+-        <meta-data android:name="JPUSH_APPKEY" android:value="fdeb83da9ad2f3e16b983fde"/>
+-        <provider android:authorities="com.xiaoji.egggame.jiguang.InitProvider" android:exported="false" android:name="cn.jpush.android.service.InitProvider" android:readPermission="com.xiaoji.egggame.permission.JPUSH_MESSAGE" android:writePermission="com.xiaoji.egggame.permission.JPUSH_MESSAGE"/>
+-        <activity android:label="@string/adb_pairing" android:name="com.xiaoji.wifi.adb.AdbPairingTutorialActivity"/>
+-        <service android:enabled="true" android:exported="false" android:foregroundServiceType="connectedDevice" android:name="com.xiaoji.wifi.adb.AdbPairingService"/>
++        </provider>
+     </application>
+ </manifest>

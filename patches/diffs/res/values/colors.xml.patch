@@ -1,0 +1,11 @@
+--- a/res/values/colors.xml
++++ b/res/values/colors.xml
+@@ -137,7 +137,7 @@
+     <color name="comm_color_transparent">#00000000</color>
+     <color name="comm_comm_dialog_bg">#fff7f7f7</color>
+     <color name="comm_default_bg">#fff4f5f7</color>
+-    <color name="comm_dialog_background">#ff191a1c</color>
++    <color name="comm_dialog_background">#ff111827</color>
+     <color name="comm_gradient_end_color">#fffd7bab</color>
+     <color name="comm_gradient_start_color">#ffffa699</color>
+     <color name="comm_gray_d5_a03">#4cd5d5d5</color>

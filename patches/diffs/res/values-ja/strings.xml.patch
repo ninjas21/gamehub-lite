@@ -1,0 +1,40 @@
+--- a/res/values-ja/strings.xml
++++ b/res/values-ja/strings.xml
+@@ -1204,7 +1204,7 @@
+     <string name="llauncher_home_mobile_game_tips">モバイルゲームを追加・管理</string>
+     <string name="llauncher_home_pc_add_device">PCを接続</string>
+     <string name="llauncher_home_pc_emulator_add_game">PCゲームをインポート</string>
+-    <string name="llauncher_home_pc_emulator_join_us_tips">ケンタッキー公式ゲームコミュニティへ参加！最新情報をチェック >>></string>
++    <string name="llauncher_home_pc_emulator_join_us_tips">テレメトリー削除と裏側のレポートを読む >>></string>
+     <string name="llauncher_home_pc_emulator_tips">PCゲームをスマホで楽しもう</string>
+     <string name="llauncher_home_pc_link_tips">PCゲームをスマホにストリーミング、どこでもプレイ</string>
+     <string name="llauncher_home_pc_link_title">PC Link リモートプレイ</string>
+@@ -1253,8 +1253,8 @@
+     <string name="llauncher_main_page_menu_dialog_hide">ゲームを非表示</string>
+     <string name="llauncher_main_page_menu_dialog_title">ゲームに対して何を行いますか？</string>
+     <string name="llauncher_main_page_menu_dialog_view_detail">ゲーム詳細を見る</string>
+-    <string name="llauncher_main_page_title_explore">探す</string>
+-    <string name="llauncher_main_page_title_my">マイ</string>
++    <string name="llauncher_main_page_title_explore">無料ゲーム</string>
++    <string name="llauncher_main_page_title_my">ダッシュボード</string>
+     <string name="llauncher_main_page_title_platform">ゲームを探す</string>
+     <string name="llauncher_main_page_top_button_goto_game">続きから</string>
+     <string name="llauncher_main_page_top_button_open_detail">詳細へ</string>
+@@ -2881,7 +2881,7 @@
+     <string name="wheel_description">ホイール押下で【視点モード】と【ポインタモード】を切り替えます。リストスクロールしたい位置にアイコンを移動させ、【視点モード】ではホイール回すだけでスクロールできます。【ポインタモード】ではホイールはポインタ位置のみ有効です。</string>
+     <string name="wheel_orientation">ホイール方向</string>
+     <string name="wheel_sensitivity">ホイール感度</string>
+-    <string name="winemu_account_value">アカウント価値(￥)</string>
++    <string name="winemu_account_value">アカウント価値 ($)</string>
+     <string name="winemu_add">追加</string>
+     <string name="winemu_add_config">構成を追加</string>
+     <string name="winemu_add_to_game_lib">ゲームライブラリに追加</string>
+@@ -2990,7 +2990,7 @@
+     <string name="winemu_game_library">ゲームライブラリ</string>
+     <string name="winemu_game_manage">ゲーム管理</string>
+     <string name="winemu_game_num">ゲーム数</string>
+-    <string name="winemu_game_price">ゲーム価格(￥)</string>
++    <string name="winemu_game_price">ゲーム価格 ($)</string>
+     <string name="winemu_get_config_detail_failure">構成詳細の取得に失敗しました</string>
+     <string name="winemu_gpu_driver">GPUドライバ</string>
+     <string name="winemu_guide_login_tips">Steamプレイデータを同期するにはSteamアカウントにログインしてください</string>

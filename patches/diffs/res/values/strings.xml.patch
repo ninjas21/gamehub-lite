@@ -1,0 +1,93 @@
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -134,7 +134,7 @@
+     <string name="ando_str_single_file_size">超过限定文件大小</string>
+     <string name="ando_str_single_file_type_mismatch">文件类型不匹配</string>
+     <string name="androidx_startup">androidx.startup</string>
+-    <string name="app_name">GameHub</string>
++    <string name="app_name">GameHub Lite</string>
+     <string name="app_update_background_downloading">Downloading new version in the background…</string>
+     <string name="app_update_click_hint">Click to install</string>
+     <string name="app_update_close">Close</string>
+@@ -787,7 +787,7 @@
+     <string name="fetching_info">Fetching info</string>
+     <string name="firmware_no_support_gtouch_hint">Current firmware does not support G-Touch. Update firmware before playing</string>
+     <string name="first_save_config_tips">Please save your config first</string>
+-    <string name="follow_system">Follow system</string>
++    <string name="follow_system">Default</string>
+     <string name="force_audio_track">Force audio track</string>
+     <string name="force_enable">Force Enable</string>
+     <string name="fps_120">120 FPS</string>
+@@ -1280,7 +1280,7 @@
+     <string name="llauncher_home_mobile_game_tips">Import mobile games, easy management</string>
+     <string name="llauncher_home_pc_add_device">Connect to your computer</string>
+     <string name="llauncher_home_pc_emulator_add_game">Import PC games</string>
+-    <string name="llauncher_home_pc_emulator_join_us_tips">Join GameHub official community! All the latest player info awaits >>></string>
++    <string name="llauncher_home_pc_emulator_join_us_tips">Read the report on telemetry removed &amp; behind-the-scenes >>></string>
+     <string name="llauncher_home_pc_emulator_tips">Import PC games, play AAA titles on mobile</string>
+     <string name="llauncher_home_pc_link_tips">Stream PC games to your phone, play anywhere</string>
+     <string name="llauncher_home_pc_link_title">PC Link Remote Play</string>
+@@ -1329,8 +1329,8 @@
+     <string name="llauncher_main_page_menu_dialog_hide">Hide game</string>
+     <string name="llauncher_main_page_menu_dialog_title">Please select an action for the games in the list？</string>
+     <string name="llauncher_main_page_menu_dialog_view_detail">View game details</string>
+-    <string name="llauncher_main_page_title_explore">Discover</string>
+-    <string name="llauncher_main_page_title_my">My</string>
++    <string name="llauncher_main_page_title_explore">Free Games</string>
++    <string name="llauncher_main_page_title_my">Dashboard</string>
+     <string name="llauncher_main_page_title_platform">Find games</string>
+     <string name="llauncher_main_page_top_button_goto_game">Continue Game</string>
+     <string name="llauncher_main_page_top_button_open_detail">View Details</string>
+@@ -1505,7 +1505,7 @@
+     <string name="llauncher_setting_notification_title4">Other Notifications</string>
+     <string name="llauncher_setting_notification_title5">Friend Notifications</string>
+     <string name="llauncher_setting_notification_title6">Highlight Notifications</string>
+-    <string name="llauncher_setting_personal_information">Personal Information</string>
++    <string name="llauncher_setting_personal_information">Credits</string>
+     <string name="llauncher_setting_record_bitrat_default">Automatic (Recommended)</string>
+     <string name="llauncher_setting_record_clear_cache">Clear Cache</string>
+     <string name="llauncher_setting_record_desc">By default, a one-minute video is approximately…</string>
+@@ -1517,12 +1517,12 @@
+ · Size 75MB, Resolution 1080p, Frame Rate 30FPS
+ · Size 50MB, Resolution 720p, Frame Rate 30FPS
+ "</string>
+-    <string name="llauncher_setting_record_go_active">Active</string>
++    <string name="llauncher_setting_record_go_active" />
+     <string name="llauncher_setting_record_rate1">Resolution 1080p, Frame Rate 60FPS</string>
+     <string name="llauncher_setting_record_rate2">Resolution 1080p, Frame Rate 30FPS</string>
+     <string name="llauncher_setting_record_rate3">Resolution 720p, Frame Rate 30FPS</string>
+     <string name="llauncher_setting_record_reset">Reset</string>
+-    <string name="llauncher_setting_record_reset_mapping">Reset Mapping Active</string>
++    <string name="llauncher_setting_record_reset_mapping" />
+     <string name="llauncher_setting_record_title1">Record Video</string>
+     <string name="llauncher_setting_record_title2">Format</string>
+     <string name="llauncher_setting_record_title3">Bitrate</string>
+@@ -2230,8 +2230,8 @@
+     <string name="pc_scan_error">Scan Error</string>
+     <string name="pc_select_file">Select File</string>
+     <string name="pc_select_game_folder">Select Game Folder</string>
+-    <string name="pc_setting_item_61">Steam Network Acceleration</string>
+-    <string name="pc_setting_item_61_desc">Provide mitigation for network-restricted regions</string>
++    <string name="pc_setting_item_61" />
++    <string name="pc_setting_item_61_desc" />
+     <string name="pc_setting_item_62">Launch in Windowed Mode</string>
+     <string name="pc_setting_item_62_desc">Run programs in windowed mode, some programs require this option to work properly</string>
+     <string name="pc_setting_page_title">Game Settings</string>
+@@ -3153,7 +3153,7 @@
+     <string name="wheel_description">Press the mouse scroll button to switch between [Camera mode] and [Cursor mode]. Drag and place this icon to the dropdown list on the screen. In [Cursor mode],you can scroll down the list by scroll the scroll wheel of mouse.</string>
+     <string name="wheel_orientation">Wheel Orientation</string>
+     <string name="wheel_sensitivity">Wheel Sensitivity</string>
+-    <string name="winemu_account_value">Account Value (￥)</string>
++    <string name="winemu_account_value">Account Value ($)</string>
+     <string name="winemu_add">Add</string>
+     <string name="winemu_add_config">Add Configurations</string>
+     <string name="winemu_add_to_game_lib">Add To Game Library</string>
+@@ -3262,7 +3262,7 @@
+     <string name="winemu_game_library">Game Library</string>
+     <string name="winemu_game_manage">Game Management</string>
+     <string name="winemu_game_num">Game Count</string>
+-    <string name="winemu_game_price">Game Price(￥)</string>
++    <string name="winemu_game_price">Game Price ($)</string>
+     <string name="winemu_get_config_detail_failure">Failed to obtain the configuration scheme</string>
+     <string name="winemu_gpu_driver">GPU Driver</string>
+     <string name="winemu_guide_login_tips">Sync Steam play data, click to log in to your Steam account</string>

@@ -1,0 +1,22 @@
+# Work directories
+work/
+decompiled/
+
+# Keystore
+keystore/
+
+# APK files
+apk/*.apk
+output/*.apk
+output/*.idsig
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# temp
+patches/stats.txt

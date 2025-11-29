@@ -1,0 +1,22 @@
+--- a/smali_classes2/cn/jiguang/ag/o.smali
++++ b/smali_classes2/cn/jiguang/ag/o.smali
+@@ -1,13 +1,13 @@
+-.class public abstract synthetic Lcn/jiguang/ag/o;
++.class public Lcn/jiguang/ag/o;
+ .super Ljava/lang/Object;
+-.source "SourceFile"
++.source "JPushStub"
+ 
+ 
+ # direct methods
+-.method public static bridge synthetic a(Ljava/lang/Object;)Landroid/telephony/CellIdentityNr;
+-    .locals 0
++.method public static a(Ljava/lang/Object;)Landroid/telephony/CellIdentityNr;
++    .locals 1
+ 
+-    check-cast p0, Landroid/telephony/CellIdentityNr;
++    const/4 v0, 0x0
+ 
+-    return-object p0
++    return-object v0
+ .end method

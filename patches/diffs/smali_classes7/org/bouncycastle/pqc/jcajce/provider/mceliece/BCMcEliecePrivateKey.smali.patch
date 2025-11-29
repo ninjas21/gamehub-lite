@@ -1,0 +1,20 @@
+--- a/smali_classes7/org/bouncycastle/pqc/jcajce/provider/mceliece/BCMcEliecePrivateKey.smali
++++ b/smali_classes7/org/bouncycastle/pqc/jcajce/provider/mceliece/BCMcEliecePrivateKey.smali
+@@ -209,15 +209,12 @@
+     new-instance v2, Lorg/bouncycastle/asn1/pkcs/PrivateKeyInfo;
+ 
+     invoke-direct {v2, v1, v8}, Lorg/bouncycastle/asn1/pkcs/PrivateKeyInfo;-><init>(Lorg/bouncycastle/asn1/x509/AlgorithmIdentifier;Lorg/bouncycastle/asn1/ASN1Encodable;)V
+-    :try_end_0
+-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+ 
+-    :try_start_1
+     invoke-virtual {v2}, Lorg/bouncycastle/asn1/ASN1Object;->getEncoded()[B
+ 
+     move-result-object v0
+-    :try_end_1
+-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
++    :try_end_0
++    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+ 
+     :catch_0
+     return-object v0

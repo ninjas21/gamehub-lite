@@ -1,0 +1,18 @@
+--- a/smali_classes4/com/xj/winemu/settings/models/PcGameSettingsKt.smali
++++ b/smali_classes4/com/xj/winemu/settings/models/PcGameSettingsKt.smali
+@@ -1916,15 +1916,7 @@
+     new-instance v8, Lcom/xj/winemu/settings/models/o;
+ 
+     invoke-direct {v8, p0, p1}, Lcom/xj/winemu/settings/models/o;-><init>(Lcom/xj/winemu/settings/PcGameSettingsActivity;Ljava/lang/String;)V
+-
+-    invoke-static/range {v5 .. v10}, Lcom/xj/winemu/settings/models/SettingDSLKt;->m(Lcom/xj/winemu/settings/models/GroupSetting;IILkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
+-
+-    sget v6, Lcom/xj/language/R$string;->pc_setting_item_61:I
+-
+-    new-instance v8, Lcom/xj/winemu/settings/models/p;
+ 
+-    invoke-direct {v8, p0, p1}, Lcom/xj/winemu/settings/models/p;-><init>(Lcom/xj/winemu/settings/PcGameSettingsActivity;Ljava/lang/String;)V
+-
+     invoke-static/range {v5 .. v10}, Lcom/xj/winemu/settings/models/SettingDSLKt;->m(Lcom/xj/winemu/settings/models/GroupSetting;IILkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
+ 
+     invoke-static {p0}, Landroidx/lifecycle/LifecycleOwnerKt;->a(Landroidx/lifecycle/LifecycleOwner;)Landroidx/lifecycle/LifecycleCoroutineScope;

@@ -1,0 +1,11 @@
+--- a/smali_classes5/com/xj/module_pcstream/view/PcStreamCheckNetDialog$onCreateDialog$3$1.smali
++++ b/smali_classes5/com/xj/module_pcstream/view/PcStreamCheckNetDialog$onCreateDialog$3$1.smali
+@@ -157,7 +157,7 @@
+ 
+     const/4 v1, -0x1
+ 
+-    const-string v2, "landscape-api.vgabc.com"
++    const-string v2, "raw.githubusercontent.com"
+ 
+     invoke-static {v2, v0, v1}, Lcom/streaming/nvstream/jni/StreamingBridge;->testClientConnectivity(Ljava/lang/String;II)I
+ 

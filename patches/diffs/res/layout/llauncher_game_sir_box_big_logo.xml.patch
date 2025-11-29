@@ -1,0 +1,9 @@
+--- a/res/layout/llauncher_game_sir_box_big_logo.xml
++++ b/res/layout/llauncher_game_sir_box_big_logo.xml
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <ImageView android:layout_gravity="center" android:id="@id/iv_game_sir_box_logo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/llanuncher_icon_guide_gamepad" />
++    <ImageView android:layout_gravity="center" android:id="@id/iv_game_sir_box_logo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@android:color/transparent" />
+ </merge>

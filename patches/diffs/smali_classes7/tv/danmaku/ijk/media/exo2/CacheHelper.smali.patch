@@ -1,0 +1,14 @@
+--- a/smali_classes7/tv/danmaku/ijk/media/exo2/CacheHelper.smali
++++ b/smali_classes7/tv/danmaku/ijk/media/exo2/CacheHelper.smali
+@@ -4,9 +4,9 @@
+ 
+ 
+ # static fields
+-.field private static downloadManager:Landroidx/media3/exoplayer/offline/DownloadManager; = null
++.field private static downloadManager:Landroidx/media3/exoplayer/offline/DownloadManager;
+ 
+-.field private static init:Z = false
++.field private static init:Z
+ 
+ 
+ # instance fields

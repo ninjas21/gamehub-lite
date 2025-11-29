@@ -1,0 +1,128 @@
+--- a/smali_classes5/com/xj/landscape/launcher/LandscapeLauncherAppKt.smali
++++ b/smali_classes5/com/xj/landscape/launcher/LandscapeLauncherAppKt.smali
+@@ -40,7 +40,7 @@
+ 
+     const/4 v1, 0x0
+ 
+-    if-eqz p0, :cond_1
++    if-eqz p0, :cond_0
+ 
+     invoke-virtual {v0}, Lcom/xj/common/utils/LogA;->g()V
+ 
+@@ -52,10 +52,6 @@
+ 
+     invoke-virtual {v2, v3, v1}, Lando/file/core/FileOperator;->d(Landroid/app/Application;Z)V
+ 
+-    sget-object v2, Lcom/coder/ffmpeg/jni/FFmpegConfig;->Companion:Lcom/coder/ffmpeg/jni/FFmpegConfig$Companion;
+-
+-    invoke-virtual {v2, v1}, Lcom/coder/ffmpeg/jni/FFmpegConfig$Companion;->setDebug(Z)V
+-
+     sget-object v2, Landroidx/lifecycle/ProcessLifecycleOwner;->i:Landroidx/lifecycle/ProcessLifecycleOwner$Companion;
+ 
+     invoke-virtual {v2}, Landroidx/lifecycle/ProcessLifecycleOwner$Companion;->a()Landroidx/lifecycle/LifecycleOwner;
+@@ -172,60 +168,6 @@
+ 
+     invoke-static {p0}, Lcom/xj/adb/wifiui/XjaInjectControlKt;->i(Landroid/content/Context;)V
+ 
+-    sget-object v2, Lcom/movingcloudgame/movingrtc/TYMovingManager;->Companion:Lcom/movingcloudgame/movingrtc/TYMovingManager$Companion;
+-
+-    invoke-virtual {v2, v3}, Lcom/movingcloudgame/movingrtc/TYMovingManager$Companion;->init(Landroid/app/Application;)Lcom/movingcloudgame/movingrtc/TYMovingManager;
+-
+-    move-result-object v2
+-
+-    invoke-static {}, Lkotlinx/coroutines/CoroutineScopeKt;->b()Lkotlinx/coroutines/CoroutineScope;
+-
+-    move-result-object v3
+-
+-    invoke-static {}, Lkotlinx/coroutines/Dispatchers;->c()Lkotlinx/coroutines/MainCoroutineDispatcher;
+-
+-    move-result-object v4
+-
+-    invoke-virtual {v2, v3, v4}, Lcom/movingcloudgame/movingrtc/TYMovingManager;->setCoroutineScope(Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/CoroutineDispatcher;)Lcom/movingcloudgame/movingrtc/TYMovingManager;
+-
+-    move-result-object v2
+-
+-    const-string v3, ""
+-
+-    invoke-virtual {v2, v3}, Lcom/movingcloudgame/movingrtc/TYMovingManager;->setWssConnectUrl(Ljava/lang/String;)Lcom/movingcloudgame/movingrtc/TYMovingManager;
+-
+-    move-result-object v2
+-
+-    const-wide/16 v3, 0xf
+-
+-    invoke-virtual {v2, v3, v4}, Lcom/movingcloudgame/movingrtc/TYMovingManager;->setWssConnectTimeout(J)Lcom/movingcloudgame/movingrtc/TYMovingManager;
+-
+-    move-result-object v2
+-
+-    const-wide/16 v3, 0x5
+-
+-    invoke-virtual {v2, v3, v4}, Lcom/movingcloudgame/movingrtc/TYMovingManager;->setWssConnectionLostTimeout(J)Lcom/movingcloudgame/movingrtc/TYMovingManager;
+-
+-    move-result-object v2
+-
+-    const/16 v3, 0x3c
+-
+-    invoke-virtual {v2, v3}, Lcom/movingcloudgame/movingrtc/TYMovingManager;->setWssReconnectFrequency(I)Lcom/movingcloudgame/movingrtc/TYMovingManager;
+-
+-    move-result-object v2
+-
+-    const-string v3, "https://hubble.movingcloudgame.com/"
+-
+-    invoke-virtual {v2, v3}, Lcom/movingcloudgame/movingrtc/TYMovingManager;->setServerAddress(Ljava/lang/String;)Lcom/movingcloudgame/movingrtc/TYMovingManager;
+-
+-    move-result-object v2
+-
+-    invoke-virtual {v2, v5}, Lcom/movingcloudgame/movingrtc/TYMovingManager;->setShowLog(Z)Lcom/movingcloudgame/movingrtc/TYMovingManager;
+-
+-    move-result-object v2
+-
+-    invoke-virtual {v2}, Lcom/movingcloudgame/movingrtc/TYMovingManager;->bulid()Lcom/movingcloudgame/movingrtc/TYMovingManager;
+-
+     sget-object v2, Lcom/xj/base/language/GHLocaleManager;->a:Lcom/xj/base/language/GHLocaleManager;
+ 
+     invoke-virtual {v2, p0}, Lcom/xj/base/language/GHLocaleManager;->m(Landroid/content/Context;)Z
+@@ -248,17 +190,6 @@
+ 
+     invoke-virtual {v0, v3}, Lcom/xj/common/utils/LogA;->b(Ljava/lang/String;)V
+ 
+-    if-eqz v2, :cond_0
+-
+-    sget-object v0, Lcom/xj/landscape/launcher/utils/share/ShareLoginUtils;->g:Lcom/xj/landscape/launcher/utils/share/ShareLoginUtils$Companion;
+-
+-    invoke-virtual {v0}, Lcom/xj/landscape/launcher/utils/share/ShareLoginUtils$Companion;->a()Lcom/xj/landscape/launcher/utils/share/ShareLoginUtils;
+-
+-    move-result-object v0
+-
+-    invoke-virtual {v0, p0}, Lcom/xj/landscape/launcher/utils/share/ShareLoginUtils;->h(Landroid/content/Context;)V
+-
+-    :cond_0
+     sget-object p0, Lcom/xj/common/deeplink/GameHubDeepLinkManager;->a:Lcom/xj/common/deeplink/GameHubDeepLinkManager;
+ 
+     sget-object v3, Lcom/xj/common/deeplink/GhDeepLinkPageType;->GameDetail:Lcom/xj/common/deeplink/GhDeepLinkPageType;
+@@ -325,7 +256,7 @@
+ 
+     invoke-static/range {v2 .. v7}, Lcom/xj/common/deeplink/GameHubDeepLinkManager;->o(Lcom/xj/common/deeplink/GameHubDeepLinkManager;Lcom/xj/common/deeplink/GhDeepLinkPageType;Lcom/xj/common/deeplink/DeepLinkHandler;ZILjava/lang/Object;)V
+ 
+-    :cond_1
++    :cond_0
+     const-class p0, Lcom/xj/steam/api/ISteamService;
+ 
+     new-array v0, v1, [Ljava/lang/Object;
+@@ -336,7 +267,7 @@
+ 
+     check-cast p0, Lcom/xj/steam/api/ISteamService;
+ 
+-    if-eqz p0, :cond_2
++    if-eqz p0, :cond_1
+ 
+     sget-object v0, Lcom/xj/common/config/AppConfig;->a:Lcom/xj/common/config/AppConfig$Companion;
+ 
+@@ -346,7 +277,7 @@
+ 
+     invoke-interface {p0, v0}, Lcom/xj/steam/api/ISteamService;->b(Z)V
+ 
+-    :cond_2
++    :cond_1
+     return-void
+ .end method
+ 

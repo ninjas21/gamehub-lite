@@ -1,0 +1,14 @@
+--- a/smali_classes7/org/repackage/com/meizu/flyme/openidsdk/b.smali
++++ b/smali_classes7/org/repackage/com/meizu/flyme/openidsdk/b.smali
+@@ -4,9 +4,9 @@
+ 
+ 
+ # static fields
+-.field private static volatile e:Lorg/repackage/com/meizu/flyme/openidsdk/b; = null
++.field private static volatile e:Lorg/repackage/com/meizu/flyme/openidsdk/b;
+ 
+-.field private static f:Z = false
++.field private static f:Z
+ 
+ 
+ # instance fields

@@ -1,0 +1,12 @@
+--- a/res/values/styles.xml
++++ b/res/values/styles.xml
+@@ -3067,9 +3067,6 @@
+     <style name="CheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+         <item name="android:textSize">@dimen/sp_16</item>
+     </style>
+-    <style name="CloudProgressStyle" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+-        <item name="android:progressDrawable">@drawable/cloud_progress_bar_style</item>
+-    </style>
+     <style name="ComboBox">
+         <item name="android:textSize">@dimen/mw_14sp</item>
+         <item name="android:ellipsize">end</item>

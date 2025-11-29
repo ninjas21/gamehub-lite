@@ -1,0 +1,11 @@
+--- a/smali_classes4/com/xj/common/R$id.smali
++++ b/smali_classes4/com/xj/common/R$id.smali
+@@ -354,6 +354,8 @@
+ .field public static final tvTitle:I = 0x7f0a0c6f
+ 
+ .field public static final tv_back:I = 0x7f0a0c8f
++
++.field public static final tv_battery_percent:I = 0x7f0a0e7b
+ 
+ .field public static final tv_bpv_pre_launching_game_launching:I = 0x7f0a0c92
+ 

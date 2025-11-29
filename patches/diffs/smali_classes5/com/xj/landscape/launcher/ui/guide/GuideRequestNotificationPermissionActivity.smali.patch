@@ -1,0 +1,19 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/guide/GuideRequestNotificationPermissionActivity.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/guide/GuideRequestNotificationPermissionActivity.smali
+@@ -814,15 +814,9 @@
+ 
+ .method public initView(Landroid/os/Bundle;)V
+     .locals 2
+-
+-    const/4 p1, 0x0
+-
+-    const/4 v0, 0x3
+ 
+-    const/4 v1, 0x0
++    invoke-virtual {p0}, Lcom/xj/landscape/launcher/ui/guide/GuideRequestNotificationPermissionActivity;->finish()V
+ 
+-    invoke-static {p0, v1, p1, v0, p1}, Lcom/xj/base/base/activity/BaseVmActivity;->enableImmersionBar$default(Lcom/xj/base/base/activity/BaseVmActivity;ZLcom/gyf/immersionbar/BarHide;ILjava/lang/Object;)V
+-
+     return-void
+ .end method
+ 

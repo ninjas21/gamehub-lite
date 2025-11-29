@@ -1,0 +1,62 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/main/me/childlist/GameChildListView$loadData$1.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/main/me/childlist/GameChildListView$loadData$1.smali
+@@ -196,7 +196,7 @@
+ 
+     move-result-object p1
+ 
+-    if-eqz p1, :cond_4
++    goto :goto_1
+ 
+     sget-object v4, Lcom/xj/landscape/launcher/data/repository/NewsRepo;->a:Lcom/xj/landscape/launcher/data/repository/NewsRepo;
+ 
+@@ -254,21 +254,21 @@
+ 
+     if-eqz p1, :cond_3
+ 
+-    goto :goto_1
++    goto :goto_2
+ 
+     :cond_3
+     invoke-static {}, Lkotlin/collections/CollectionsKt;->m()Ljava/util/List;
+ 
+     move-result-object p1
+ 
+-    goto :goto_1
++    goto :goto_2
+ 
+-    :cond_4
++    :goto_1
+     invoke-static {}, Lkotlin/collections/CollectionsKt;->m()Ljava/util/List;
+ 
+     move-result-object p1
+ 
+-    :goto_1
++    :goto_2
+     iget-object v0, p0, Lcom/xj/landscape/launcher/ui/main/me/childlist/GameChildListView$loadData$1;->this$0:Lcom/xj/landscape/launcher/ui/main/me/childlist/GameChildListView;
+ 
+     move-object v1, p1
+@@ -289,20 +289,20 @@
+ 
+     move-result v0
+ 
+-    if-ne v0, v3, :cond_5
++    if-ne v0, v3, :cond_4
+ 
+     iget-object v0, p0, Lcom/xj/landscape/launcher/ui/main/me/childlist/GameChildListView$loadData$1;->this$0:Lcom/xj/landscape/launcher/ui/main/me/childlist/GameChildListView;
+ 
+     invoke-virtual {v0, p1}, Lcom/xj/landscape/launcher/ui/main/me/childlist/ChildListView;->j(Ljava/util/List;)V
+ 
+-    goto :goto_2
++    goto :goto_3
+ 
+-    :cond_5
++    :cond_4
+     iget-object v0, p0, Lcom/xj/landscape/launcher/ui/main/me/childlist/GameChildListView$loadData$1;->this$0:Lcom/xj/landscape/launcher/ui/main/me/childlist/GameChildListView;
+ 
+     invoke-virtual {v0, p1}, Lcom/xj/landscape/launcher/ui/main/me/childlist/ChildListView;->a(Ljava/util/List;)V
+ 
+-    :goto_2
++    :goto_3
+     iget-object p1, p0, Lcom/xj/landscape/launcher/ui/main/me/childlist/GameChildListView$loadData$1;->this$0:Lcom/xj/landscape/launcher/ui/main/me/childlist/GameChildListView;
+ 
+     invoke-static {p1}, Lcom/xj/landscape/launcher/ui/main/me/childlist/GameChildListView;->k(Lcom/xj/landscape/launcher/ui/main/me/childlist/GameChildListView;)I

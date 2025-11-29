@@ -1,0 +1,32 @@
+--- a/smali_classes5/com/xj/landscape/launcher/LandscapeLauncherApp.smali
++++ b/smali_classes5/com/xj/landscape/launcher/LandscapeLauncherApp.smali
+@@ -37,29 +37,11 @@
+     :cond_0
+     sget-object p1, Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame;->a:Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame;
+ 
+-    sget-object v0, Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame$From;->CloudGame:Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame$From;
+-
+-    const-class v1, Lcom/xj/cloud/ui/LauncherCloudGameActivity;
+-
+-    invoke-virtual {p1, v0, v1}, Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame;->u(Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame$From;Ljava/lang/Class;)V
+-
+     sget-object v0, Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame$From;->PcLinkGame:Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame$From;
+ 
+     const-class v1, Lcom/streaming/AppView;
+ 
+     invoke-virtual {p1, v0, v1}, Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame;->u(Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame$From;Ljava/lang/Class;)V
+ 
+-    sget-object v0, Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame$From;->PsLinkGame:Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame$From;
+-
+-    const-class v1, Lcom/xj/psplay/ui/home/HomePSActivity;
+-
+-    invoke-virtual {p1, v0, v1}, Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame;->u(Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame$From;Ljava/lang/Class;)V
+-
+-    sget-object v0, Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame$From;->XBoxWebGame:Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame$From;
+-
+-    const-class v1, Lcom/xj/bussiness/devicemanagement/XboxWebActivity;
+-
+-    invoke-virtual {p1, v0, v1}, Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame;->u(Lcom/xj/common/download/HandleDownloadingTaskWhenLaunchGame$From;Ljava/lang/Class;)V
+-
+     return-void
+ .end method

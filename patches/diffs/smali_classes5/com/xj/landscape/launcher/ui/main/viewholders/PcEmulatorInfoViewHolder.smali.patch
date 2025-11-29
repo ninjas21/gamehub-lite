@@ -1,0 +1,73 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/main/viewholders/PcEmulatorInfoViewHolder.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/main/viewholders/PcEmulatorInfoViewHolder.smali
+@@ -251,41 +251,50 @@
+ .end method
+ 
+ .method public final x()V
+-    .locals 7
+-
+-    iget-object v0, p0, Lcom/xj/landscape/launcher/ui/main/viewholders/PcEmulatorInfoViewHolder;->scope:Lkotlinx/coroutines/CoroutineScope;
+-
+-    if-nez v0, :cond_0
++    .locals 4
+ 
+-    invoke-static {}, Lcom/xj/common/utils/KotlinUseUtilsKt;->a()Lkotlinx/coroutines/CoroutineScope;
++    :try_start_0
++    invoke-virtual {p0}, Lcom/xj/common/view/adapter/VBViewHolder;->f()Landroidx/viewbinding/ViewBinding;
+ 
+     move-result-object v0
+ 
+-    iput-object v0, p0, Lcom/xj/landscape/launcher/ui/main/viewholders/PcEmulatorInfoViewHolder;->scope:Lkotlinx/coroutines/CoroutineScope;
++    check-cast v0, Lcom/xj/landscape/launcher/databinding/LlauncherViewMyTopPlatformPcEmulatorInfoBinding;
+ 
+-    :cond_0
+-    iget-object v1, p0, Lcom/xj/landscape/launcher/ui/main/viewholders/PcEmulatorInfoViewHolder;->scope:Lkotlinx/coroutines/CoroutineScope;
++    invoke-virtual {v0}, Lcom/xj/landscape/launcher/databinding/LlauncherViewMyTopPlatformPcEmulatorInfoBinding;->getRoot()Landroid/view/View;
+ 
+-    if-eqz v1, :cond_1
++    move-result-object v0
+ 
+-    invoke-static {}, Lkotlinx/coroutines/Dispatchers;->b()Lkotlinx/coroutines/CoroutineDispatcher;
++    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+ 
+-    move-result-object v2
++    move-result-object v0
+ 
+-    new-instance v4, Lcom/xj/landscape/launcher/ui/main/viewholders/PcEmulatorInfoViewHolder$showPromotionalDialog$1;
++    new-instance v1, Landroid/content/Intent;
+ 
+-    const/4 v0, 0x0
++    const-string v2, "android.intent.action.VIEW"
+ 
+-    invoke-direct {v4, v0}, Lcom/xj/landscape/launcher/ui/main/viewholders/PcEmulatorInfoViewHolder$showPromotionalDialog$1;-><init>(Lkotlin/coroutines/Continuation;)V
++    const-string v3, "https://github.com/gamehublite"
++
++    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
++
++    move-result-object v3
++
++    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+ 
+-    const/4 v5, 0x2
++    const/high16 v2, 0x10000000
+ 
+-    const/4 v6, 0x0
++    invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+ 
+-    const/4 v3, 0x0
++    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
++    :try_end_0
++    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+ 
+-    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/BuildersKt;->d(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
++    goto :goto_0
+ 
+-    :cond_1
++    :catch_0
++    move-exception v0
++
++    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
++
++    :goto_0
+     return-void
+ .end method

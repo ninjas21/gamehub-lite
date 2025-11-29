@@ -1,0 +1,11 @@
+--- a/smali_classes4/com/nirvana/tools/logger/UaidTracker.smali
++++ b/smali_classes4/com/nirvana/tools/logger/UaidTracker.smali
+@@ -30,7 +30,7 @@
+ 
+ .field private static final UAID_TRACKER_DATA_VERSION:I = 0x1
+ 
+-.field private static isTackerEnable:Z = false
++.field private static isTackerEnable:Z
+ 
+ .field private static volatile sInstance:Lcom/nirvana/tools/logger/UaidTracker;
+ 

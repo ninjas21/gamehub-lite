@@ -1,0 +1,11 @@
+--- a/smali_classes5/com/xj/mapping/interaction/KeyboardEditService.smali
++++ b/smali_classes5/com/xj/mapping/interaction/KeyboardEditService.smali
+@@ -17,7 +17,7 @@
+ 
+ 
+ # static fields
+-.field public static q:Z = false
++.field public static q:Z
+ 
+ .field public static r:Ljava/util/List;
+ 

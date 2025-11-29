@@ -4,19 +4,201 @@
 
 GameHub Lite is a community-maintained modified version of GameHub for education purposes.
 
-**Note:** This version may display visual inconsistencies and lacks some features (for example “News” and “Free Games” sections) while the community-funded server is being worked on.
-
 ---
 
-## Why this release?
+## GameHub Lite Patcher
 
-- The previous release (v4) became non-functional because the cloud workers it relied upon were taken offline due to privacy concerns.
-- The community is working on a more stable and permanent infrastructure.
-- Meanwhile, this version (v5.0.0) bridges the gap: most core functionality is restored so you can keep using your library without waiting.
+A patching system that transforms GameHub 5.1.0 into GameHub Lite. A privacy-focused, lightweight version with telemetry removed and offline support added.
 
-Expect this repository to be updated soon with a more permanent solution, included a patch file that you can apply to your existing GameHub installation.
+## What is GameHub Lite?
 
----
+GameHub Lite is a modified version of GameHub that:
+
+- **Removes telemetry and tracking** - Umeng analytics, Firebase, JPush, crash reporting
+- **Removes bloat** - Cloud Streaming, Xbox Cloud Gaming, Social features, etc.
+- **Removes account requirement** - Use the app without logging in
+- **Reduces app size** - From 118MB to 52MB (-56%)
+- **Removes unnecessary permissions** - Location, contacts, phone state, etc.
+- **Adds offline support** - Works without constant network connectivity
+- **Changes package name** - `gamehub.lite` for side-by-side installation
+- **Adds custom news page** - Uses community API for updates
+
+## Quick Start
+
+### Prerequisites
+
+Install the required tools:
+
+```bash
+# macOS
+brew install apktool openjdk
+
+# Ubuntu/Debian
+sudo apt install apktool openjdk-17-jdk
+
+# Windows
+# Download apktool from https://apktool.org/
+# Install Java JDK 17+
+```
+
+### Patching
+
+1. Download GameHub 5.1.0 APK and place it at `apk/GameHub-5.1.0.apk`
+
+2. Run the patcher:
+   ```bash
+   ./patch.sh
+   ```
+
+3. Install the output APK:
+   ```bash
+   adb install output/GameHub-Lite.apk
+   ```
+
+## How It Works
+
+The patcher uses a multi-step process:
+
+1. **Decompile** - Uses apktool to decompile the original APK to smali bytecode
+2. **Delete** - Removes telemetry SDKs, unused assets, and tracking libraries
+3. **Patch** - Applies unified diff patches to modify smali code
+4. **Add** - Copies new files (resources, additional smali)
+5. **Rebuild** - Reassembles the APK using apktool
+6. **Sign** - Signs with a debug keystore for installation
+
+## Patch Contents
+
+| Category | Count | Description |
+|----------|-------|-------------|
+| Deletions | 3,385 | Telemetry SDKs, tracking code, unused assets |
+| Additions | 2,856 | New resources, modified assets, new features |
+| Modifications | 223 | Smali code patches for behavior changes |
+
+### Removed Components
+
+- **Native libraries**: libumeng-spy.so, libcrashsdk.so, libalicomphonenumberauthsdk_core.so, etc.
+- **SDKs**: Umeng Analytics, JPush, Firebase Analytics, Tencent login
+- **Assets**: Splash video, auth videos, emoji font (saves ~30MB)
+- **Permissions**: Location, contacts, phone state, ad tracking
+
+### Added Features
+
+- Custom splash/intro video from community CDN
+- Local game ID copy functionality
+- Offline mode improvements
+- News page integration with community API
+
+## For Developers
+
+### Regenerating Patches
+
+If you've modified the Lite APK and want to update the patches:
+
+```bash
+./generate-patches.sh [path/to/original.apk] [path/to/lite.apk]
+```
+
+This will:
+1. Decompile both APKs
+2. Generate diff patches for modified files
+3. Copy new files to patches directory
+4. Create deletion and addition lists
+
+### Patch Directory Structure
+
+```
+patches/
+├── files_to_delete.txt    # List of files to remove
+├── files_to_add.txt       # List of files to add
+├── files_to_patch.txt     # List of files to modify
+├── diffs/                 # Unified diff patches
+│   ├── AndroidManifest.xml.patch
+│   ├── smali/...
+│   └── res/...
+├── new_files/             # New files to add
+│   ├── res/...
+│   └── smali_classes10/...
+└── stats.txt              # Patch statistics
+```
+
+### Modifying Patches
+
+1. Decompile the Lite APK manually:
+   ```bash
+   apktool d apk/GameHub-Lite.apk -o work/lite
+   ```
+
+2. Make your changes to files in `work/lite/`
+
+3. Rebuild and test:
+   ```bash
+   apktool b work/lite -o work/test.apk
+   # Sign and install for testing
+   ```
+
+4. When satisfied, regenerate patches:
+   ```bash
+   ./generate-patches.sh
+   ```
+
+## Troubleshooting
+
+### Patch fails to apply
+
+If patches fail due to APK version mismatch:
+- Ensure you're using GameHub 5.1.0 exactly
+- Check the MD5 hash matches expected value
+- Try regenerating patches with your APK version
+
+### APK won't install
+
+- Uninstall any existing GameHub Lite first
+- Check if device is rooted - some patches may conflict (unlikely)
+
+### Build errors
+
+- Ensure apktool is version 2.8.0+ (`apktool --version`)
+- Check Java version is 17+ (`java -version`)
+- Try cleaning work directory: `rm -rf work/`
+
+## Version Compatibility
+
+| GameHub Version | Patcher Version | Status         |
+|-----------------|-----------------|----------------|
+| 5.1.0 | 1.0 | Supported      |
+| 5.3.3 | - | in development |
+
+## Alternative: ReVanced Patches (WORK IN PROGRESS)
+
+An alternative ReVanced-based patching system is available in the `revanced/` directory. This approach uses the [ReVanced Patcher](https://github.com/ReVanced/revanced-patcher) framework for bytecode-level modifications.
+This doesn't currently support all features of the Lite APK, but you are free to contribute patches for missing features and resolve existing issues.
+
+```bash
+cd revanced
+./apply-patches.sh ../apk/GameHub-5.1.0.apk
+```
+
+See [revanced/README.md](revanced/README.md) for details.
+
+### When to Use Which
+
+| Approach | Best For |
+|----------|----------|
+| **Diff-based** (`./patch.sh`) | Full control, complete SDK removal, simpler maintenance |
+| **ReVanced** (`revanced/`) | ReVanced Manager integration, portable JAR patches |
+
+## License
+
+This project is for educational and personal privacy purposes only. The patches and tooling are provided as-is. GameHub is a product of its respective owners.
+
+## Contributing
+
+1. Fork the repository
+2. Make your changes
+3. Regenerate patches with `./generate-patches.sh`
+4. Test the full patch cycle with `./patch.sh`
+5. Submit a pull request
+
 
 ## Different versions of GameHub Lite
 
@@ -64,3 +246,21 @@ The goal for PUBG is more like **MORE POWER**, since the intention is often to h
     •    Similar to Antutu but slightly less aggressive
     •    Longer sustained performance boost (multi-minute tests)
     •    Memory frequency optimization
+
+## Support
+
+If you have trouble running a game, please see if anyone shared a solution on [EmuReady](https://www.emuready.com) before you ask for help in the Discord server.
+
+For support, discussion and development updates join the [EmuReady Discord server](https://discord.gg/CYhCzApXav).
+
+--- 
+
+## Related Projects
+
+| Repository | Description                                                                                                                                                      |
+|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [gamehub-lite](https://github.com/Producdevity/gamehub-lite) | Main project with pre-built APK releases and patch files                                                                                                         |
+| [gamehub-lite-api](https://github.com/Producdevity/gamehub-lite-api) | Static JSON API hosting component manifests, configuration files, and mock responses that replace the original Chinese servers                                   |
+| [gamehub-lite-worker](https://github.com/Producdevity/gamehub-lite-worker) | Cloudflare Worker API proxy that handles token management, signature regeneration, privacy protection (IP hiding, fingerprint sanitization), and content routing |
+| [gamehub-lite-news](https://github.com/Producdevity/gamehub-lite-news) | News aggregator that collects gaming news from RSS feeds and GitHub releases, transforms them into GameHub's API format                                          |
+| [gamehub-lite-token-refresh](https://github.com/Producdevity/gamehub-lite-token-refresh) | Automated token refresher that uses Mail.tm OTP authentication to maintain valid GameHub tokens, runs every 4 hours via Cloudflare Cron                          |

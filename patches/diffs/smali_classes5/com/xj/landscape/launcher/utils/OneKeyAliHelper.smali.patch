@@ -1,0 +1,11 @@
+--- a/smali_classes5/com/xj/landscape/launcher/utils/OneKeyAliHelper.smali
++++ b/smali_classes5/com/xj/landscape/launcher/utils/OneKeyAliHelper.smali
+@@ -657,7 +657,7 @@
+ 
+     move-result-object v3
+ 
+-    const-string v4, "https://www.xiaoji.com/url/gsw-app-rules"
++    const-string v4, "http://127.0.0.1"
+ 
+     invoke-virtual {v2, v3, v4}, Lcom/mobile/auth/gatewayauth/AuthUIConfig$Builder;->setAppPrivacyOne(Ljava/lang/String;Ljava/lang/String;)Lcom/mobile/auth/gatewayauth/AuthUIConfig$Builder;
+ 

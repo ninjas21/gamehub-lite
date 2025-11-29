@@ -1,0 +1,32 @@
+--- a/smali_classes2/com/google/android/gms/common/internal/GmsClientSupervisor.smali
++++ b/smali_classes2/com/google/android/gms/common/internal/GmsClientSupervisor.smali
+@@ -9,7 +9,7 @@
+ 
+ 
+ # static fields
+-.field static zza:Landroid/os/HandlerThread; = null
++.field static zza:Landroid/os/HandlerThread;
+     .annotation build Landroidx/annotation/Nullable;
+     .end annotation
+ 
+@@ -19,17 +19,17 @@
+ 
+ .field private static final zzb:Ljava/lang/Object;
+ 
+-.field private static zzc:Lcom/google/android/gms/common/internal/zzs; = null
++.field private static zzc:Lcom/google/android/gms/common/internal/zzs;
+     .annotation build Landroidx/annotation/Nullable;
+     .end annotation
+ .end field
+ 
+-.field private static zzd:Ljava/util/concurrent/Executor; = null
++.field private static zzd:Ljava/util/concurrent/Executor;
+     .annotation build Landroidx/annotation/Nullable;
+     .end annotation
+ .end field
+ 
+-.field private static zze:Z = false
++.field private static zze:Z
+ 
+ 
+ # direct methods

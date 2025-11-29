@@ -1,0 +1,11 @@
+--- a/res/layout/comm_dialog_fragment_verify.xml
++++ b/res/layout/comm_dialog_fragment_verify.xml
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <FrameLayout android:tag="layout/comm_dialog_fragment_verify_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+-    <com.hjq.shape.layout.ShapeConstraintLayout android:layout_gravity="center" android:id="@id/common_focus_cl" android:paddingBottom="@dimen/mw_24dp" android:layout_width="@dimen/mw_460dp" android:layout_height="wrap_content" app:shape_radius="@dimen/mw_12dp" app:shape_solidColor="#ff191a1c" app:shape_type="rectangle">
++    <com.hjq.shape.layout.ShapeConstraintLayout android:layout_gravity="center" android:id="@id/common_focus_cl" android:paddingBottom="@dimen/mw_24dp" android:layout_width="@dimen/mw_460dp" android:layout_height="wrap_content" app:shape_radius="@dimen/mw_12dp" app:shape_solidColor="#ff111827" app:shape_type="rectangle">
+         <ImageView android:id="@id/closeIv" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="@dimen/mw_24dp" android:layout_height="@dimen/mw_24dp" android:layout_marginTop="@dimen/mw_12dp" android:src="@drawable/common_verify_dialog_close" android:layout_marginEnd="@dimen/mw_12dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+         <TextView android:textSize="@dimen/mw_16sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mw_40dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+         <TextView android:textSize="@dimen/mw_16sp" android:textColor="@color/comm_red_tips_point" android:gravity="center_horizontal" android:id="@id/highlight_tv" android:layout_width="@dimen/mw_334dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mw_4dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/title_tv" />

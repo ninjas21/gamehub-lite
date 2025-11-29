@@ -1,0 +1,92 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/device/ScanDeviceActivity.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/device/ScanDeviceActivity.smali
+@@ -1478,7 +1478,7 @@
+ 
+     iget-object v0, p0, Lcom/xj/landscape/launcher/ui/device/ScanDeviceActivity;->a:Lcom/xj/bussiness/devicemanagement/entity/DeviceItemEntity;
+ 
+-    if-eqz v0, :cond_4
++    if-eqz v0, :cond_2
+ 
+     invoke-virtual {v0}, Lcom/xj/bussiness/devicemanagement/entity/DeviceItemEntity;->getDevice_type()I
+ 
+@@ -1486,7 +1486,7 @@
+ 
+     const/4 v1, 0x1
+ 
+-    if-eq v0, v1, :cond_3
++    if-eq v0, v1, :cond_1
+ 
+     const/4 v2, 0x2
+ 
+@@ -1512,69 +1512,15 @@
+     invoke-virtual {v0, p0}, Lcom/xj/bussiness/devicemanagement/utils/DeviceManager;->i(Landroid/content/Context;)Z
+ 
+     move-result v0
+-
+-    if-nez v0, :cond_2
+-
+-    invoke-virtual {p0}, Lcom/xj/landscape/launcher/ui/device/ScanDeviceActivity;->e2()V
+-
+-    iget-object p1, p0, Lcom/xj/landscape/launcher/ui/device/ScanDeviceActivity;->e:Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment;
+-
+-    if-nez p1, :cond_1
+-
+-    sget-object p1, Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment;->e:Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment$Companion;
+-
+-    const/4 v0, 0x0
+-
+-    invoke-static {p1, v0, v1, v0}, Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment$Companion;->c(Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment$Companion;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment;
+-
+-    move-result-object p1
+-
+-    iput-object p1, p0, Lcom/xj/landscape/launcher/ui/device/ScanDeviceActivity;->e:Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment;
+-
+-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->d(Ljava/lang/Object;)V
+-
+-    new-instance v0, Lcom/xj/landscape/launcher/ui/device/n;
+-
+-    invoke-direct {v0, p0}, Lcom/xj/landscape/launcher/ui/device/n;-><init>(Lcom/xj/landscape/launcher/ui/device/ScanDeviceActivity;)V
+-
+-    invoke-virtual {p1, v0}, Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment;->g0(Lkotlin/jvm/functions/Function0;)V
+-
+-    :cond_1
+-    iget-object p1, p0, Lcom/xj/landscape/launcher/ui/device/ScanDeviceActivity;->e:Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment;
+-
+-    if-eqz p1, :cond_4
+-
+-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->d(Ljava/lang/Object;)V
+-
+-    invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->isAdded()Z
+-
+-    move-result p1
+-
+-    if-nez p1, :cond_4
+-
+-    iget-object p1, p0, Lcom/xj/landscape/launcher/ui/device/ScanDeviceActivity;->e:Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment;
+-
+-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->d(Ljava/lang/Object;)V
+-
+-    invoke-virtual {p0}, Lcom/xj/base/base/fragment/safely/SafelyActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
+-
+-    move-result-object v0
+-
+-    const-string v1, "RequestBlePermissionDialogFragment"
+-
+-    invoke-virtual {p1, v0, v1}, Landroidx/fragment/app/DialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
+-
+-    goto :goto_0
+ 
+-    :cond_2
+     invoke-virtual {p0, p1}, Lcom/xj/landscape/launcher/ui/device/ScanDeviceActivity;->V1(Z)V
+ 
+     goto :goto_0
+ 
+-    :cond_3
++    :cond_1
+     invoke-virtual {p0, p1}, Lcom/xj/landscape/launcher/ui/device/ScanDeviceActivity;->V1(Z)V
+ 
+-    :cond_4
++    :cond_2
+     :goto_0
+     return-void
+ .end method

@@ -1,0 +1,16 @@
+--- a/smali_classes4/com/xj/common/data/list/CardLineData.smali
++++ b/smali_classes4/com/xj/common/data/list/CardLineData.smali
+@@ -182,11 +182,11 @@
+ 
+     sput-object v0, Lcom/xj/common/data/list/CardLineData;->Companion:Lcom/xj/common/data/list/CardLineData$Companion;
+ 
+-    const/4 v0, 0x2
++    const/16 v0, 0x3e7
+ 
+     sput v0, Lcom/xj/common/data/list/CardLineData;->PS_LINK_ENTRY_ID:I
+ 
+-    const/4 v0, 0x3
++    const/16 v0, 0x3e8
+ 
+     sput v0, Lcom/xj/common/data/list/CardLineData;->PC_LINK_ENTRY_ID:I
+ 

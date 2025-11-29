@@ -1,0 +1,24 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/guide/GuideKeypadOperationActivity.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/guide/GuideKeypadOperationActivity.smali
+@@ -119,10 +119,6 @@
+     const/4 p1, 0x1
+ 
+     invoke-virtual {p0, p1}, Lcom/xj/common/user/UserManager;->setCloseGuideHighlight(Z)V
+-
+-    const-class p0, Lcom/xj/landscape/launcher/ui/guide/GuideRequestNotificationPermissionActivity;
+-
+-    invoke-static {p0}, Lcom/blankj/utilcode/util/ActivityUtils;->q(Ljava/lang/Class;)V
+ 
+     :goto_1
+     sget-object p0, Lkotlin/Unit;->a:Lkotlin/Unit;
+@@ -404,10 +400,6 @@
+     const/4 v1, 0x1
+ 
+     invoke-virtual {v0, v1}, Lcom/xj/common/user/UserManager;->setCloseGuideHighlight(Z)V
+-
+-    const-class v0, Lcom/xj/landscape/launcher/ui/guide/GuideRequestNotificationPermissionActivity;
+-
+-    invoke-static {v0}, Lcom/blankj/utilcode/util/ActivityUtils;->q(Ljava/lang/Class;)V
+ 
+     return-void
+ .end method

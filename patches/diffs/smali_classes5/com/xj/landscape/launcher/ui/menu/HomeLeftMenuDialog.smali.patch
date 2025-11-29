@@ -1,0 +1,96 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/menu/HomeLeftMenuDialog.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/menu/HomeLeftMenuDialog.smali
+@@ -1155,7 +1155,7 @@
+ 
+     move-result v4
+ 
+-    if-nez v4, :cond_1
++    goto :goto_0
+ 
+     new-instance v4, Lcom/xj/landscape/launcher/ui/menu/HomeLeftMenuDialog$MenuItem;
+ 
+@@ -1183,73 +1183,16 @@
+ 
+     invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+ 
+-    :cond_1
++    :goto_0
+     invoke-virtual {v3}, Lcom/xj/common/config/AppConfig$Companion;->l()Z
+ 
+     move-result v4
+-
+-    if-nez v4, :cond_2
+-
+-    new-instance v4, Lcom/xj/landscape/launcher/ui/menu/HomeLeftMenuDialog$MenuItem;
+-
+-    sget v14, Lcom/xj/landscape/launcher/R$drawable;->menu_media_normal:I
+-
+-    sget v5, Lcom/xj/language/R$string;->llauncher_media:I
+-
+-    invoke-virtual {v0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+-
+-    move-result-object v15
+-
+-    invoke-static {v15, v11}, Lkotlin/jvm/internal/Intrinsics;->f(Ljava/lang/Object;Ljava/lang/String;)V
+ 
+-    const/16 v17, 0x8
+-
+-    const/16 v18, 0x0
+-
+-    const/4 v13, 0x4
+-
+-    const/16 v16, 0x0
+-
+-    move-object v12, v4
+-
+-    invoke-direct/range {v12 .. v18}, Lcom/xj/landscape/launcher/ui/menu/HomeLeftMenuDialog$MenuItem;-><init>(IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+-
+-    invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+-    :cond_2
+-    new-instance v4, Lcom/xj/landscape/launcher/ui/menu/HomeLeftMenuDialog$MenuItem;
+-
+-    sget v21, Lcom/xj/landscape/launcher/R$drawable;->menu_user_center_normal:I
+-
+-    sget v5, Lcom/xj/language/R$string;->llauncher_user_center:I
+-
+-    invoke-virtual {v0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+-
+-    move-result-object v5
+-
+-    invoke-static {v5, v11}, Lkotlin/jvm/internal/Intrinsics;->f(Ljava/lang/Object;Ljava/lang/String;)V
+-
+-    const/16 v24, 0x8
+-
+-    const/16 v25, 0x0
+-
+-    const/16 v20, 0x5
+-
+-    const/16 v23, 0x0
+-
+-    move-object/from16 v19, v4
+-
+-    move-object/from16 v22, v5
+-
+-    invoke-direct/range {v19 .. v25}, Lcom/xj/landscape/launcher/ui/menu/HomeLeftMenuDialog$MenuItem;-><init>(IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+-
+-    invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+     invoke-virtual {v3}, Lcom/xj/common/config/AppConfig$Companion;->l()Z
+ 
+     move-result v3
+ 
+-    if-nez v3, :cond_3
++    if-nez v3, :cond_1
+ 
+     new-instance v3, Lcom/xj/landscape/launcher/ui/menu/HomeLeftMenuDialog$MenuItem;
+ 
+@@ -1277,7 +1220,7 @@
+ 
+     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+ 
+-    :cond_3
++    :cond_1
+     new-instance v3, Lcom/xj/landscape/launcher/ui/menu/HomeLeftMenuDialog$MenuItem;
+ 
+     sget v14, Lcom/xj/landscape/launcher/R$drawable;->menu_setting_normal:I

@@ -1,0 +1,11 @@
+--- a/smali_classes7/org/bouncycastle/pqc/crypto/newhope/NewHope.smali
++++ b/smali_classes7/org/bouncycastle/pqc/crypto/newhope/NewHope.smali
+@@ -12,7 +12,7 @@
+ 
+ .field public static final SENDB_BYTES:I = 0x800
+ 
+-.field private static final STATISTICAL_TEST:Z = false
++.field private static final STATISTICAL_TEST:Z
+ 
+ 
+ # direct methods

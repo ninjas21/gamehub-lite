@@ -1,0 +1,152 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity.smali
+@@ -1193,72 +1193,52 @@
+ .method public final Q1()V
+     .locals 8
+ 
+-    invoke-virtual {p0}, Lcom/xj/base/base/activity/BaseVmActivity;->getMDataBind()Landroidx/databinding/ViewDataBinding;
++    sget-object v0, Lcom/xj/common/user/UserManager;->INSTANCE:Lcom/xj/common/user/UserManager;
+ 
+-    move-result-object v0
++    const-string v1, "SnoopOranges"
+ 
+-    check-cast v0, Lcom/xj/landscape/launcher/databinding/LlauncherActivityGuideCreateInfoBinding;
++    invoke-virtual {v0, v1}, Lcom/xj/common/user/UserManager;->setNickname(Ljava/lang/String;)V
+ 
+-    iget-object v0, v0, Lcom/xj/landscape/launcher/databinding/LlauncherActivityGuideCreateInfoBinding;->avatarNameTv:Landroid/widget/TextView;
++    invoke-virtual {p0}, Lcom/xj/base/base/activity/BaseVmActivity;->getMDataBind()Landroidx/databinding/ViewDataBinding;
+ 
+-    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+-
+-    move-result-object v0
++    move-result-object v2
+ 
+-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
++    check-cast v2, Lcom/xj/landscape/launcher/databinding/LlauncherActivityGuideCreateInfoBinding;
+ 
+-    move-result-object v0
++    iget-object v2, v2, Lcom/xj/landscape/launcher/databinding/LlauncherActivityGuideCreateInfoBinding;->avatarNameTv:Landroid/widget/TextView;
+ 
+-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
++    invoke-virtual {v2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
++
++    move-result-object v2
+ 
+-    move-result v1
++    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+ 
+-    if-nez v1, :cond_0
++    move-result-object v2
+ 
+-    sget-object v0, Lcom/xj/common/utils/toast/Toaster;->a:Lcom/xj/common/utils/toast/Toaster;
++    invoke-virtual {v0, v2}, Lcom/xj/common/user/UserManager;->setAvatar(Ljava/lang/String;)V
+ 
+-    sget v1, Lcom/xj/language/R$string;->llauncher_profile_no_avatar_hint:I
++    iget-object v0, p0, Lcom/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity;->b:Lcom/xj/landscape/launcher/ui/guide/CreateInfoState;
+ 
+-    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+-
+-    move-result-object v1
++    iput-object v0, p0, Lcom/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity;->a:Lcom/xj/landscape/launcher/ui/guide/CreateInfoState;
+ 
+-    invoke-virtual {v0, v1}, Lcom/xj/common/utils/toast/Toaster;->d(Ljava/lang/String;)V
++    if-eqz v0, :cond_0
+ 
+-    return-void
++    invoke-virtual {v0}, Lcom/xj/landscape/launcher/ui/guide/CreateInfoState;->a()Lcom/xj/landscape/launcher/ui/guide/CreateInfoState;
+ 
+-    :cond_0
+-    new-instance v5, Lcom/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity$postProfileAvatar$1;
+-
+-    const/4 v1, 0x0
+-
+-    invoke-direct {v5, v0, p0, v1}, Lcom/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity$postProfileAvatar$1;-><init>(Ljava/lang/String;Lcom/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity;Lkotlin/coroutines/Continuation;)V
+-
+-    const/4 v6, 0x3
+-
+-    const/4 v7, 0x0
+-
+-    const/4 v3, 0x0
+-
+-    const/4 v4, 0x0
+-
+-    move-object v2, p0
+-
+-    invoke-static/range {v2 .. v7}, Lcom/drake/net/utils/ScopeKt;->p(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;Lkotlinx/coroutines/CoroutineDispatcher;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lcom/drake/net/scope/NetCoroutineScope;
+-
+     move-result-object v0
+ 
+-    new-instance v1, Lcom/xj/landscape/launcher/ui/guide/c0;
++    iput-object v0, p0, Lcom/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity;->b:Lcom/xj/landscape/launcher/ui/guide/CreateInfoState;
+ 
+-    invoke-direct {v1, p0}, Lcom/xj/landscape/launcher/ui/guide/c0;-><init>(Lcom/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity;)V
++    :cond_0
++    iget-object v0, p0, Lcom/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity;->b:Lcom/xj/landscape/launcher/ui/guide/CreateInfoState;
+ 
+-    invoke-virtual {v0, v1}, Lcom/drake/net/scope/AndroidScope;->o(Lkotlin/jvm/functions/Function2;)Lcom/drake/net/scope/AndroidScope;
++    invoke-virtual {p0, v0}, Lcom/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity;->U1(Lcom/xj/landscape/launcher/ui/guide/CreateInfoState;)V
+ 
+     return-void
+ .end method
+ 
+ .method public final S1()V
+-    .locals 8
++    .locals 2
+ 
+     invoke-virtual {p0}, Lcom/xj/base/base/activity/BaseVmActivity;->getMDataBind()Landroidx/databinding/ViewDataBinding;
+ 
+@@ -1276,51 +1256,12 @@
+ 
+     move-result-object v0
+ 
+-    invoke-static {v0}, Lkotlin/text/StringsKt;->r0(Ljava/lang/CharSequence;)Z
++    sget-object v1, Lcom/xj/common/user/UserManager;->INSTANCE:Lcom/xj/common/user/UserManager;
+ 
+-    move-result v1
+-
+-    if-eqz v1, :cond_0
+-
+-    sget-object v0, Lcom/xj/common/utils/toast/Toaster;->a:Lcom/xj/common/utils/toast/Toaster;
+-
+-    sget v1, Lcom/xj/language/R$string;->llauncher_profile_no_username_hint:I
+-
+-    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+-
+-    move-result-object v1
+-
+-    invoke-virtual {v0, v1}, Lcom/xj/common/utils/toast/Toaster;->d(Ljava/lang/String;)V
+-
+-    return-void
+-
+-    :cond_0
+-    new-instance v5, Lcom/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity$postProfileUserName$1;
++    invoke-virtual {v1, v0}, Lcom/xj/common/user/UserManager;->setUsername(Ljava/lang/String;)V
+ 
+-    const/4 v1, 0x0
+-
+-    invoke-direct {v5, v0, p0, v1}, Lcom/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity$postProfileUserName$1;-><init>(Ljava/lang/String;Lcom/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity;Lkotlin/coroutines/Continuation;)V
+-
+-    const/4 v6, 0x3
+-
+-    const/4 v7, 0x0
+-
+-    const/4 v3, 0x0
+-
+-    const/4 v4, 0x0
+-
+-    move-object v2, p0
+-
+-    invoke-static/range {v2 .. v7}, Lcom/drake/net/utils/ScopeKt;->p(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;Lkotlinx/coroutines/CoroutineDispatcher;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lcom/drake/net/scope/NetCoroutineScope;
+-
+-    move-result-object v0
+-
+-    new-instance v1, Lcom/xj/landscape/launcher/ui/guide/l0;
++    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
+ 
+-    invoke-direct {v1, p0}, Lcom/xj/landscape/launcher/ui/guide/l0;-><init>(Lcom/xj/landscape/launcher/ui/guide/GuideCreateInfoActivity;)V
+-
+-    invoke-virtual {v0, v1}, Lcom/drake/net/scope/AndroidScope;->o(Lkotlin/jvm/functions/Function2;)Lcom/drake/net/scope/AndroidScope;
+-
+     return-void
+ .end method
+ 

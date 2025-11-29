@@ -1,0 +1,205 @@
+--- a/smali_classes5/com/xj/mapping/play/dialog/HidModelTipDialog.smali
++++ b/smali_classes5/com/xj/mapping/play/dialog/HidModelTipDialog.smali
+@@ -774,7 +774,7 @@
+ 
+     const/4 v0, 0x0
+ 
+-    if-eqz p1, :cond_2
++    if-eqz p1, :cond_1
+ 
+     const-string v1, "isDisplayGameBtn"
+ 
+@@ -783,40 +783,22 @@
+     move-result v1
+ 
+     iput-boolean v1, p0, Lcom/xj/mapping/play/dialog/HidModelTipDialog;->j:Z
+-
+-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+-
+-    const/16 v2, 0x21
+-
+-    const-string v3, "startInfoModel"
+-
+-    if-lt v1, v2, :cond_1
+-
+-    const-class v1, Lcom/xj/common/entity/StartInfoModel;
+-
+-    invoke-static {p1, v3, v1}, Lcom/google/android/play/core/integrity/a0;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+-
+-    move-result-object p1
+-
+-    check-cast p1, Lcom/xj/common/entity/StartInfoModel;
+ 
+-    goto :goto_0
++    const-string v3, "preview_data"
+ 
+-    :cond_1
+     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+ 
+     move-result-object p1
+ 
+     check-cast p1, Lcom/xj/common/entity/StartInfoModel;
+ 
+-    :goto_0
+     iput-object p1, p0, Lcom/xj/mapping/play/dialog/HidModelTipDialog;->k:Lcom/xj/common/entity/StartInfoModel;
+ 
+-    if-nez p1, :cond_2
++    if-nez p1, :cond_1
+ 
+     return-void
+ 
+-    :cond_2
++    :cond_1
+     const/4 p1, 0x3
+ 
+     const/4 v1, 0x0
+@@ -829,11 +811,11 @@
+ 
+     check-cast p1, Lcom/xj/mapping/databinding/DialogHidModelPopupBinding;
+ 
+-    if-eqz p1, :cond_3
++    if-eqz p1, :cond_2
+ 
+     iget-object p1, p1, Lcom/xj/mapping/databinding/DialogHidModelPopupBinding;->btnClose:Lcom/hjq/shape/view/ShapeImageView;
+ 
+-    if-eqz p1, :cond_3
++    if-eqz p1, :cond_2
+ 
+     new-instance v1, Lz1/c;
+ 
+@@ -841,20 +823,20 @@
+ 
+     invoke-virtual {p1, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+ 
+-    :cond_3
++    :cond_2
+     invoke-direct {p0}, Lcom/xj/mapping/play/dialog/HidModelTipDialog;->C0()V
+ 
+     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->getDialog()Landroid/app/Dialog;
+ 
+     move-result-object p1
+ 
+-    if-eqz p1, :cond_4
++    if-eqz p1, :cond_3
+ 
+     invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+ 
+     move-result-object p1
+ 
+-    if-eqz p1, :cond_4
++    if-eqz p1, :cond_3
+ 
+     const-string v1, "#99000000"
+ 
+@@ -868,12 +850,12 @@
+ 
+     invoke-virtual {p1, v2}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+ 
+-    :cond_4
++    :cond_3
+     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->getDialog()Landroid/app/Dialog;
+ 
+     move-result-object p1
+ 
+-    if-eqz p1, :cond_5
++    if-eqz p1, :cond_4
+ 
+     new-instance v1, Lz1/d;
+ 
+@@ -881,7 +863,7 @@
+ 
+     invoke-virtual {p1, v1}, Landroid/app/Dialog;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
+ 
+-    :cond_5
++    :cond_4
+     const-string p1, "DeviceTipsManager"
+ 
+     invoke-static {p1}, Lcom/blankj/utilcode/util/SPUtils;->g(Ljava/lang/String;)Lcom/blankj/utilcode/util/SPUtils;
+@@ -906,11 +888,11 @@
+ 
+     check-cast v0, Lcom/xj/mapping/databinding/DialogHidModelPopupBinding;
+ 
+-    if-eqz v0, :cond_6
++    if-eqz v0, :cond_5
+ 
+     iget-object v0, v0, Lcom/xj/mapping/databinding/DialogHidModelPopupBinding;->tvNoMoreReminders:Lcom/hjq/shape/view/ShapeTextView;
+ 
+-    if-eqz v0, :cond_6
++    if-eqz v0, :cond_5
+ 
+     xor-int/lit8 p1, p1, 0x1
+ 
+@@ -920,12 +902,12 @@
+ 
+     invoke-virtual {v0, p1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+ 
+-    :cond_6
++    :cond_5
+     invoke-virtual {p0}, Lcom/xj/mapping/play/dialog/HidModelTipDialog;->G0()V
+ 
+     iget-boolean p1, p0, Lcom/xj/mapping/play/dialog/HidModelTipDialog;->j:Z
+ 
+-    if-nez p1, :cond_8
++    if-nez p1, :cond_7
+ 
+     invoke-virtual {p0}, Lcom/xj/common/dialog/BaseDialogFragment;->d0()Landroidx/databinding/ViewDataBinding;
+ 
+@@ -933,39 +915,39 @@
+ 
+     check-cast p1, Lcom/xj/mapping/databinding/DialogHidModelPopupBinding;
+ 
+-    if-eqz p1, :cond_7
++    if-eqz p1, :cond_6
+ 
+     iget-object p1, p1, Lcom/xj/mapping/databinding/DialogHidModelPopupBinding;->btnTouchPlay:Lcom/hjq/shape/layout/ShapeLinearLayout;
+ 
+-    if-eqz p1, :cond_7
++    if-eqz p1, :cond_6
+ 
+     invoke-static {p1}, Lcom/xj/base/ext/BaseViewExtKt;->a(Landroid/view/View;)V
+ 
+-    :cond_7
++    :cond_6
+     invoke-virtual {p0}, Lcom/xj/common/dialog/BaseDialogFragment;->d0()Landroidx/databinding/ViewDataBinding;
+ 
+     move-result-object p1
+ 
+     check-cast p1, Lcom/xj/mapping/databinding/DialogHidModelPopupBinding;
+ 
+-    if-eqz p1, :cond_9
++    if-eqz p1, :cond_8
+ 
+     iget-object p1, p1, Lcom/xj/mapping/databinding/DialogHidModelPopupBinding;->tvNoMoreRemindersTips:Landroid/widget/TextView;
+ 
+-    if-eqz p1, :cond_9
++    if-eqz p1, :cond_8
+ 
+     invoke-static {p1}, Lcom/xj/base/ext/BaseViewExtKt;->a(Landroid/view/View;)V
+ 
+-    goto :goto_1
++    goto :goto_0
+ 
+-    :cond_8
++    :cond_7
+     sget-object p1, Lcom/xj/common/view/floatview/MenuFloatView;->o:Lcom/xj/common/view/floatview/MenuFloatView$Companion;
+ 
+     invoke-virtual {p1, p0}, Lcom/xj/common/view/floatview/MenuFloatView$Companion;->h(Lcom/xj/common/dialog/BaseDialogFragment;)Lcom/xj/common/view/floatview/MenuFloatView;
+ 
+     move-result-object p1
+ 
+-    if-eqz p1, :cond_9
++    if-eqz p1, :cond_8
+ 
+     new-instance v0, Lcom/xj/common/view/floatview/MenuItem;
+ 
+@@ -997,8 +979,8 @@
+ 
+     invoke-virtual {p1, v0}, Lcom/xj/common/view/floatview/MenuFloatView;->E([Lcom/xj/common/view/floatview/MenuItem;)Lcom/xj/common/view/floatview/MenuFloatView;
+ 
+-    :cond_9
+-    :goto_1
++    :cond_8
++    :goto_0
+     return-void
+ .end method
+ 

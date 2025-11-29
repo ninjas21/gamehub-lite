@@ -1,0 +1,11 @@
+--- a/smali_classes5/com/xj/standalone/steam/wrapper/apis/XjSteamPlayerApi.smali
++++ b/smali_classes5/com/xj/standalone/steam/wrapper/apis/XjSteamPlayerApi.smali
+@@ -63,7 +63,7 @@
+ 
+     if-eqz v0, :cond_1
+ 
+-    move v6, v2
++    move v6, v1
+ 
+     goto :goto_1
+ 

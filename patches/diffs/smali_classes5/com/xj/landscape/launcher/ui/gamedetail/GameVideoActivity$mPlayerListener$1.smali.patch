@@ -1,0 +1,13 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/gamedetail/GameVideoActivity$mPlayerListener$1.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/gamedetail/GameVideoActivity$mPlayerListener$1.smali
+@@ -100,6 +100,10 @@
+ 
+     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+ 
++    iget-object p1, p0, Lcom/xj/landscape/launcher/ui/gamedetail/GameVideoActivity$mPlayerListener$1;->a:Lcom/xj/landscape/launcher/ui/gamedetail/GameVideoActivity;
++
++    invoke-static {p1}, Lcom/xj/landscape/launcher/ui/gamedetail/GameVideoActivity;->I1(Lcom/xj/landscape/launcher/ui/gamedetail/GameVideoActivity;)V
++
+     :goto_0
+     return-void
+ .end method

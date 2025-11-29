@@ -1,0 +1,11 @@
+--- a/smali_classes2/com/bumptech/glide/util/pool/GlideTrace.smali
++++ b/smali_classes2/com/bumptech/glide/util/pool/GlideTrace.smali
+@@ -8,7 +8,7 @@
+ 
+ .field private static final MAX_LENGTH:I = 0x7f
+ 
+-.field private static final TRACING_ENABLED:Z = false
++.field private static final TRACING_ENABLED:Z
+ 
+ 
+ # direct methods

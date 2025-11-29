@@ -1,0 +1,17 @@
+--- a/smali_classes2/com/coder/ffmpeg/jni/FFmpegConfig.smali
++++ b/smali_classes2/com/coder/ffmpeg/jni/FFmpegConfig.smali
+@@ -33,14 +33,6 @@
+ 
+     sput-object v0, Lcom/coder/ffmpeg/jni/FFmpegConfig;->Companion:Lcom/coder/ffmpeg/jni/FFmpegConfig$Companion;
+ 
+-    const-string v0, "ffmpeg-org"
+-
+-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+-
+-    const-string v0, "ffmpeg-command"
+-
+-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+-
+     return-void
+ .end method
+ 

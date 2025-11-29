@@ -1,0 +1,20 @@
+--- a/smali_classes5/com/xj/landscape/launcher/config/EggGameApi.smali
++++ b/smali_classes5/com/xj/landscape/launcher/config/EggGameApi.smali
+@@ -42,7 +42,7 @@
+ 
+     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 
+-    const-string v1, "agreement/index.html?type=1&lang="
++    const-string v1, "agreement/credits.html?lang="
+ 
+     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 
+@@ -62,7 +62,7 @@
+ 
+     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 
+-    const-string v1, "agreement/index.html?type=2&lang="
++    const-string v1, "agreement/index.html?lang="
+ 
+     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 

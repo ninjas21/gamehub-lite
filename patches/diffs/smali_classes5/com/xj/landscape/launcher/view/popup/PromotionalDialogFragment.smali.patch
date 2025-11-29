@@ -1,0 +1,11 @@
+--- a/smali_classes5/com/xj/landscape/launcher/view/popup/PromotionalDialogFragment.smali
++++ b/smali_classes5/com/xj/landscape/launcher/view/popup/PromotionalDialogFragment.smali
+@@ -814,6 +814,8 @@
+     new-instance v0, Landroid/content/Intent;
+ 
+     const-string v1, "android.intent.action.VIEW"
++
++    const-string p2, "https://github.com/gamehublite"
+ 
+     invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ 

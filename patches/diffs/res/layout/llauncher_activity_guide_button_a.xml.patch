@@ -1,0 +1,11 @@
+--- a/res/layout/llauncher_activity_guide_button_a.xml
++++ b/res/layout/llauncher_activity_guide_button_a.xml
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/llauncher_activity_guide_button_a_0" android:background="@color/comm_l_bg_color_FFFFFF" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+-    <ImageView android:id="@id/cover_iv" android:layout_width="@dimen/dp_396" android:layout_height="@dimen/dp_222" android:src="@drawable/llanuncher_icon_guide_gamepad" android:layout_marginStart="@dimen/dp_30" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
++    <ImageView android:id="@id/cover_iv" android:layout_width="@dimen/dp_396" android:layout_height="@dimen/dp_222" android:src="@android:color/transparent" android:layout_marginStart="@dimen/dp_30" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+     <androidx.media3.ui.PlayerView android:id="@id/play_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:resize_mode="fit" app:show_buffering="always" app:surface_type="surface_view" app:use_controller="false" />
+     <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/container_cl" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+         <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.5" />

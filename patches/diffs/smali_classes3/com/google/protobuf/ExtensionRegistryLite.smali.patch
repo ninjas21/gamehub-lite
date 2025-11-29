@@ -1,0 +1,11 @@
+--- a/smali_classes3/com/google/protobuf/ExtensionRegistryLite.smali
++++ b/smali_classes3/com/google/protobuf/ExtensionRegistryLite.smali
+@@ -17,7 +17,7 @@
+ 
+ .field static final EXTENSION_CLASS_NAME:Ljava/lang/String; = "com.google.protobuf.Extension"
+ 
+-.field private static volatile eagerlyParseMessageSets:Z = false
++.field private static volatile eagerlyParseMessageSets:Z
+ 
+ .field private static volatile emptyRegistry:Lcom/google/protobuf/ExtensionRegistryLite;
+ 

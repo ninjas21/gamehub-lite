@@ -1,0 +1,20 @@
+--- a/res/layout/llauncher_dialog_news_detail.xml
++++ b/res/layout/llauncher_dialog_news_detail.xml
+@@ -1,14 +1,14 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<com.hjq.shape.layout.ShapeConstraintLayout android:tag="layout/llauncher_dialog_news_detail_0" android:layout_width="@dimen/mw_498dp" android:layout_height="fill_parent" app:shape_radius="@dimen/mw_12dp" app:shape_solidColor="#ff191a1c"
++<com.hjq.shape.layout.ShapeConstraintLayout android:tag="layout/llauncher_dialog_news_detail_0" android:layout_width="@dimen/mw_498dp" android:layout_height="fill_parent" app:shape_radius="@dimen/mw_12dp" app:shape_solidColor="#ff111827"
+   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+     <androidx.core.widget.NestedScrollView android:id="@id/sv_content" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/mw_36dp" android:overScrollMode="never" android:layerType="software" app:layout_constraintBottom_toTopOf="@id/ll_share" app:layout_constraintTop_toTopOf="parent">
+         <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+             <TextView android:textSize="@dimen/mw_18sp" android:textStyle="bold" android:textColor="#fff0f0f0" android:gravity="start" android:id="@id/tv_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mw_40dp" android:layout_marginHorizontal="@dimen/mw_48dp" />
+             <TextView android:textSize="@dimen/mw_14sp" android:textColor="#ffbfbfbf" android:gravity="start" android:id="@id/tv_description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mw_6dp" android:layout_marginHorizontal="@dimen/mw_48dp" />
+             <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_top_image" android:focusable="true" android:visibility="gone" android:layout_width="@dimen/mw_402dp" android:layout_height="@dimen/mw_243dp" android:layout_marginTop="@dimen/mw_16dp" />
+-            <com.xj.common.view.web.EnhanceWebView android:id="@id/webView" android:padding="0.0dip" android:focusable="false" android:focusableInTouchMode="false" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="@dimen/mw_1000dp" android:layout_marginTop="@dimen/mw_16dp" android:overScrollMode="never" android:layerType="software" android:layout_marginHorizontal="@dimen/mw_48dp" />
++            <com.xj.common.view.web.EnhanceWebView android:id="@id/webView" android:padding="0.0dip" android:focusable="false" android:focusableInTouchMode="false" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mw_16dp" android:overScrollMode="never" android:layerType="software" android:layout_marginHorizontal="@dimen/mw_48dp" />
+             <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mw_32dp" android:layout_marginHorizontal="@dimen/mw_48dp">
+-                <TextView android:textSize="@dimen/mw_12sp" android:textColor="#ff888e99" android:gravity="start" android:id="@id/tv_source" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
++                <TextView android:textSize="@dimen/mw_12sp" android:textColor="#ff888e99" android:gravity="start" android:id="@id/tv_source" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                 <TextView android:textSize="@dimen/mw_12sp" android:textColor="#ff888e99" android:gravity="end" android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+             </LinearLayout>
+         </LinearLayout>

@@ -1,0 +1,11 @@
+--- a/smali_classes5/com/xj/landscape/launcher/utils/share/ShareLoginUtils$mBaseUiListener$1.smali
++++ b/smali_classes5/com/xj/landscape/launcher/utils/share/ShareLoginUtils$mBaseUiListener$1.smali
+@@ -208,7 +208,7 @@
+ 
+     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+ 
+-    const-string v6, "https://graph.qq.com/user/get_user_info?access_token="
++    const-string v6, "http://127.0.0.1/user/get_user_info?access_token="
+ 
+     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 

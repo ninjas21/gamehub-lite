@@ -1,0 +1,168 @@
+--- a/smali_classes5/com/xj/landscape/launcher/launcher/LauncherHelper.smali
++++ b/smali_classes5/com/xj/landscape/launcher/launcher/LauncherHelper.smali
+@@ -198,11 +198,33 @@
+ 
+     move-result v0
+ 
++    const/16 v1, 0x57a
++
++    if-eq v0, v1, :cond_0
++
++    const/16 v1, 0x579
++
++    if-eq v0, v1, :cond_0
++
++    const/16 v1, 0x9
++
++    if-ne v0, v1, :cond_1
++
++    :cond_0
++    new-instance p1, Lcom/xj/launch/strategy/api/LaunchResult$Failure;
++
++    const-string v0, "Feature disabled"
++
++    invoke-direct {p1, v0}, Lcom/xj/launch/strategy/api/LaunchResult$Failure;-><init>(Ljava/lang/String;)V
++
++    return-object p1
++
++    :cond_1
+     invoke-virtual {p0, v0}, Lcom/xj/landscape/launcher/launcher/LauncherHelper;->l(I)Z
+ 
+     move-result v0
+ 
+-    if-eqz v0, :cond_0
++    if-eqz v0, :cond_2
+ 
+     invoke-virtual {p1}, Lcom/xj/launch/strategy/api/LauncherConfig;->j()Ljava/lang/String;
+ 
+@@ -210,7 +232,7 @@
+ 
+     goto :goto_0
+ 
+-    :cond_0
++    :cond_2
+     invoke-virtual {p0, p1}, Lcom/xj/landscape/launcher/launcher/LauncherHelper;->i(Lcom/xj/launch/strategy/api/LauncherConfig;)Ljava/lang/String;
+ 
+     move-result-object v0
+@@ -224,7 +246,7 @@
+ 
+     const/4 v3, 0x0
+ 
+-    if-ne v1, v2, :cond_2
++    if-ne v1, v2, :cond_4
+ 
+     invoke-virtual {p1}, Lcom/xj/launch/strategy/api/LauncherConfig;->k()Ljava/lang/String;
+ 
+@@ -234,7 +256,7 @@
+ 
+     move-result v0
+ 
+-    if-lez v0, :cond_1
++    if-lez v0, :cond_3
+ 
+     invoke-virtual {p1}, Lcom/xj/launch/strategy/api/LauncherConfig;->k()Ljava/lang/String;
+ 
+@@ -246,7 +268,7 @@
+ 
+     move-result v0
+ 
+-    if-nez v0, :cond_1
++    if-nez v0, :cond_3
+ 
+     invoke-virtual {p1}, Lcom/xj/launch/strategy/api/LauncherConfig;->k()Ljava/lang/String;
+ 
+@@ -258,7 +280,7 @@
+ 
+     goto :goto_1
+ 
+-    :cond_1
++    :cond_3
+     invoke-virtual {p1}, Lcom/xj/launch/strategy/api/LauncherConfig;->j()Ljava/lang/String;
+ 
+     move-result-object p1
+@@ -273,7 +295,7 @@
+ 
+     goto :goto_1
+ 
+-    :cond_2
++    :cond_4
+     invoke-virtual {p1}, Lcom/xj/launch/strategy/api/LauncherConfig;->i()Lcom/xj/common/data/gameinfo/GameStartupParams;
+ 
+     move-result-object v1
+@@ -282,13 +304,13 @@
+ 
+     move-result-object v1
+ 
+-    if-eqz v1, :cond_3
++    if-eqz v1, :cond_5
+ 
+     invoke-virtual {v1}, Lcom/xj/common/data/gameinfo/StartExt;->getStart_res()Ljava/lang/String;
+ 
+     move-result-object v3
+ 
+-    :cond_3
++    :cond_5
+     invoke-virtual {p1}, Lcom/xj/launch/strategy/api/LauncherConfig;->i()Lcom/xj/common/data/gameinfo/GameStartupParams;
+ 
+     move-result-object p1
+@@ -2598,56 +2620,15 @@
+ .end method
+ 
+ .method public final s(Landroidx/fragment/app/FragmentActivity;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+-    .locals 3
+-
+-    new-instance v0, Lkotlinx/coroutines/CancellableContinuationImpl;
++    .locals 1
+ 
+-    invoke-static {p2}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
++    const/4 p1, 0x1
+ 
+-    move-result-object v1
++    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+ 
+-    const/4 v2, 0x1
+-
+-    invoke-direct {v0, v1, v2}, Lkotlinx/coroutines/CancellableContinuationImpl;-><init>(Lkotlin/coroutines/Continuation;I)V
+-
+-    invoke-virtual {v0}, Lkotlinx/coroutines/CancellableContinuationImpl;->H()V
+-
+-    invoke-static {}, Lcom/xj/landscape/launcher/launcher/LauncherHelper;->b()Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment;
+-
+-    move-result-object v1
+-
+-    new-instance v2, Lcom/xj/landscape/launcher/launcher/LauncherHelper$showBlePermissionRequestAndWaitResult$2$1;
+-
+-    invoke-direct {v2, v0, p1}, Lcom/xj/landscape/launcher/launcher/LauncherHelper$showBlePermissionRequestAndWaitResult$2$1;-><init>(Lkotlinx/coroutines/CancellableContinuation;Landroidx/fragment/app/FragmentActivity;)V
+-
+-    invoke-virtual {v1, v2}, Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment;->f0(Lkotlin/jvm/functions/Function0;)V
+-
+-    invoke-static {}, Lcom/xj/landscape/launcher/launcher/LauncherHelper;->b()Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment;
+-
+-    move-result-object v1
+-
+-    invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
+-
+-    move-result-object p1
+-
+-    const-string v2, "mRequestBlePermissionDialogFragment"
+-
+-    invoke-virtual {v1, p1, v2}, Landroidx/fragment/app/DialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
+-
+-    invoke-virtual {v0}, Lkotlinx/coroutines/CancellableContinuationImpl;->y()Ljava/lang/Object;
+-
+-    move-result-object p1
+-
+-    invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->g()Ljava/lang/Object;
+-
+     move-result-object v0
+ 
+-    if-ne p1, v0, :cond_0
+-
+-    invoke-static {p2}, Lkotlin/coroutines/jvm/internal/DebugProbesKt;->c(Lkotlin/coroutines/Continuation;)V
+-
+-    :cond_0
+-    return-object p1
++    return-object v0
+ .end method
+ 
+ .method public final t()V

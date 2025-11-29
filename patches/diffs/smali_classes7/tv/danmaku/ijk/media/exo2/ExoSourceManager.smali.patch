@@ -1,0 +1,11 @@
+--- a/smali_classes7/tv/danmaku/ijk/media/exo2/ExoSourceManager.smali
++++ b/smali_classes7/tv/danmaku/ijk/media/exo2/ExoSourceManager.smali
+@@ -24,7 +24,7 @@
+ 
+ .field private static sHttpReadTimeout:I = -0x1
+ 
+-.field private static sSkipSSLChain:Z = false
++.field private static sSkipSSLChain:Z
+     .annotation runtime Ljava/lang/Deprecated;
+     .end annotation
+ .end field

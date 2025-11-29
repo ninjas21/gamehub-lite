@@ -1,0 +1,11 @@
+--- a/smali_classes5/com/xj/ota/data/repository/BaseOTARepository.smali
++++ b/smali_classes5/com/xj/ota/data/repository/BaseOTARepository.smali
+@@ -36,7 +36,7 @@
+ 
+     iput-object p1, p0, Lcom/xj/ota/data/repository/BaseOTARepository;->vm:Lcom/xj/base/base/viewmodel/BaseViewModel;
+ 
+-    const-string p1, "https://www.xiaoji.com/firmware/update/x1/"
++    const-string p1, "http://127.0.0.1"
+ 
+     iput-object p1, p0, Lcom/xj/ota/data/repository/BaseOTARepository;->URL_GET_FIRMWARE:Ljava/lang/String;
+ 

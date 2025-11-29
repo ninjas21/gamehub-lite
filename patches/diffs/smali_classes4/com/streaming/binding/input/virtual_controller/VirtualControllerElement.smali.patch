@@ -1,0 +1,11 @@
+--- a/smali_classes4/com/streaming/binding/input/virtual_controller/VirtualControllerElement.smali
++++ b/smali_classes4/com/streaming/binding/input/virtual_controller/VirtualControllerElement.smali
+@@ -12,7 +12,7 @@
+ 
+ 
+ # static fields
+-.field public static n:Z = false
++.field public static n:Z
+ 
+ 
+ # instance fields

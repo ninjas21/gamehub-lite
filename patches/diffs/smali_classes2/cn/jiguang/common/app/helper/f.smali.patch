@@ -1,0 +1,24 @@
+--- a/smali_classes2/cn/jiguang/common/app/helper/f.smali
++++ b/smali_classes2/cn/jiguang/common/app/helper/f.smali
+@@ -1,15 +1,13 @@
+-.class public abstract synthetic Lcn/jiguang/common/app/helper/f;
++.class public Lcn/jiguang/common/app/helper/f;
+ .super Ljava/lang/Object;
+-.source "SourceFile"
++.source "JPushStub"
+ 
+ 
+ # direct methods
+-.method public static bridge synthetic a(Landroid/content/pm/SigningInfo;)[Landroid/content/pm/Signature;
+-    .locals 0
++.method public static a(Landroid/content/pm/SigningInfo;)[Landroid/content/pm/Signature;
++    .locals 1
+ 
+-    invoke-virtual {p0}, Landroid/content/pm/SigningInfo;->getApkContentsSigners()[Landroid/content/pm/Signature;
++    const/4 v0, 0x0
+ 
+-    move-result-object p0
+-
+-    return-object p0
++    return-object v0
+ .end method

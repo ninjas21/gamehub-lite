@@ -1,0 +1,18 @@
+--- a/res/layout/llauncher_dialog_compatible.xml
++++ b/res/layout/llauncher_dialog_compatible.xml
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <FrameLayout android:id="@id/layout" android:tag="layout/llauncher_dialog_compatible_0" android:background="#cc000000" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+-    <com.hjq.shape.layout.ShapeConstraintLayout android:layout_gravity="center" android:id="@id/common_focus_cl" android:paddingBottom="@dimen/dp_29" android:layout_width="@dimen/dp_460" android:layout_height="wrap_content" app:shape_radius="@dimen/dp_16" app:shape_solidColor="#ff191a1c">
++    <com.hjq.shape.layout.ShapeConstraintLayout android:layout_gravity="center" android:id="@id/common_focus_cl" android:paddingBottom="@dimen/dp_29" android:layout_width="@dimen/dp_460" android:layout_height="wrap_content" app:shape_radius="@dimen/dp_16" app:shape_solidColor="#ff111827">
+         <ImageView android:id="@id/iv_question" android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_24" android:layout_marginTop="@dimen/dp_14" android:src="@drawable/llauncher_question" android:layout_marginStart="@dimen/dp_14" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+         <ImageView android:id="@id/iv_close" android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_24" android:layout_marginTop="@dimen/dp_12" android:src="@drawable/common_verify_dialog_close" android:layout_marginEnd="@dimen/dp_12" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+         <TextView android:textSize="@dimen/sp_16" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_14" android:text="@string/llauncher_pc_emulator_compatibility_dialog_title" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+@@ -20,5 +20,6 @@
+         <com.hjq.shape.layout.ShapeFrameLayout android:id="@id/btn_confirm" android:padding="@dimen/dp_3" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="@dimen/dp_50" android:layout_marginTop="@dimen/dp_12" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@id/et_report" app:layout_constraintStart_toEndOf="@id/btn_cancel" app:layout_constraintTop_toBottomOf="@id/et_report">
+             <com.hjq.shape.view.ShapeTextView android:textColor="@color/white" android:gravity="center" android:id="@id/tv_confirm" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/submit" app:shape_radius="@dimen/mw_8dp" app:shape_solidColor="@color/comm_white_a14" />
+         </com.hjq.shape.layout.ShapeFrameLayout>
++        <ImageView android:id="@id/iv_emuready_logo" android:layout_width="@dimen/dp_80" android:layout_height="@dimen/dp_20" android:layout_marginTop="@dimen/dp_12" android:layout_marginBottom="@dimen/dp_8" android:src="@drawable/emuready_logo" android:scaleType="fitCenter" android:alpha="1.0" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/recycler_view" />
+     </com.hjq.shape.layout.ShapeConstraintLayout>
+ </FrameLayout>

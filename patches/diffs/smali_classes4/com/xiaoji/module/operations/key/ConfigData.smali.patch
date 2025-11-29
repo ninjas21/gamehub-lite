@@ -1,0 +1,26 @@
+--- a/smali_classes4/com/xiaoji/module/operations/key/ConfigData.smali
++++ b/smali_classes4/com/xiaoji/module/operations/key/ConfigData.smali
+@@ -4,17 +4,17 @@
+ 
+ 
+ # static fields
+-.field public static a:I = 0x0
++.field public static a:I
+ 
+-.field public static b:I = 0x0
++.field public static b:I
+ 
+-.field public static c:Z = false
++.field public static c:Z
+ 
+-.field public static d:Z = false
++.field public static d:Z
+ 
+-.field public static e:Z = false
++.field public static e:Z
+ 
+-.field public static f:Z = false
++.field public static f:Z
+ 
+ .field public static g:[I
+ 

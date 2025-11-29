@@ -1,0 +1,9 @@
+--- a/res/layout/edit_pro_file_name_dialog.xml
++++ b/res/layout/edit_pro_file_name_dialog.xml
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<com.hjq.shape.layout.ShapeConstraintLayout android:id="@id/common_focus_cl" android:tag="layout/edit_pro_file_name_dialog_0" android:focusable="false" android:layout_width="@dimen/mw_460dp" android:layout_height="@dimen/mw_260dp" app:shape_radius="@dimen/mw_8dp" app:shape_solidColor="#ff191a1c"
++<com.hjq.shape.layout.ShapeConstraintLayout android:id="@id/common_focus_cl" android:tag="layout/edit_pro_file_name_dialog_0" android:focusable="false" android:layout_width="@dimen/mw_460dp" android:layout_height="@dimen/mw_260dp" app:shape_radius="@dimen/mw_8dp" app:shape_solidColor="#ff111827"
+   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+     <ImageView android:id="@id/back_iv" android:focusable="false" android:layout_width="@dimen/mw_24dp" android:layout_height="@dimen/mw_24dp" android:layout_margin="@dimen/mw_12dp" android:src="@drawable/pc_back_left_white" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+     <TextView android:textSize="@dimen/mw_16sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mw_16dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />

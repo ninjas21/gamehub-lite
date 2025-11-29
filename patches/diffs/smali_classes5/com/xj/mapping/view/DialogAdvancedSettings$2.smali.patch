@@ -1,0 +1,11 @@
+--- a/smali_classes5/com/xj/mapping/view/DialogAdvancedSettings$2.smali
++++ b/smali_classes5/com/xj/mapping/view/DialogAdvancedSettings$2.smali
+@@ -47,7 +47,7 @@
+ 
+     invoke-direct {p1, v0}, Lcom/xj/mapping/view/DialogWebView;-><init>(Landroid/content/Context;)V
+ 
+-    const-string v0, "https://www.xiaoji.com/url/obscure-click"
++    const-string v0, "http://127.0.0.1"
+ 
+     invoke-virtual {p1, v0}, Lcom/xj/mapping/view/DialogWebView;->setUrl(Ljava/lang/String;)V
+ 

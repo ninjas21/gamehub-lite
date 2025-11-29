@@ -1,0 +1,11 @@
+--- a/smali_classes5/com/xj/landscape/launcher/vm/NewLandscapeLauncherMainVM$1.smali
++++ b/smali_classes5/com/xj/landscape/launcher/vm/NewLandscapeLauncherMainVM$1.smali
+@@ -238,7 +238,7 @@
+     :cond_3
+     iget-object p1, p0, Lcom/xj/landscape/launcher/vm/NewLandscapeLauncherMainVM$1;->this$0:Lcom/xj/landscape/launcher/vm/NewLandscapeLauncherMainVM;
+ 
+-    invoke-virtual {p1, v3, v3}, Lcom/xj/landscape/launcher/vm/NewLandscapeLauncherMainVM;->n(IZ)V
++    invoke-virtual {p1, v2, v3}, Lcom/xj/landscape/launcher/vm/NewLandscapeLauncherMainVM;->n(IZ)V
+ 
+     goto :goto_1
+ 

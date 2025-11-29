@@ -1,0 +1,17 @@
+--- a/smali_classes2/com/arialyy/aria/orm/DBConfig.smali
++++ b/smali_classes2/com/arialyy/aria/orm/DBConfig.smali
+@@ -4,11 +4,11 @@
+ 
+ 
+ # static fields
+-.field static DB_NAME:Ljava/lang/String; = null
++.field static DB_NAME:Ljava/lang/String;
+ 
+-.field static DEBUG:Z = false
++.field static DEBUG:Z
+ 
+-.field static final SAVE_IN_SDCARD:Z = false
++.field static final SAVE_IN_SDCARD:Z
+ 
+ .field static VERSION:I
+ 

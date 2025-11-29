@@ -1,0 +1,11 @@
+--- a/smali_classes5/com/xj/mapping/utils/ConfigUtil.smali
++++ b/smali_classes5/com/xj/mapping/utils/ConfigUtil.smali
+@@ -28,7 +28,7 @@
+ 
+ .field public static j:I = -0x1
+ 
+-.field public static k:Z = false
++.field public static k:Z
+ 
+ .field public static l:I
+ 

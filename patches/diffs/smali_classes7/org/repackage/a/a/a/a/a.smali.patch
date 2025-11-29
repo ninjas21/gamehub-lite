@@ -1,0 +1,11 @@
+--- a/smali_classes7/org/repackage/a/a/a/a/a.smali
++++ b/smali_classes7/org/repackage/a/a/a/a/a.smali
+@@ -4,6 +4,6 @@
+ 
+ 
+ # static fields
+-.field public static a:Z = false
++.field public static a:Z
+ 
+-.field public static b:Z = false
++.field public static b:Z

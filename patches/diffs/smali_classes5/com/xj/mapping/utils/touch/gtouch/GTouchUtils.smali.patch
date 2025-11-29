@@ -1,0 +1,14 @@
+--- a/smali_classes5/com/xj/mapping/utils/touch/gtouch/GTouchUtils.smali
++++ b/smali_classes5/com/xj/mapping/utils/touch/gtouch/GTouchUtils.smali
+@@ -12,9 +12,9 @@
+ 
+ 
+ # static fields
+-.field public static c:Z = false
++.field public static c:Z
+ 
+-.field public static d:Z = false
++.field public static d:Z
+ 
+ .field public static e:Lcom/xj/mapping/utils/touch/gtouch/GTouchUtils;
+ 

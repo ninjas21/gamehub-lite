@@ -1,0 +1,14 @@
+--- a/smali_classes7/org/slf4j/helpers/Util.smali
++++ b/smali_classes7/org/slf4j/helpers/Util.smali
+@@ -12,9 +12,9 @@
+ 
+ 
+ # static fields
+-.field public static a:Lorg/slf4j/helpers/Util$ClassContextSecurityManager; = null
++.field public static a:Lorg/slf4j/helpers/Util$ClassContextSecurityManager;
+ 
+-.field public static b:Z = false
++.field public static b:Z
+ 
+ 
+ # direct methods

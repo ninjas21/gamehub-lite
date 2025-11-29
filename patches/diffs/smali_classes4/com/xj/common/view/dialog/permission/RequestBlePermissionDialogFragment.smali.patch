@@ -1,0 +1,52 @@
+--- a/smali_classes4/com/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment.smali
++++ b/smali_classes4/com/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment.smali
+@@ -47,49 +47,11 @@
+     invoke-direct {v0, v1}, Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+ 
+     sput-object v0, Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment;->e:Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment$Companion;
+-
+-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+-
+-    const/16 v1, 0x1f
+-
+-    const-string v2, "android.permission.ACCESS_FINE_LOCATION"
+-
+-    const-string v3, "android.permission.ACCESS_COARSE_LOCATION"
+-
+-    if-lt v0, v1, :cond_0
+-
+-    new-instance v0, Ljava/util/ArrayList;
+-
+-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+-
+-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+-    const-string v1, "android.permission.BLUETOOTH_SCAN"
+-
+-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+-    const-string v1, "android.permission.BLUETOOTH_ADVERTISE"
+-
+-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+-    const-string v1, "android.permission.BLUETOOTH_CONNECT"
+-
+-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+ 
+-    goto :goto_0
+-
+-    :cond_0
+     new-instance v0, Ljava/util/ArrayList;
+ 
+     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+-
+-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+ 
+-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+-    :goto_0
+     sput-object v0, Lcom/xj/common/view/dialog/permission/RequestBlePermissionDialogFragment;->f:Ljava/util/List;
+ 
+     return-void

@@ -1,0 +1,27 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/setting/tab/AboutSettingFragment.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/setting/tab/AboutSettingFragment.smali
+@@ -139,24 +139,8 @@
+ 
+     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+ 
+-    new-instance v8, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity;
+-
+     sget-object v9, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity;->Companion:Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;
+-
+-    invoke-virtual {v9}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getTYPE_UPGRADE()I
+-
+-    move-result v2
+-
+-    const/16 v6, 0xc
+-
+-    const/4 v4, 0x0
+ 
+-    move-object v1, v8
+-
+-    invoke-direct/range {v1 .. v7}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity;-><init>(IILandroid/util/SparseArray;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+-
+-    invoke-interface {v0, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+     new-instance v1, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity;
+ 
+     invoke-virtual {v9}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getTYPE_JUMP_ITEM()I

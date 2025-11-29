@@ -1,0 +1,13 @@
+--- a/res/values/ids.xml
++++ b/res/values/ids.xml
+@@ -3338,4 +3338,10 @@
+     <item type="id" name="xy_together_max" />
+     <item type="id" name="yesTv" />
+     <item type="id" name="zh_bgImage" />
++    <item type="id" name="tv_dashboard_label" />
++    <item type="id" name="tv_battery_percent" />
++    <item type="id" name="iv_emuready_logo" />
++    <item type="id" name="tv_local_game_id" />
++    <item type="id" name="ll_local_game_id_container" />
++    <item type="id" name="btn_copy_local_game_id" />
+ </resources>

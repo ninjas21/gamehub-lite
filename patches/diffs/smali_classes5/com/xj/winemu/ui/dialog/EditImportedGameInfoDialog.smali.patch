@@ -1,0 +1,195 @@
+--- a/smali_classes5/com/xj/winemu/ui/dialog/EditImportedGameInfoDialog.smali
++++ b/smali_classes5/com/xj/winemu/ui/dialog/EditImportedGameInfoDialog.smali
+@@ -1639,62 +1639,44 @@
+     move-result-object v2
+ 
+     const/4 v3, 0x0
+-
+-    if-eqz v2, :cond_3
+ 
+-    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
+-
+-    const/16 v5, 0x21
++    if-eqz v2, :cond_2
+ 
+     const-string v6, "key_info"
+-
+-    if-lt v4, v5, :cond_1
+-
+-    const-class v4, Lcom/xj/game/entity/ImportedGameEntity;
+-
+-    invoke-static {v2, v6, v4}, Lcom/google/android/play/core/integrity/a0;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+ 
+-    move-result-object v2
+-
+-    check-cast v2, Landroid/os/Parcelable;
+-
+-    goto :goto_0
+-
+-    :cond_1
+     invoke-virtual {v2, v6}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+ 
+     move-result-object v2
+ 
+     instance-of v4, v2, Lcom/xj/game/entity/ImportedGameEntity;
+ 
+-    if-nez v4, :cond_2
++    if-nez v4, :cond_1
+ 
+     move-object v2, v3
+ 
+-    :cond_2
++    :cond_1
+     check-cast v2, Lcom/xj/game/entity/ImportedGameEntity;
+ 
+-    :goto_0
+     check-cast v2, Lcom/xj/game/entity/ImportedGameEntity;
+ 
+-    goto :goto_1
++    goto :goto_0
+ 
+-    :cond_3
++    :cond_2
+     move-object v2, v3
+ 
+-    :goto_1
+-    if-nez v2, :cond_4
++    :goto_0
++    if-nez v2, :cond_3
+ 
+     invoke-virtual/range {p0 .. p0}, Lcom/xj/common/dialog/BaseDialogFragment;->dismissAllowingStateLoss()V
+ 
+     return-void
+ 
+-    :cond_4
++    :cond_3
+     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/DialogFragment;->getDialog()Landroid/app/Dialog;
+ 
+     move-result-object v4
+ 
+-    if-eqz v4, :cond_5
++    if-eqz v4, :cond_4
+ 
+     new-instance v5, Lcom/xj/winemu/ui/dialog/i;
+ 
+@@ -1702,7 +1684,7 @@
+ 
+     invoke-virtual {v4, v5}, Landroid/app/Dialog;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
+ 
+-    :cond_5
++    :cond_4
+     invoke-virtual/range {p0 .. p0}, Lcom/xj/winemu/ui/dialog/EditImportedGameInfoDialog;->Y0()V
+ 
+     iput-object v2, v0, Lcom/xj/winemu/ui/dialog/EditImportedGameInfoDialog;->k:Lcom/xj/game/entity/ImportedGameEntity;
+@@ -1713,7 +1695,7 @@
+ 
+     const/4 v4, 0x0
+ 
+-    if-eqz v2, :cond_6
++    if-eqz v2, :cond_5
+ 
+     const-string v5, "key_is_new_import"
+ 
+@@ -1721,12 +1703,12 @@
+ 
+     move-result v2
+ 
+-    goto :goto_2
++    goto :goto_1
+ 
+-    :cond_6
++    :cond_5
+     move v2, v4
+ 
+-    :goto_2
++    :goto_1
+     iput-boolean v2, v0, Lcom/xj/winemu/ui/dialog/EditImportedGameInfoDialog;->n:Z
+ 
+     iget-object v5, v1, Lcom/xj/winemu/databinding/WinemuDialogImportedGameInfoEditBinding;->ivChooseImg:Landroid/widget/ImageView;
+@@ -1895,7 +1877,7 @@
+ 
+     const-string v5, "importedGameEntity"
+ 
+-    if-eqz v2, :cond_8
++    if-eqz v2, :cond_7
+ 
+     invoke-virtual/range {p0 .. p0}, Lcom/xj/winemu/ui/dialog/EditImportedGameInfoDialog;->K0()Lcom/xj/winemu/vm/ImportGameViewModel;
+ 
+@@ -1921,45 +1903,45 @@
+ 
+     iget-object v2, v0, Lcom/xj/winemu/ui/dialog/EditImportedGameInfoDialog;->k:Lcom/xj/game/entity/ImportedGameEntity;
+ 
+-    if-nez v2, :cond_7
++    if-nez v2, :cond_6
+ 
+     invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->y(Ljava/lang/String;)V
+ 
+     move-object v2, v3
+ 
+-    :cond_7
++    :cond_6
+     invoke-virtual {v2}, Lcom/xj/game/entity/ImportedGameEntity;->getFilePath()Ljava/lang/String;
+ 
+     move-result-object v2
+ 
+     invoke-virtual {v1, v2}, Lcom/xj/winemu/vm/ImportGameViewModel;->m(Ljava/lang/String;)V
+ 
+-    goto :goto_3
++    goto :goto_2
+ 
+-    :cond_8
++    :cond_7
+     iget-object v2, v0, Lcom/xj/winemu/ui/dialog/EditImportedGameInfoDialog;->k:Lcom/xj/game/entity/ImportedGameEntity;
+ 
+-    if-nez v2, :cond_9
++    if-nez v2, :cond_8
+ 
+     invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->y(Ljava/lang/String;)V
+ 
+     move-object v2, v3
+ 
+-    :cond_9
++    :cond_8
+     invoke-virtual {v0, v2}, Lcom/xj/winemu/ui/dialog/EditImportedGameInfoDialog;->d1(Lcom/xj/game/entity/ImportedGameEntity;)V
+ 
+     iget-object v2, v0, Lcom/xj/winemu/ui/dialog/EditImportedGameInfoDialog;->k:Lcom/xj/game/entity/ImportedGameEntity;
+ 
+-    if-nez v2, :cond_a
++    if-nez v2, :cond_9
+ 
+     invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->y(Ljava/lang/String;)V
+ 
+     move-object v2, v3
+ 
+-    :cond_a
++    :cond_9
+     invoke-virtual {v0, v1, v2}, Lcom/xj/winemu/ui/dialog/EditImportedGameInfoDialog;->f1(Lcom/xj/winemu/databinding/WinemuDialogImportedGameInfoEditBinding;Lcom/xj/game/entity/ImportedGameEntity;)V
+ 
+-    :goto_3
++    :goto_2
+     invoke-virtual/range {p0 .. p0}, Lcom/xj/winemu/ui/dialog/EditImportedGameInfoDialog;->K0()Lcom/xj/winemu/vm/ImportGameViewModel;
+ 
+     move-result-object v1
+@@ -1984,7 +1966,7 @@
+ 
+     move-result-object v1
+ 
+-    if-eqz v1, :cond_b
++    if-eqz v1, :cond_a
+ 
+     new-instance v2, Lcom/xj/common/view/floatview/MenuItem;
+ 
+@@ -2012,11 +1994,11 @@
+ 
+     move-result-object v1
+ 
+-    if-eqz v1, :cond_b
++    if-eqz v1, :cond_a
+ 
+     invoke-static {v1, v4, v6, v3}, Lcom/xj/common/view/floatview/MenuFloatView;->I(Lcom/xj/common/view/floatview/MenuFloatView;ZILjava/lang/Object;)V
+ 
+-    :cond_b
++    :cond_a
+     return-void
+ .end method
+ 

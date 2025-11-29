@@ -1,0 +1,179 @@
+--- a/smali_classes4/com/xj/app/SplashActivity.smali
++++ b/smali_classes4/com/xj/app/SplashActivity.smali
+@@ -439,7 +439,7 @@
+ .end method
+ 
+ .method public static final l1(Lcom/xj/app/SplashActivity;I)Lkotlin/Unit;
+-    .locals 2
++    .locals 6
+ 
+     const-string v0, "this$0"
+ 
+@@ -447,7 +447,7 @@
+ 
+     const/4 v0, 0x1
+ 
+-    if-ne p1, v0, :cond_1
++    if-ne p1, v0, :cond_3
+ 
+     const/4 p1, 0x0
+ 
+@@ -477,12 +477,90 @@
+     const-string v1, "uminit"
+ 
+     invoke-virtual {p1, v1, v0}, Lcom/blankj/utilcode/util/SPUtils;->m(Ljava/lang/String;I)V
++
++    const-string v1, "intro_video_prefs"
++
++    const/4 v2, 0x0
++
++    invoke-virtual {p0, v1, v2}, Lcom/xj/app/SplashActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
++
++    move-result-object v1
++
++    const-string v3, "intro_video_played"
++
++    invoke-interface {v1, v3, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
++
++    move-result v1
+ 
++    if-eqz v1, :cond_1
++
+     invoke-virtual {p0}, Lcom/xj/app/SplashActivity;->j1()V
+ 
+     goto :goto_0
+ 
+     :cond_1
++    const-string v1, "intro_video_prefs"
++
++    invoke-virtual {p0, v1, v2}, Lcom/xj/app/SplashActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
++
++    move-result-object v1
++
++    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
++
++    move-result-object v1
++
++    const-string v3, "intro_video_played"
++
++    invoke-interface {v1, v3, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
++
++    move-result-object v1
++
++    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
++
++    invoke-static {}, Lcom/blankj/utilcode/util/NetworkUtils;->r()Z
++
++    move-result v1
++
++    if-nez v1, :cond_2
++
++    invoke-virtual {p0}, Lcom/xj/app/SplashActivity;->j1()V
++
++    goto :goto_0
++
++    :cond_2
++    new-instance v1, Landroid/os/Bundle;
++
++    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
++
++    const-string v3, "https://github.com/gamehublite/gamehub_api/raw/refs/heads/main/base/intro_video.mp4"
++
++    const-string v4, "video_path"
++
++    invoke-virtual {v1, v4, v3}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
++
++    const-string v3, "video_like"
++
++    invoke-virtual {v1, v3, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
++
++    const-string v3, "video_id"
++
++    invoke-virtual {v1, v3, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
++
++    const-string v3, "video_is_notice"
++
++    invoke-virtual {v1, v3, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
++
++    const-string v3, "is_intro_video"
++
++    invoke-virtual {v1, v3, v0}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
++
++    const-class v2, Lcom/xj/landscape/launcher/ui/gamedetail/GameVideoActivity;
++
++    invoke-static {v1, v2}, Lcom/blankj/utilcode/util/ActivityUtils;->p(Landroid/os/Bundle;Ljava/lang/Class;)V
++
++    goto :goto_0
++
++    :cond_3
+     sget-object p0, Lcom/xj/common/CommonApp;->b:Lcom/xj/common/CommonApp$Companion;
+ 
+     invoke-virtual {p0}, Lcom/xj/common/CommonApp$Companion;->a()V
+@@ -638,6 +716,8 @@
+     move-result v0
+ 
+     const/4 v1, 0x1
++
++    const/4 v0, 0x1
+ 
+     if-eq v0, v1, :cond_0
+ 
+@@ -845,3 +925,58 @@
+ 
+     return-void
+ .end method
++
++.method public onResume()V
++    .locals 4
++
++    invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->onResume()V
++
++    const-string v0, "intro_video_prefs"
++
++    const/4 v1, 0x0
++
++    invoke-virtual {p0, v0, v1}, Lcom/xj/app/SplashActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
++
++    move-result-object v0
++
++    const-string v2, "intro_video_played"
++
++    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
++
++    move-result v2
++
++    const-string v3, "gif_loaded"
++
++    invoke-interface {v0, v3, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
++
++    move-result v0
++
++    if-eqz v2, :cond_0
++
++    if-nez v0, :cond_0
++
++    const-string v0, "intro_video_prefs"
++
++    invoke-virtual {p0, v0, v1}, Lcom/xj/app/SplashActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
++
++    move-result-object v0
++
++    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
++
++    move-result-object v0
++
++    const-string v1, "gif_loaded"
++
++    const/4 v2, 0x1
++
++    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
++
++    move-result-object v0
++
++    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
++
++    invoke-virtual {p0}, Lcom/xj/app/SplashActivity;->j1()V
++
++    :cond_0
++    return-void
++.end method

@@ -1,0 +1,60 @@
+--- a/smali_classes4/com/uc/crashsdk/b.smali
++++ b/smali_classes4/com/uc/crashsdk/b.smali
+@@ -105,39 +105,39 @@
+ 
+ .field static final synthetic i:Z = true
+ 
+-.field private static j:Ljava/lang/String; = null
++.field private static j:Ljava/lang/String;
+ 
+-.field private static k:Ljava/lang/String; = null
++.field private static k:Ljava/lang/String;
+ 
+-.field private static l:Ljava/lang/String; = null
++.field private static l:Ljava/lang/String;
+ 
+-.field private static m:Ljava/lang/String; = null
++.field private static m:Ljava/lang/String;
+ 
+-.field private static n:Ljava/lang/String; = null
++.field private static n:Ljava/lang/String;
+ 
+-.field private static o:Ljava/lang/String; = null
++.field private static o:Ljava/lang/String;
+ 
+-.field private static p:Ljava/lang/String; = null
++.field private static p:Ljava/lang/String;
+ 
+-.field private static q:Ljava/lang/String; = null
++.field private static q:Ljava/lang/String;
+ 
+-.field private static r:Ljava/lang/String; = null
++.field private static r:Ljava/lang/String;
+ 
+-.field private static s:Ljava/lang/String; = null
++.field private static s:Ljava/lang/String;
+ 
+-.field private static t:Ljava/lang/String; = null
++.field private static t:Ljava/lang/String;
++
++.field private static u:Ljava/lang/String;
+ 
+-.field private static u:Ljava/lang/String; = null
++.field private static v:Ljava/lang/String;
+ 
+-.field private static v:Ljava/lang/String; = null
++.field private static w:Ljava/lang/String;
+ 
+-.field private static w:Ljava/lang/String; = null
+-
+-.field private static x:Z = false
++.field private static x:Z
+ 
+-.field private static y:Z = false
++.field private static y:Z
+ 
+-.field private static volatile z:Z = false
++.field private static volatile z:Z
+ 
+ 
+ # direct methods

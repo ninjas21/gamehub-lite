@@ -1,0 +1,85 @@
+--- a/smali_classes4/com/xj/common/preview/PreviewVideoFragment.smali
++++ b/smali_classes4/com/xj/common/preview/PreviewVideoFragment.smali
+@@ -1243,39 +1243,22 @@
+     move-result-object p1
+ 
+     const/4 v0, 0x0
+-
+-    if-eqz p1, :cond_2
+-
+-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+ 
+-    const/16 v2, 0x21
++    if-eqz p1, :cond_1
+ 
+     const-string v3, "preview_data"
+-
+-    if-lt v1, v2, :cond_0
+-
+-    const-class v0, Lcom/xj/common/preview/PreviewMediaEntity;
+-
+-    invoke-static {p1, v3, v0}, Lcom/google/android/play/core/integrity/a0;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+-
+-    move-result-object p1
+-
+-    check-cast p1, Landroid/os/Parcelable;
+-
+-    goto :goto_1
+ 
+-    :cond_0
+     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+ 
+     move-result-object p1
+ 
+     instance-of v1, p1, Lcom/xj/common/preview/PreviewMediaEntity;
+ 
+-    if-nez v1, :cond_1
++    if-nez v1, :cond_0
+ 
+     goto :goto_0
+ 
+-    :cond_1
++    :cond_0
+     move-object v0, p1
+ 
+     :goto_0
+@@ -1283,19 +1266,18 @@
+ 
+     check-cast p1, Lcom/xj/common/preview/PreviewMediaEntity;
+ 
+-    :goto_1
+     move-object v0, p1
+ 
+     check-cast v0, Lcom/xj/common/preview/PreviewMediaEntity;
+ 
+-    :cond_2
++    :cond_1
+     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
+ 
+     move-result-object p1
+ 
+     const/4 v1, 0x1
+ 
+-    if-eqz p1, :cond_3
++    if-eqz p1, :cond_2
+ 
+     const-string v2, "key_play_new"
+ 
+@@ -1303,14 +1285,14 @@
+ 
+     move-result v1
+ 
+-    :cond_3
++    :cond_2
+     iput-boolean v1, p0, Lcom/xj/common/preview/PreviewVideoFragment;->o:Z
+ 
+-    if-nez v0, :cond_4
++    if-nez v0, :cond_3
+ 
+     return-void
+ 
+-    :cond_4
++    :cond_3
+     iput-object v0, p0, Lcom/xj/common/preview/PreviewVideoFragment;->n:Lcom/xj/common/preview/PreviewMediaEntity;
+ 
+     invoke-virtual {p0}, Lcom/xj/base/base/fragment/BaseVmFragment;->T()Landroidx/databinding/ViewDataBinding;

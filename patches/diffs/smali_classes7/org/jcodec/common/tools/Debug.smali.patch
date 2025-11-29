@@ -1,0 +1,11 @@
+--- a/smali_classes7/org/jcodec/common/tools/Debug.smali
++++ b/smali_classes7/org/jcodec/common/tools/Debug.smali
+@@ -4,7 +4,7 @@
+ 
+ 
+ # static fields
+-.field public static a:Z = false
++.field public static a:Z
+ 
+ 
+ # direct methods

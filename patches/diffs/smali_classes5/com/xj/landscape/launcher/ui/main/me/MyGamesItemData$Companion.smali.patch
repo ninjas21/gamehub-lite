@@ -1,0 +1,20 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/main/me/MyGamesItemData$Companion.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/main/me/MyGamesItemData$Companion.smali
+@@ -98,7 +98,7 @@
+ 
+     if-eqz v1, :cond_2
+ 
+-    sget-object p1, Lcom/xj/common/data/list/TopPlatFormType;->PCLink:Lcom/xj/common/data/list/TopPlatFormType;
++    sget-object p1, Lcom/xj/common/data/list/TopPlatFormType;->Other:Lcom/xj/common/data/list/TopPlatFormType;
+ 
+     goto :goto_0
+ 
+@@ -117,7 +117,7 @@
+ 
+     if-eqz v1, :cond_3
+ 
+-    sget-object p1, Lcom/xj/common/data/list/TopPlatFormType;->PSLink:Lcom/xj/common/data/list/TopPlatFormType;
++    sget-object p1, Lcom/xj/common/data/list/TopPlatFormType;->Other:Lcom/xj/common/data/list/TopPlatFormType;
+ 
+     goto :goto_0
+ 

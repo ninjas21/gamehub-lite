@@ -1,0 +1,79 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/setting/SettingMainActivity.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/setting/SettingMainActivity.smali
+@@ -916,44 +916,9 @@
+     invoke-interface {p1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+ 
+     sget-object v2, Lcom/xj/common/config/AppConfig;->a:Lcom/xj/common/config/AppConfig$Companion;
+-
+-    invoke-virtual {v2}, Lcom/xj/common/config/AppConfig$Companion;->l()Z
+-
+-    move-result v3
+-
+-    if-nez v3, :cond_0
+ 
+     new-instance v3, Lcom/xj/landscape/launcher/ui/setting/holder/SettingLeftMenu;
+ 
+-    sget v4, Lcom/xj/language/R$string;->llauncher_setting_main_menu_notification:I
+-
+-    sget v5, Lcom/xj/landscape/launcher/R$drawable;->llanuncher_icon_menu_notification_grey:I
+-
+-    new-instance v6, Lcom/xj/landscape/launcher/ui/setting/o;
+-
+-    invoke-direct {v6, p0}, Lcom/xj/landscape/launcher/ui/setting/o;-><init>(Lcom/xj/landscape/launcher/ui/setting/SettingMainActivity;)V
+-
+-    invoke-direct {v3, v4, v5, v6}, Lcom/xj/landscape/launcher/ui/setting/holder/SettingLeftMenu;-><init>(IILkotlin/jvm/functions/Function0;)V
+-
+-    invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+-    :cond_0
+-    new-instance v3, Lcom/xj/landscape/launcher/ui/setting/holder/SettingLeftMenu;
+-
+-    sget v4, Lcom/xj/language/R$string;->llauncher_setting_main_menu_help:I
+-
+-    sget v5, Lcom/xj/landscape/launcher/R$drawable;->llanuncher_icon_menu_help_grey:I
+-
+-    new-instance v6, Lcom/xj/landscape/launcher/ui/setting/p;
+-
+-    invoke-direct {v6, p0}, Lcom/xj/landscape/launcher/ui/setting/p;-><init>(Lcom/xj/landscape/launcher/ui/setting/SettingMainActivity;)V
+-
+-    invoke-direct {v3, v4, v5, v6}, Lcom/xj/landscape/launcher/ui/setting/holder/SettingLeftMenu;-><init>(IILkotlin/jvm/functions/Function0;)V
+-
+-    invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+-    new-instance v3, Lcom/xj/landscape/launcher/ui/setting/holder/SettingLeftMenu;
+-
+     sget v4, Lcom/xj/language/R$string;->llauncher_setting_main_menu_about:I
+ 
+     sget v5, Lcom/xj/landscape/launcher/R$drawable;->llanuncher_icon_menu_about_grey:I
+@@ -970,7 +935,7 @@
+ 
+     move-result v2
+ 
+-    if-eqz v2, :cond_1
++    if-eqz v2, :cond_0
+ 
+     new-instance v2, Lcom/xj/landscape/launcher/ui/setting/holder/SettingLeftMenu;
+ 
+@@ -986,7 +951,7 @@
+ 
+     invoke-interface {p1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+ 
+-    :cond_1
++    :cond_0
+     invoke-virtual {p0}, Lcom/xj/base/base/activity/BaseVmActivity;->getMDataBind()Landroidx/databinding/ViewDataBinding;
+ 
+     move-result-object v2
+@@ -1077,11 +1042,11 @@
+ 
+     move-result-object v0
+ 
+-    if-eqz v0, :cond_2
++    if-eqz v0, :cond_1
+ 
+     invoke-static {v0, p1}, Lcom/xj/common/view/adapter/MultiViewHolderAdapterKt;->f(Landroidx/recyclerview/widget/RecyclerView$Adapter;Ljava/util/List;)V
+ 
+-    :cond_2
++    :cond_1
+     invoke-virtual {p0}, Lcom/xj/base/base/activity/BaseVmActivity;->getMDataBind()Landroidx/databinding/ViewDataBinding;
+ 
+     move-result-object v0

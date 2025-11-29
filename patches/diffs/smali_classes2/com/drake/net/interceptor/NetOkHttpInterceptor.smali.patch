@@ -1,0 +1,34 @@
+--- a/smali_classes2/com/drake/net/interceptor/NetOkHttpInterceptor.smali
++++ b/smali_classes2/com/drake/net/interceptor/NetOkHttpInterceptor.smali
+@@ -199,7 +199,31 @@
+     invoke-virtual {v0}, Lokhttp3/Request;->newBuilder()Lokhttp3/Request$Builder;
+ 
+     move-result-object v5
++
++    const-string v8, "User-Agent"
++
++    const-string v9, "Mozilla/5.0 (Linux; Android 13; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36"
++
++    invoke-virtual {v5, v8, v9}, Lokhttp3/Request$Builder;->addHeader(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$Builder;
++
++    const-string v8, "Accept"
++
++    const-string v9, "application/json, text/plain, */*"
++
++    invoke-virtual {v5, v8, v9}, Lokhttp3/Request$Builder;->addHeader(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$Builder;
++
++    const-string v8, "Accept-Language"
+ 
++    const-string v9, "en-US,en;q=0.9"
++
++    invoke-virtual {v5, v8, v9}, Lokhttp3/Request$Builder;->addHeader(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$Builder;
++
++    const-string v8, "Connection"
++
++    const-string v9, "keep-alive"
++
++    invoke-virtual {v5, v8, v9}, Lokhttp3/Request$Builder;->addHeader(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$Builder;
++
+     if-eqz v3, :cond_2
+ 
+     if-eqz v4, :cond_2

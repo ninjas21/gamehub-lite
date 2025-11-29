@@ -1,0 +1,11 @@
+--- a/res/layout/llauncher_activity_guide_game_pad_cover_1.xml
++++ b/res/layout/llauncher_activity_guide_game_pad_cover_1.xml
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <com.hjq.shape.layout.ShapeConstraintLayout android:tag="layout/llauncher_activity_guide_game_pad_cover_1_0" android:layout_width="fill_parent" android:layout_height="fill_parent" app:shape_solidGradientEndColor="@color/comm_l_bg_gradient_end_color_353B49" app:shape_solidGradientStartColor="@color/comm_l_bg_gradient_start_color_20242F" app:shape_solidGradientType="linear" app:shape_type="rectangle"
+   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+-    <ImageView android:id="@id/cover_iv" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:src="@drawable/llanuncher_guide_game_pad_cover1_bg" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/guideline_center" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
++    <ImageView android:id="@id/cover_iv" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:src="@android:color/transparent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/guideline_center" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+     <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/guideline_center" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.5" />
+     <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/guideline_end" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="1.0" />
+     <TextView android:id="@id/title_tv" android:layout_width="@dimen/dp_0" android:layout_marginTop="@dimen/dp_70" android:text="G8射手座游戏手柄可替换不同外壳使用" android:layout_marginStart="@dimen/dp_56" android:layout_marginEnd="@dimen/dp_84" app:layout_constraintEnd_toStartOf="@id/guideline_end" app:layout_constraintStart_toEndOf="@id/guideline_center" app:layout_constraintTop_toTopOf="parent" style="@style/comm_l_text_s_24_c_fff_w_bold" />

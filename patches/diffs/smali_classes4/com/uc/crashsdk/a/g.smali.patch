@@ -1,0 +1,30 @@
+--- a/smali_classes4/com/uc/crashsdk/a/g.smali
++++ b/smali_classes4/com/uc/crashsdk/a/g.smali
+@@ -6,19 +6,19 @@
+ # static fields
+ .field static final synthetic a:Z = true
+ 
+-.field private static b:Landroid/content/Context; = null
++.field private static b:Landroid/content/Context;
+ 
+-.field private static c:Ljava/lang/String; = null
++.field private static c:Ljava/lang/String;
+ 
+-.field private static d:Ljava/lang/String; = null
++.field private static d:Ljava/lang/String;
+ 
+-.field private static e:Ljava/lang/String; = null
+-
+-.field private static f:Ljava/lang/String; = null
++.field private static e:Ljava/lang/String;
+ 
+-.field private static g:Ljava/lang/String; = null
++.field private static f:Ljava/lang/String;
+ 
+-.field private static h:Z = false
++.field private static g:Ljava/lang/String;
++
++.field private static h:Z
+ 
+ .field private static final i:Ljava/lang/Object;
+ 

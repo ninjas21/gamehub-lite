@@ -1,0 +1,14 @@
+--- a/smali_classes5/com/xj/winemu/ui/env_setting/WinEmuEnvListFragment.smali
++++ b/smali_classes5/com/xj/winemu/ui/env_setting/WinEmuEnvListFragment.smali
+@@ -595,10 +595,8 @@
+     move-result-object p1
+ 
+     if-eqz p1, :cond_0
+-
+-    const-class v3, Lcom/xj/winemu/data/bean/EnvTabEntity;
+ 
+-    invoke-static {p1, v0, v3}, Lcom/google/android/play/core/integrity/a0;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
++    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+ 
+     move-result-object p1
+ 

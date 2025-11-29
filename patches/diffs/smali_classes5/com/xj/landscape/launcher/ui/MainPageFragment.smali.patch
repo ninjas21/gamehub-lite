@@ -1,0 +1,71 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/MainPageFragment.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/MainPageFragment.smali
+@@ -1003,19 +1003,7 @@
+     const/4 v2, 0x1
+ 
+     if-nez v0, :cond_0
+-
+-    iget-boolean v3, p0, Lcom/xj/landscape/launcher/ui/MainPageFragment;->w:Z
+-
+-    if-eqz v3, :cond_0
+-
+-    iget-boolean v3, p0, Lcom/xj/landscape/launcher/ui/MainPageFragment;->x:Z
+ 
+-    if-eqz v3, :cond_0
+-
+-    iget-boolean v3, p0, Lcom/xj/landscape/launcher/ui/MainPageFragment;->y:Z
+-
+-    if-eqz v3, :cond_0
+-
+     goto :goto_0
+ 
+     :cond_0
+@@ -1039,9 +1027,9 @@
+ 
+     move-result-object v0
+ 
+-    if-eqz v0, :cond_3
++    if-eqz v0, :cond_4
+ 
+-    if-eqz v2, :cond_3
++    if-eqz v2, :cond_4
+ 
+     invoke-virtual {p0}, Lcom/xj/base/base/fragment/BaseVmFragment;->T()Landroidx/databinding/ViewDataBinding;
+ 
+@@ -1070,6 +1058,27 @@
+ 
+     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
+ 
++    iget v0, p0, Lcom/xj/landscape/launcher/ui/MainPageFragment;->j:I
++
++    if-nez v0, :cond_3
++
++    invoke-virtual {p0}, Lcom/xj/base/base/fragment/BaseVmFragment;->T()Landroidx/databinding/ViewDataBinding;
++
++    move-result-object v0
++
++    check-cast v0, Lcom/xj/landscape/launcher/databinding/LlauncherPageLauncherMainBinding;
++
++    iget-object v0, v0, Lcom/xj/landscape/launcher/databinding/LlauncherPageLauncherMainBinding;->rvMain:Lcom/xj/landscape/launcher/ui/HomeRecyclerView;
++
++    const/4 v2, 0x0
++
++    invoke-virtual {v0, v2}, Lcom/xj/landscape/launcher/ui/HomeRecyclerView;->setMCurrentSelectPosition(I)V
++
++    :cond_3
++    iget v0, p0, Lcom/xj/landscape/launcher/ui/MainPageFragment;->j:I
++
++    if-eqz v0, :cond_4
++
+     new-instance v0, Lcom/xj/landscape/launcher/ui/w;
+ 
+     invoke-direct {v0, p0}, Lcom/xj/landscape/launcher/ui/w;-><init>(Lcom/xj/landscape/launcher/ui/MainPageFragment;)V
+@@ -1078,7 +1087,7 @@
+ 
+     invoke-static {v1, v2, v0}, Lcom/xj/common/utils/VUiKit;->f(JLjava/lang/Runnable;)V
+ 
+-    :cond_3
++    :cond_4
+     sget-object p0, Lkotlin/Unit;->a:Lkotlin/Unit;
+ 
+     return-object p0

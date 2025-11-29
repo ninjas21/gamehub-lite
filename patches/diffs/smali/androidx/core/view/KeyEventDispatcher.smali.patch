@@ -1,0 +1,17 @@
+--- a/smali/androidx/core/view/KeyEventDispatcher.smali
++++ b/smali/androidx/core/view/KeyEventDispatcher.smali
+@@ -15,11 +15,11 @@
+ 
+ 
+ # static fields
+-.field public static a:Z = false
++.field public static a:Z
+ 
+-.field public static b:Ljava/lang/reflect/Method; = null
++.field public static b:Ljava/lang/reflect/Method;
+ 
+-.field public static c:Z = false
++.field public static c:Z
+ 
+ .field public static d:Ljava/lang/reflect/Field;
+ 

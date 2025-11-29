@@ -1,0 +1,22 @@
+--- a/smali_classes2/cn/jiguang/aw/k.smali
++++ b/smali_classes2/cn/jiguang/aw/k.smali
+@@ -1,15 +1,13 @@
+-.class public abstract synthetic Lcn/jiguang/aw/k;
++.class public Lcn/jiguang/aw/k;
+ .super Ljava/lang/Object;
+-.source "SourceFile"
++.source "JPushStub"
+ 
+ 
+ # direct methods
+-.method public static bridge synthetic a()Ljava/lang/String;
++.method public static a()Ljava/lang/String;
+     .locals 1
+ 
+-    invoke-static {}, Landroid/app/Application;->getProcessName()Ljava/lang/String;
++    const-string v0, ""
+ 
+-    move-result-object v0
+-
+     return-object v0
+ .end method

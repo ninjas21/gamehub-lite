@@ -1,0 +1,54 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/guide/GuideCreateAvatarActivity.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/guide/GuideCreateAvatarActivity.smali
+@@ -320,49 +320,14 @@
+ # virtual methods
+ .method public final A1(Ljava/lang/String;)V
+     .locals 7
+-
+-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+-
+-    move-result v0
+ 
+-    if-nez v0, :cond_0
++    sget-object p1, Lcom/xj/landscape/launcher/router/RouterUtils;->a:Lcom/xj/landscape/launcher/router/RouterUtils;
+ 
+-    sget-object p1, Lcom/xj/common/utils/toast/Toaster;->a:Lcom/xj/common/utils/toast/Toaster;
+-
+-    sget v0, Lcom/xj/language/R$string;->llauncher_profile_no_avatar_hint:I
+-
+-    invoke-virtual {p1, v0}, Lcom/xj/common/utils/toast/Toaster;->a(I)V
++    invoke-virtual {p1, p0}, Lcom/xj/landscape/launcher/router/RouterUtils;->p(Landroid/content/Context;)V
+ 
+     return-void
+ 
+-    :cond_0
+-    new-instance v4, Lcom/xj/landscape/launcher/ui/guide/GuideCreateAvatarActivity$postProfileAvatar$1;
+-
+     const/4 v0, 0x0
+-
+-    invoke-direct {v4, p1, p0, v0}, Lcom/xj/landscape/launcher/ui/guide/GuideCreateAvatarActivity$postProfileAvatar$1;-><init>(Ljava/lang/String;Lcom/xj/landscape/launcher/ui/guide/GuideCreateAvatarActivity;Lkotlin/coroutines/Continuation;)V
+-
+-    const/4 v5, 0x3
+-
+-    const/4 v6, 0x0
+-
+-    const/4 v2, 0x0
+-
+-    const/4 v3, 0x0
+-
+-    move-object v1, p0
+-
+-    invoke-static/range {v1 .. v6}, Lcom/drake/net/utils/ScopeKt;->p(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;Lkotlinx/coroutines/CoroutineDispatcher;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lcom/drake/net/scope/NetCoroutineScope;
+-
+-    move-result-object p1
+-
+-    new-instance v0, Lcom/xj/landscape/launcher/ui/guide/y;
+-
+-    invoke-direct {v0}, Lcom/xj/landscape/launcher/ui/guide/y;-><init>()V
+-
+-    invoke-virtual {p1, v0}, Lcom/drake/net/scope/AndroidScope;->o(Lkotlin/jvm/functions/Function2;)Lcom/drake/net/scope/AndroidScope;
+-
+-    return-void
+ .end method
+ 
+ .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z

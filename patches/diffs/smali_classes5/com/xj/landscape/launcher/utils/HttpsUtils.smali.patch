@@ -1,0 +1,118 @@
+--- a/smali_classes5/com/xj/landscape/launcher/utils/HttpsUtils.smali
++++ b/smali_classes5/com/xj/landscape/launcher/utils/HttpsUtils.smali
+@@ -20,78 +20,80 @@
+ 
+ # direct methods
+ .method static constructor <clinit>()V
+-    .locals 34
++    .locals 35
+ 
+-    const-string v32, "qpic.cn"
++    const-string v33, "qpic.cn"
+ 
+-    const-string v33, "uxupload-inter.bigeyes.com"
++    const-string v34, "uxupload-inter.bigeyes.com"
+ 
+-    const-string v0, "clientgsw.vgabc.com"
++    const-string v0, "zlyer-cdn-comps-en.bigeyes.com"
+ 
+-    const-string v1, "xiaoji.com"
++    const-string v1, "clientgsw.vgabc.com"
+ 
+-    const-string v2, "taobao.com"
++    const-string v2, "xiaoji.com"
+ 
+-    const-string v3, "facebook.com"
++    const-string v3, "taobao.com"
+ 
+-    const-string v4, "aliyuncs.com"
++    const-string v4, "facebook.com"
+ 
+-    const-string v5, "gamesir.hk"
++    const-string v5, "aliyuncs.com"
+ 
+-    const-string v6, "cmpassport.com"
++    const-string v6, "gamesir.hk"
+ 
+-    const-string v7, "vgabc.com"
++    const-string v7, "cmpassport.com"
+ 
+-    const-string v8, "umeng.com"
++    const-string v8, "vgabc.com"
+ 
+-    const-string v9, "mp.weixin.qq.com"
++    const-string v9, "umeng.com"
+ 
+-    const-string v10, "api.weixin.qq.com"
++    const-string v10, "mp.weixin.qq.com"
+ 
+     const-string v11, "api.weixin.qq.com"
+ 
+-    const-string v12, "mp.weixin.qq.com"
++    const-string v12, "api.weixin.qq.com"
+ 
+-    const-string v13, "open.weixin.qq.com"
++    const-string v13, "mp.weixin.qq.com"
+ 
+-    const-string v14, "wechat.com"
++    const-string v14, "open.weixin.qq.com"
+ 
+-    const-string v15, "weixin.qq.com"
++    const-string v15, "wechat.com"
+ 
+-    const-string v16, "mp.weixinbridge.com"
++    const-string v16, "weixin.qq.com"
+ 
+-    const-string v17, "servicewechat.com"
++    const-string v17, "mp.weixinbridge.com"
+ 
+-    const-string v18, "21cn.com"
++    const-string v18, "servicewechat.com"
+ 
+-    const-string v19, "id6.me"
++    const-string v19, "21cn.com"
+ 
+-    const-string v20, "graph.qq.com"
++    const-string v20, "id6.me"
+ 
+-    const-string v21, "qq.com"
++    const-string v21, "graph.qq.com"
+ 
+-    const-string v22, "qlogo.cn"
++    const-string v22, "qq.com"
+ 
+-    const-string v23, "qpic.cn"
++    const-string v23, "qlogo.cn"
+ 
+-    const-string v24, "thirdqq.qlogo.cn"
++    const-string v24, "qpic.cn"
+ 
+-    const-string v25, "qpic.cn"
++    const-string v25, "thirdqq.qlogo.cn"
+ 
+-    const-string v26, "photo.qq.com"
++    const-string v26, "qpic.cn"
+ 
+-    const-string v27, "photo.store.qq.com"
++    const-string v27, "photo.qq.com"
+ 
+-    const-string v28, "preview.qpic.cn"
++    const-string v28, "photo.store.qq.com"
+ 
+-    const-string v29, "qlogo.cn"
++    const-string v29, "preview.qpic.cn"
+ 
+-    const-string v30, "store.qq.com"
++    const-string v30, "qlogo.cn"
+ 
+-    const-string v31, "sz.preview.qpic.cn"
++    const-string v31, "store.qq.com"
+ 
+-    filled-new-array/range {v0 .. v33}, [Ljava/lang/String;
++    const-string v32, "sz.preview.qpic.cn"
+ 
++    filled-new-array/range {v0 .. v34}, [Ljava/lang/String;
++
+     move-result-object v0
+ 
+     sput-object v0, Lcom/xj/landscape/launcher/utils/HttpsUtils;->a:[Ljava/lang/String;

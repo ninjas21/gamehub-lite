@@ -1,0 +1,13 @@
+--- a/res/layout/dialog_no_support_model_popup.xml
++++ b/res/layout/dialog_no_support_model_popup.xml
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <FrameLayout android:tag="layout/dialog_no_support_model_popup_0" android:layout_width="wrap_content" android:layout_height="wrap_content"
+   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+-    <com.hjq.shape.layout.ShapeConstraintLayout android:focusable="false" android:focusableInTouchMode="false" android:layout_width="@dimen/mw_640dp" android:layout_height="wrap_content" app:shape_radius="@dimen/mw_16dp" app:shape_radiusInTopLeft="@dimen/mw_12dp" app:shape_radiusInTopRight="@dimen/mw_12dp" app:shape_solidColor="#ff191a1c">
+-        <com.hjq.shape.view.ShapeImageView android:id="@id/btn_close" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="@dimen/mw_24dp" android:layout_height="@dimen/mw_24dp" android:layout_marginTop="@dimen/mw_12dp" android:src="@drawable/comm_guide_close_gry" android:scaleType="fitXY" android:layout_marginEnd="@dimen/mw_12dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
++    <com.hjq.shape.layout.ShapeConstraintLayout android:focusable="false" android:focusableInTouchMode="false" android:layout_width="@dimen/mw_640dp" android:layout_height="wrap_content" app:shape_radius="@dimen/mw_16dp" app:shape_radiusInTopLeft="@dimen/mw_12dp" app:shape_radiusInTopRight="@dimen/mw_12dp" app:shape_solidColor="#ff111827">
++        <com.hjq.shape.view.ShapeImageView android:id="@id/btn_close" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="@dimen/mw_24dp" android:layout_height="@dimen/mw_24dp" android:layout_marginTop="@dimen/mw_12dp" android:src="@android:color/transparent" android:scaleType="fitXY" android:layout_marginEnd="@dimen/mw_12dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+         <ImageView android:id="@id/desImage" android:layout_width="0.0dip" android:layout_height="0.0dip" android:adjustViewBounds="true" android:layout_marginStart="@dimen/mw_73dp" android:layout_marginEnd="@dimen/mw_73dp" android:layout_marginVertical="@dimen/mw_32dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="W,494:210" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+     </com.hjq.shape.layout.ShapeConstraintLayout>
+ </FrameLayout>

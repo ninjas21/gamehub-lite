@@ -1,0 +1,67 @@
+--- a/smali_classes4/com/xj/common/utils/BatteryUtil.smali
++++ b/smali_classes4/com/xj/common/utils/BatteryUtil.smali
+@@ -39,7 +39,7 @@
+ 
+ # virtual methods
+ .method public final a(Landroid/content/Context;Landroid/widget/ImageView;)V
+-    .locals 2
++    .locals 3
+ 
+     const-string v0, "context"
+ 
+@@ -67,6 +67,8 @@
+ 
+     move-result p1
+ 
++    move v2, p1
++
+     const/16 v0, 0x15
+ 
+     if-ltz p1, :cond_0
+@@ -137,5 +139,46 @@
+ 
+     invoke-virtual {p2, p1}, Landroid/view/View;->setVisibility(I)V
+ 
++    :try_start_0
++    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
++
++    move-result-object p1
++
++    check-cast p1, Landroid/view/ViewGroup;
++
++    const p2, 0x7f0a0e7b
++
++    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
++
++    move-result-object p1
++
++    check-cast p1, Landroid/widget/TextView;
++
++    if-eqz p1, :cond_5
++
++    new-instance p2, Ljava/lang/StringBuilder;
++
++    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
++
++    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
++
++    const-string v0, "%"
++
++    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
++
++    move-result-object p2
++
++    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
++
++    const/4 p2, 0x0
++
++    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
++    :try_end_0
++    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
++
++    :catch_0
++    :cond_5
+     return-void
+ .end method

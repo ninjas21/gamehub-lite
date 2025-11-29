@@ -1,0 +1,9 @@
+--- a/res/layout/llauncher_dialog_fragment_device_pop.xml
++++ b/res/layout/llauncher_dialog_fragment_device_pop.xml
+@@ -2,5 +2,5 @@
+ <com.hjq.shape.layout.ShapeConstraintLayout android:id="@id/common_focus_cl" android:tag="layout/llauncher_dialog_fragment_device_pop_0" android:layout_width="@dimen/dp_640" android:layout_height="@dimen/dp_314" app:shape_radius="@dimen/dp_16" app:shape_solidGradientEndColor="@color/comm_l_bg_gradient_end_color_40444E" app:shape_solidGradientStartColor="@color/comm_l_bg_gradient_start_color_2A2D35" app:shape_solidGradientType="linear" app:shape_type="rectangle"
+   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+     <ImageView android:id="@id/iv_device_popup" android:layout_width="@dimen/dp_560" android:layout_height="@dimen/dp_276" android:scaleType="centerInside" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="640:314" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+-    <ImageView android:id="@id/closeIv" android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_24" android:layout_marginTop="@dimen/dp_12" android:src="@drawable/llanuncher_guide_close_gry" android:layout_marginStart="@dimen/dp_12" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
++    <ImageView android:id="@id/closeIv" android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_24" android:layout_marginTop="@dimen/dp_12" android:src="@android:color/transparent" android:layout_marginStart="@dimen/dp_12" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+ </com.hjq.shape.layout.ShapeConstraintLayout>

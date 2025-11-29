@@ -1,0 +1,9 @@
+--- a/res/layout/pc_stream_list_title_menu_dialog.xml
++++ b/res/layout/pc_stream_list_title_menu_dialog.xml
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<com.hjq.shape.layout.ShapeConstraintLayout android:id="@id/common_focus_cl" android:tag="layout/pc_stream_list_title_menu_dialog_0" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:shape_radius="@dimen/mw_8dp" app:shape_solidColor="#ff191a1c"
++<com.hjq.shape.layout.ShapeConstraintLayout android:id="@id/common_focus_cl" android:tag="layout/pc_stream_list_title_menu_dialog_0" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:shape_radius="@dimen/mw_8dp" app:shape_solidColor="#ff111827"
+   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+     <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+ </com.hjq.shape.layout.ShapeConstraintLayout>

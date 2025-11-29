@@ -1,0 +1,39 @@
+--- a/smali_classes4/com/xj/common/service/IUmengService.smali
++++ b/smali_classes4/com/xj/common/service/IUmengService.smali
+@@ -3,11 +3,6 @@
+ .source "SourceFile"
+ 
+ 
+-# annotations
+-.annotation runtime Lkotlin/Metadata;
+-.end annotation
+-
+-
+ # virtual methods
+ .method public abstract a(Landroid/content/Context;)V
+ .end method
+@@ -19,14 +14,20 @@
+ .end method
+ 
+ .method public abstract d(Ljava/lang/String;Ljava/util/Map;)V
++    .annotation system Ldalvik/annotation/Signature;
++        value = {
++            "(",
++            "Ljava/lang/String;",
++            "Ljava/util/Map<",
++            "Ljava/lang/String;",
++            "Ljava/lang/Object;",
++            ">;)V"
++        }
++    .end annotation
+ .end method
+ 
+ .method public abstract e()V
+ .end method
+ 
+ .method public abstract onEvent(Ljava/lang/String;)V
+-    .param p1    # Ljava/lang/String;
+-        .annotation build Lorg/jetbrains/annotations/NotNull;
+-        .end annotation
+-    .end param
+ .end method

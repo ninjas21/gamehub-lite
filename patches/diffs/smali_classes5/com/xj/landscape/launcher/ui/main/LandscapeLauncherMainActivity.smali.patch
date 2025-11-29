@@ -1,0 +1,75 @@
+--- a/smali_classes5/com/xj/landscape/launcher/ui/main/LandscapeLauncherMainActivity.smali
++++ b/smali_classes5/com/xj/landscape/launcher/ui/main/LandscapeLauncherMainActivity.smali
+@@ -3194,46 +3194,6 @@
+     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+ 
+     :cond_0
+-    new-instance v4, Lcom/xj/landscape/launcher/ui/main/TabItemData;
+-
+-    sget v17, Lcom/xj/language/R$string;->llauncher_main_page_title_explore:I
+-
+-    new-instance v18, Lcom/xj/landscape/launcher/ui/main/t;
+-
+-    invoke-direct/range {v18 .. v18}, Lcom/xj/landscape/launcher/ui/main/t;-><init>()V
+-
+-    const/16 v19, 0x1
+-
+-    const/16 v20, 0x0
+-
+-    const/16 v16, 0x0
+-
+-    move-object v15, v4
+-
+-    invoke-direct/range {v15 .. v20}, Lcom/xj/landscape/launcher/ui/main/TabItemData;-><init>(IILkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+-
+-    invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+-    new-instance v4, Lcom/xj/landscape/launcher/ui/main/TabItemData;
+-
+-    sget v10, Lcom/xj/language/R$string;->llauncher_main_page_title_platform:I
+-
+-    new-instance v11, Lcom/xj/landscape/launcher/ui/main/u;
+-
+-    invoke-direct {v11}, Lcom/xj/landscape/launcher/ui/main/u;-><init>()V
+-
+-    const/4 v12, 0x1
+-
+-    const/4 v13, 0x0
+-
+-    const/4 v9, 0x0
+-
+-    move-object v8, v4
+-
+-    invoke-direct/range {v8 .. v13}, Lcom/xj/landscape/launcher/ui/main/TabItemData;-><init>(IILkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+-
+-    invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+     goto :goto_0
+ 
+     :cond_1
+@@ -3626,25 +3586,7 @@
+     iget-object v0, v0, Lcom/xj/landscape/launcher/databinding/LlauncherActivityNewLauncherMainBinding;->mainTabView:Lcom/xj/landscape/launcher/ui/main/LauncherTabLayout;
+ 
+     invoke-virtual {v0}, Lcom/xj/common/view/focus/focus/view/FocusTabLayout;->r()V
+-
+-    sget-object v0, Lcom/xj/common/utils/PermissionUtils;->a:Lcom/xj/common/utils/PermissionUtils;
+-
+-    new-instance v4, Lcom/xj/landscape/launcher/ui/main/o;
+-
+-    invoke-direct {v4, v7}, Lcom/xj/landscape/launcher/ui/main/o;-><init>(Lcom/xj/landscape/launcher/ui/main/LandscapeLauncherMainActivity;)V
+ 
+-    const/4 v5, 0x6
+-
+-    const/4 v6, 0x0
+-
+-    const/4 v2, 0x0
+-
+-    const/4 v3, 0x0
+-
+-    move-object/from16 v1, p0
+-
+-    invoke-static/range {v0 .. v6}, Lcom/xj/common/utils/PermissionUtils;->J(Lcom/xj/common/utils/PermissionUtils;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function3;ILjava/lang/Object;)V
+-
+     invoke-virtual/range {p0 .. p0}, Lcom/xj/landscape/launcher/ui/main/LandscapeLauncherMainActivity;->m2()V
+ 
+     invoke-virtual/range {p0 .. p0}, Lcom/xj/landscape/launcher/ui/main/LandscapeLauncherMainActivity;->X2()V

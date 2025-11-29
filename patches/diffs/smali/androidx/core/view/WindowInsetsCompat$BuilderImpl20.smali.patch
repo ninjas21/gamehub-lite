@@ -1,0 +1,21 @@
+--- a/smali/androidx/core/view/WindowInsetsCompat$BuilderImpl20.smali
++++ b/smali/androidx/core/view/WindowInsetsCompat$BuilderImpl20.smali
+@@ -18,13 +18,13 @@
+ 
+ 
+ # static fields
+-.field public static e:Ljava/lang/reflect/Field; = null
++.field public static e:Ljava/lang/reflect/Field;
+ 
+-.field public static f:Z = false
+-
+-.field public static g:Ljava/lang/reflect/Constructor; = null
++.field public static f:Z
+ 
+-.field public static h:Z = false
++.field public static g:Ljava/lang/reflect/Constructor;
++
++.field public static h:Z
+ 
+ 
+ # instance fields

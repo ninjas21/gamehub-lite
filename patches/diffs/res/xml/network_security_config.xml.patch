@@ -1,0 +1,10 @@
+--- a/res/xml/network_security_config.xml
++++ b/res/xml/network_security_config.xml
+@@ -3,6 +3,7 @@
+     <base-config cleartextTrafficPermitted="true">
+         <trust-anchors>
+             <certificates src="system" />
++            <certificates src="user" />
+         </trust-anchors>
+     </base-config>
+ </network-security-config>

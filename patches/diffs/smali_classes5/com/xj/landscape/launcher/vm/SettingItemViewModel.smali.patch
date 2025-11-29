@@ -1,0 +1,112 @@
+--- a/smali_classes5/com/xj/landscape/launcher/vm/SettingItemViewModel.smali
++++ b/smali_classes5/com/xj/landscape/launcher/vm/SettingItemViewModel.smali
+@@ -238,108 +238,13 @@
+     invoke-direct/range {v1 .. v7}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity;-><init>(IILandroid/util/SparseArray;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+ 
+     invoke-interface {v0, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+-    new-instance v1, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity;
+-
+-    invoke-virtual {v9}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getTYPE_JUMP_ITEM()I
+-
+-    move-result v11
+-
+-    invoke-virtual {v9}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getCONTENT_TYPE_RECODE_FPS()I
+-
+-    move-result v12
+-
+-    const/16 v15, 0xc
+-
+-    const/16 v16, 0x0
+-
+-    const/4 v13, 0x0
+-
+-    const/4 v14, 0x0
+-
+-    move-object v10, v1
+-
+-    invoke-direct/range {v10 .. v16}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity;-><init>(IILandroid/util/SparseArray;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+-
+-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+-    new-instance v1, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity;
+ 
+-    invoke-virtual {v9}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getTYPE_JUMP_ITEM()I
+-
+-    move-result v3
+-
+-    invoke-virtual {v9}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getCONTENT_TYPE_RECODE_TYPE()I
+-
+-    move-result v4
+-
+-    const/16 v7, 0xc
+-
+-    const/4 v8, 0x0
+-
+-    const/4 v5, 0x0
+-
+-    const/4 v6, 0x0
+-
+-    move-object v2, v1
+-
+-    invoke-direct/range {v2 .. v8}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity;-><init>(IILandroid/util/SparseArray;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+-
+-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+-    new-instance v1, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity;
++    nop
+ 
+-    invoke-virtual {v9}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getTYPE_JUMP_ITEM()I
+-
+-    move-result v11
+-
+-    invoke-virtual {v9}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getCONTENT_TYPE_RECODE_BIT()I
+-
+-    move-result v12
+-
+-    move-object v10, v1
+-
+-    invoke-direct/range {v10 .. v16}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity;-><init>(IILandroid/util/SparseArray;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+-
+-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+-    sget-object v1, Lcom/xj/common/config/AppConfig;->a:Lcom/xj/common/config/AppConfig$Companion;
+-
+-    invoke-virtual {v1}, Lcom/xj/common/config/AppConfig$Companion;->l()Z
+-
+-    move-result v1
+-
+-    if-nez v1, :cond_0
+-
+     new-instance v1, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity;
+ 
+     invoke-virtual {v9}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getTYPE_BTN()I
+ 
+-    move-result v3
+-
+-    invoke-virtual {v9}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getCONTENT_TYPE_RESET_MAPPING()I
+-
+-    move-result v4
+-
+-    const/16 v7, 0xc
+-
+-    const/4 v8, 0x0
+-
+-    const/4 v5, 0x0
+-
+-    const/4 v6, 0x0
+-
+-    move-object v2, v1
+-
+-    invoke-direct/range {v2 .. v8}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity;-><init>(IILandroid/util/SparseArray;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+-
+-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+-
+-    :cond_0
+-    new-instance v1, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity;
+-
+-    invoke-virtual {v9}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getTYPE_BTN()I
+-
+     move-result v11
+ 
+     invoke-virtual {v9}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getCONTENT_TYPE_CLEAR_CAHCE()I

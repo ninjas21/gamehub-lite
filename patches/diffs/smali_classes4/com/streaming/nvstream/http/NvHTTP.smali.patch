@@ -1,0 +1,11 @@
+--- a/smali_classes4/com/streaming/nvstream/http/NvHTTP.smali
++++ b/smali_classes4/com/streaming/nvstream/http/NvHTTP.smali
+@@ -12,7 +12,7 @@
+ 
+ 
+ # static fields
+-.field public static m:Z = false
++.field public static m:Z
+ 
+ .field public static final n:Lokhttp3/MediaType;
+ 

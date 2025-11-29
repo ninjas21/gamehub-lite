@@ -1,0 +1,12 @@
+--- a/res/layout/llauncher_activity_gamedetail.xml
++++ b/res/layout/llauncher_activity_gamedetail.xml
+@@ -8,5 +8,9 @@
+     <com.xj.landscape.launcher.ui.HomeRecyclerView android:id="@id/rv_main" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:dpadRecyclerViewFocusOutFront="true" app:dpadRecyclerViewFocusOutSideFront="true" />
+     <View android:id="@id/view_left_menu_block" android:layout_width="@dimen/dp_0" android:layout_height="@dimen/dp_0" android:layout_marginBottom="-10.0dip" app:layout_constraintBottom_toBottomOf="@id/btn_share" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+     <com.xj.common.view.CommonTopBarView android:id="@id/topBarView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/mw_8dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
++    <LinearLayout android:orientation="horizontal" android:id="@id/ll_local_game_id_container" android:paddingTop="@dimen/mw_8dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/mw_60dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/topBarView">
++        <TextView android:textSize="@dimen/mw_12sp" android:textColor="#ffffffff" android:id="@id/tv_local_game_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
++        <TextView android:textSize="@dimen/mw_10sp" android:textColor="#ffffffff" android:id="@id/btn_copy_local_game_id" android:background="#ff444444" android:paddingTop="@dimen/mw_4dp" android:paddingBottom="@dimen/mw_4dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Copy" android:paddingStart="@dimen/mw_8dp" android:paddingEnd="@dimen/mw_8dp" android:layout_marginStart="@dimen/mw_8dp" />
++    </LinearLayout>
+     <include android:id="@id/include_skeleton" layout="@layout/llauncher_skeleton_game_detail" />
+ </com.hjq.shape.layout.ShapeConstraintLayout>

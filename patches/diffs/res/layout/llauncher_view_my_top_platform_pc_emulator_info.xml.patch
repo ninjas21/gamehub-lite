@@ -1,0 +1,14 @@
+--- a/res/layout/llauncher_view_my_top_platform_pc_emulator_info.xml
++++ b/res/layout/llauncher_view_my_top_platform_pc_emulator_info.xml
+@@ -2,9 +2,9 @@
+ <com.xj.common.view.focus.focus.view.FocusableFrameLayout android:id="@id/cl_card_root" android:paddingBottom="@dimen/mw_24dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+     <com.xj.common.view.focus.focus.view.FocusableFrameLayout android:id="@id/fl_shape_group_bg" android:padding="@dimen/mw_3dp" android:layout_width="fill_parent" android:layout_height="@dimen/mw_62dp" android:layout_marginHorizontal="@dimen/mw_57dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/fl_import_game">
+-        <com.xj.common.view.focus.focus.view.FocusableLinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:shape_radius="@dimen/mw_8dp" app:shape_solidGradientEndColor="#ff0b1d40" app:shape_solidGradientOrientation="leftToRight" app:shape_solidGradientStartColor="#ff062629">
++        <com.xj.common.view.focus.focus.view.FocusableLinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:shape_radius="@dimen/mw_8dp" app:shape_solidGradientEndColor="#ff0b0f1a" app:shape_solidGradientOrientation="leftToRight" app:shape_solidGradientStartColor="#ff0b0f1a">
+             <ImageView android:id="@id/ivGHLogo" android:background="@drawable/llauncher_ic_game_hub_gradient_logo" android:layout_width="@dimen/mw_36dp" android:layout_height="@dimen/mw_36dp" android:layout_marginStart="@dimen/mw_24dp" />
+-            <com.hjq.shape.view.ShapeTextView android:textSize="@dimen/mw_14sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/llauncher_home_pc_emulator_join_us_tips" android:singleLine="true" android:layout_marginStart="@dimen/mw_12dp" app:shape_textCenterColor="#ff7dd4ff" app:shape_textEndColor="#ff657eff" app:shape_textGradientOrientation="horizontal" app:shape_textStartColor="#ffb5ffd4" />
++            <com.hjq.shape.view.ShapeTextView android:textSize="@dimen/mw_14sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/llauncher_home_pc_emulator_join_us_tips" android:singleLine="true" android:layout_marginStart="@dimen/mw_12dp" app:shape_textCenterColor="#ff22d3ee" app:shape_textEndColor="#ffef4444" app:shape_textGradientOrientation="horizontal" app:shape_textStartColor="#ff22d3ee" />
+         </com.xj.common.view.focus.focus.view.FocusableLinearLayout>
+     </com.xj.common.view.focus.focus.view.FocusableFrameLayout>
+ </com.xj.common.view.focus.focus.view.FocusableFrameLayout>

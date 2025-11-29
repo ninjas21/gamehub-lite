@@ -1,0 +1,22 @@
+--- a/smali_classes2/cn/jiguang/common/app/helper/d.smali
++++ b/smali_classes2/cn/jiguang/common/app/helper/d.smali
+@@ -1,13 +1,13 @@
+-.class public abstract synthetic Lcn/jiguang/common/app/helper/d;
++.class public Lcn/jiguang/common/app/helper/d;
+ .super Ljava/lang/Object;
+-.source "SourceFile"
++.source "JPushStub"
+ 
+ 
+ # direct methods
+-.method public static bridge synthetic a(Landroid/content/pm/PackageInfo;)Landroid/content/pm/SigningInfo;
+-    .locals 0
++.method public static a(Landroid/content/pm/PackageInfo;)Landroid/content/pm/SigningInfo;
++    .locals 1
+ 
+-    iget-object p0, p0, Landroid/content/pm/PackageInfo;->signingInfo:Landroid/content/pm/SigningInfo;
++    const/4 v0, 0x0
+ 
+-    return-object p0
++    return-object v0
+ .end method

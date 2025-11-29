@@ -1,0 +1,11 @@
+--- a/smali/androidx/loader/app/LoaderManagerImpl.smali
++++ b/smali/androidx/loader/app/LoaderManagerImpl.smali
+@@ -14,7 +14,7 @@
+ 
+ 
+ # static fields
+-.field public static c:Z = false
++.field public static c:Z
+ 
+ 
+ # instance fields
