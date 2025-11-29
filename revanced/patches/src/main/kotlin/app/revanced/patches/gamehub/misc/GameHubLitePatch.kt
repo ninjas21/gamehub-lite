@@ -1,0 +1,60 @@
+package app.revanced.patches.gamehub.misc
+
+import app.revanced.patcher.patch.resourcePatch
+import app.revanced.patches.gamehub.telemetry.disableAllTelemetryPatch
+import app.revanced.util.get
+import app.revanced.util.set
+import org.w3c.dom.Element
+
+/**
+ * Main patch that transforms GameHub into GameHub Lite.
+ *
+ * This patch:
+ * - Changes package name to gamehub.lite for side-by-side installation
+ * - Removes all telemetry and tracking
+ * - Removes unnecessary permissions
+ * - Removes tracking SDK native libraries
+ * - Updates app branding
+ */
+val gameHubLitePatch = resourcePatch(
+    name = "GameHub Lite",
+    description = "Transform GameHub into a privacy-focused lightweight version",
+) {
+    compatibleWith("com.xiaoji.egggame"("5.1.0"))
+
+    dependsOn(
+        disableAllTelemetryPatch,
+        removeTrackingSdksPatch,
+    )
+
+    execute { context ->
+        // Change package name in AndroidManifest.xml
+        context.document["AndroidManifest.xml"].use { document ->
+            val manifest = document.getElementsByTagName("manifest").item(0) as Element
+
+            // Change package name
+            manifest.setAttribute("package", "gamehub.lite")
+
+            // Update application attributes
+            val application = document.getElementsByTagName("application").item(0) as Element
+
+            // Add hardware acceleration
+            application.setAttribute("android:hardwareAccelerated", "true")
+
+            // Update app name (optional - can be done via string resources)
+            // application.setAttribute("android:label", "GameHub Lite")
+        }
+
+        // Update string resources if needed
+        context.document["res/values/strings.xml"].use { document ->
+            val strings = document.getElementsByTagName("string")
+            for (i in 0 until strings.length) {
+                val string = strings.item(i) as Element
+                val name = string.getAttribute("name")
+                if (name == "app_name") {
+                    string.textContent = "GameHub Lite"
+                }
+            }
+        }
+    }
+}
